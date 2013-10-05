@@ -12,6 +12,10 @@ gem 'redcarpet', :git => 'https://github.com/vmg/redcarpet.git'
 gem 'pygments.rb'
 #gem 'codeclimate-test-reporter', group: :test, require: nil
 
+group :production do
+  gem 'newrelic_rpm'
+end
+
 group :development do
 
   gem 'rb-fsevent'

@@ -11,6 +11,10 @@ class DASmith < Sinatra::Base
     BetterErrors.application_root = __dir__
   end
 
+  configure :production do
+    require 'newrelic_rpm'
+  end
+
   configure do
 
     # Pull all of the articl-images into @images array

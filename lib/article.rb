@@ -12,7 +12,7 @@ class Article
 
     # Parse the file to seperate out the markdown and parse the Yaml.
     @body_as_markdown = File.read(file)
-    data = @body_as_markdown.split(/#!!====+/)
+    data = @body_as_markdown.split(/#!!====+/, 2)
     meta = YAML.load(data[0])
     date = File.basename(file).split('-')[0]
 

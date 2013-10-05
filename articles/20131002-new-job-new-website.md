@@ -51,7 +51,7 @@ Because the local version of the site is in my dropbox, I can write on both my m
 
 Although I'm not certain that this is the best way for me to write, I'm happy that I've been able to throw this together so quickly. The only thing I'm slightly worried about is the fact that the app has to parse every markdown file when it spins up. This wouldn't be a problem, except that Heroku spins down apps that haven't had any visits in a while. I ntend to find a way of handling this at some point in the future.
 
-[^1]: The code is here: 
+[^1]: The code is here: https://github.com/dannysmith/dasmith
 
 # Styles
 

@@ -1,0 +1,47 @@
+figure {
+	padding: 0; margin: 2em 0;
+	max-width: $max-width;
+	text-align: center;
+
+	counter-increment: articleFigureCounter;
+
+	img {
+		max-width: 100%;
+		border: 1px solid rgba(0,0,0,0.1);
+	}
+
+	img:hover {
+		cursor: -webkit-zoom-in;
+		cursor: -moz-zoom-in;
+	}
+
+	> figcaption {
+		font-size: .7em;
+		font-style: italic;
+		color: lighten($base-text-color, 20%);
+	}
+
+	> figcaption:before {
+		content: "Figure " counter(articleFigureCounter) ": "
+	}
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid rgba(0,0,0,0.1);
+
+	th {
+		font-family: $sans-font;
+		border-bottom: 2px solid $highlight-color;
+	}
+
+	td, th {
+		padding: 5px;
+		border-right: 1px solid rgba(0,0,0,0.1);
+	}
+
+	tr:nth-child(even) td {
+		background: rgba(200,200,200,0.1);
+	}
+}

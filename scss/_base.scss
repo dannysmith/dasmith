@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  transition: all .2s;
+  -webkit-transition: all .2s;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+body {
+	background: #fff;
+	color: $base-text-color;
+
+  font-family: $serif-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+
+  -webkit-font-smoothing: antialiased;
+
+  @media screen and (min-width: 500px) {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+
+  @media screen and (min-width: 1000px) {
+    font-size: 22px;
+  }
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: black;
+}
+
+h1, h2, h3, h4 {
+  font-family: $sans-font;
+  font-weight: 600;
+}
+
+ul, ol {
+  color: lighten($base-text-color, 50%);
+
+  li > span {
+    color: $base-text-color;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: .5em;
+}
+
+
+
+

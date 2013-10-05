@@ -1,0 +1,74 @@
+
+// All Code, everywhere - is not applied to plain <pre> elements.
+.gist,
+code,
+.highlight pre {
+	font-size: 16px;
+	font-family: "inconsolata", Courier, monospace;
+}
+
+// Inline Code Tags
+code.prettyprint {
+  padding: 2px 4px;
+  color: rgb(221, 17, 68);
+  background-color: rgb(247, 247, 249);
+  border: 1px solid rgb(225, 225, 232);
+  border-radius: 2px;
+}
+
+// Fenced Blocks of Code
+.highlight pre {
+  counter-reset: preLineNumbers;
+  white-space: pre;
+  overflow-x: scroll;
+  word-break: inherit;
+  word-wrap: inherit;
+  border: 2px solid rgba(0,0,0,0.1);
+  background: #f8f8ff;
+}
+
+.highlight pre > span:before {
+  content: counter(preLineNumbers);
+  counter-increment: preLineNumbers;
+  width: 1.5em;
+
+  padding-right: 1em; /* space after numbers */
+  text-align: right;
+  display: inline-block;
+  color: #aaa;
+  background: #ececec;
+  border-right: 1px solid #ddd;
+  margin-right: 10px;
+  padding: 2px 8px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+
+
+//Gist Code Overrides
+
+.gist .gist-file {
+	border-radius: 0 !important;
+	border: none !important;
+}
+
+.gist .gist-file .gist-data {
+	border: 1px solid #ddd !important;
+}
+.gist .gist-file,
+.gist .gist-file .gist-data .line-pre {
+	font-family: "inconsolata" !important;
+}
+
+.gist .gist-file .gist-meta {
+	background-image: none !important;
+	background-color: transparent !important;
+	text-shadow: none !important;
+	padding: 10px 0 !important;
+}

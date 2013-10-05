@@ -1,0 +1,14 @@
+package_assets:   on
+embed_assets:     off
+compress_assets:  off
+gzip_assets:      off
+javascript_compressor: uglifier
+
+javascripts:
+  js/main.min:
+    - javascripts/magnific-popup.js
+    - javascripts/application.js
+
+stylesheets:
+  css/main.min:
+    - public/css/main.css

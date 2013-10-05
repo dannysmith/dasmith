@@ -1,0 +1,23 @@
+<header class="page-header">
+	<h1><a href="/">Articles</a></h1>
+	<p>by <a href="/about">Danny Smith</a></p>
+</header>
+<div class="container">
+	<% @articles.each do |article| %>
+	<article class="article">
+		<h1><a href="/articles/<%= article.slug %>"><%= article.title %></a></h1>
+		<div class="article-body">
+			<%= article.body %>
+		</div>
+	</article>
+	<% end %>
+
+	<nav class="pagination clearfix">
+		<% unless @page == $page_count %>
+			<a href="/articles/<%= @page+1 %>">&larr; Older</a>
+		<% end %>
+		<% unless @page == 1 %>
+			<a href="/articles/<%= @page-1 %>">Newer &rarr;</a>
+		<% end %>
+	</nav>
+</div>

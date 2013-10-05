@@ -1,0 +1,13 @@
+.page-footer {
+	font-family: $sans-font;
+	font-size: .7em;
+	text-align: center;
+
+	a {
+		color: $link-color;
+	}
+
+	a:hover {
+		color: lighten($link-color, 15%);
+	}
+}

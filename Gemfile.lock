@@ -79,6 +79,7 @@ GEM
     method_source (0.8.2)
     multi_json (1.8.1)
     multi_test (0.0.2)
+    newrelic_rpm (3.6.7.159)
     parser (2.0.0)
       ast (~> 1.1)
       slop (~> 3.4, >= 3.4.5)
@@ -153,6 +154,7 @@ DEPENDENCIES
   guard-shell
   guard-shotgun!
   jammit
+  newrelic_rpm
   pg
   pry (>= 0.9.12)
   pygments.rb

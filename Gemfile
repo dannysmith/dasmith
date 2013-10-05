@@ -14,10 +14,8 @@ gem 'pygments.rb'
 
 group :development do
 
-  if RUBY_PLATFORM.downcase.include?("darwin")
-    gem 'rb-fsevent'
-    gem 'growl' # also install growlnotify
-  end
+  gem 'rb-fsevent'
+  gem 'growl' # also install growlnotify
 
   gem 'pry', '>= 0.9.12'
   gem 'rb-readline'

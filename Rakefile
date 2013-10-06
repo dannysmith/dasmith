@@ -1,4 +1,29 @@
 # Rakefile
+require 'pry'
+
+task :new do
+  if ARGV.length == 0
+    title = "new-article"
+  else
+    title = ARGV.join("-")
+  end
+  filename = "#{Date.today.strftime('%Y%m%d')}-#{title}.md"
+  ARGV.clear
+
+  template = "title:
+post_id:
+slug: #{title}\n
+#!!==========================================================\n\n"
+
+  File.open("./articles/#{filename}", 'w') {|f| f.write(template) }
+  %x{open -a "iA Writer" "./articles/#{filename}"}
+  puts filename
+end
+
+
+
+
+
 
 
 ######### CUCUMBER TASKS #########
@@ -38,14 +63,3 @@ Cucumber::Rake::Task.new(:t, "Run 'all' profile, pass tags as args.") do |t|
   end
   t.cucumber_opts = options
 end
-
-
-desc "Pings PING_URL to keep a dyno alive"
-  task :dyno_ping do
-    require "net/http"
-
-    if ENV['PING_URL']
-      uri = URI(ENV['PING_URL'])
-      Net::HTTP.get_response(uri)
-    end
-  end

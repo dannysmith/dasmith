@@ -36,7 +36,7 @@ class DASmith < Sinatra::Base
   end
 
   get '/' do
-    @articles = $articles[0..(ARTICLE_PAGE_LIMIT-1)]
+    @articles = $articles[0..(ARTICLE_PAGE_LIMIT - 1)]
     erb :index
   end
 
@@ -75,4 +75,24 @@ class DASmith < Sinatra::Base
     end
   end
 
+  # Catch Other paths, or return a 404.
+  get // do
+    path = request.path_info
+    case path
+    when %r{^/cv(?:/|\.pdf)?$}
+      redirect 'http://files.dasmith.co.uk/cv.pdf', 301
+    when /^\/avatar(.*)/
+      redirect "http://files.dasmith.co.uk/avatar#{$1}", 301
+    when /^\/files(.*)/
+      redirect "http://files.dasmith.co.uk/files#{$1}", 301
+    else
+      status 404
+      erb :page404
+    end
+  end
+
+  not_found do
+    status 404
+    erb :page404
+  end
 end

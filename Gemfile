@@ -10,6 +10,7 @@ gem 'thin'
 gem 'pg'
 gem 'redcarpet', :git => 'https://github.com/vmg/redcarpet.git'
 gem 'pygments.rb'
+gem 'coveralls', require: false
 #gem 'codeclimate-test-reporter', group: :test, require: nil
 
 group :production do
@@ -23,7 +24,7 @@ group :development do
 
   gem 'pry', '>= 0.9.12'
   gem 'rb-readline'
-  gem 'guard'
+  gem 'guard', '~> 2.0.5'
   gem 'guard-bundler'
   gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
 

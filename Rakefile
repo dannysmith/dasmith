@@ -20,7 +20,9 @@ slug: #{title}\n
   puts filename
 end
 
-
+task :coveralls do
+ `bundle exec coveralls push`
+end
 
 
 

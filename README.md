@@ -1,5 +1,4 @@
-[![Dependency Status](https://gemnasium.com/dannysmith/dasmith.png)](http://gemnasium.com/dannysmith/dasmith)
-[![Coverage Status](https://coveralls.io/repos/dannysmith/dasmith/badge.png)](https://coveralls.io/r/dannysmith/dasmith)
+[![Build Status](https://travis-ci.org/dannysmith/dasmith.png?branch=master)](https://travis-ci.org/dannysmith/dasmith) [![Coverage Status](https://coveralls.io/repos/dannysmith/dasmith/badge.png)](https://coveralls.io/r/dannysmith/dasmith) [![Dependency Status](https://gemnasium.com/dannysmith/dasmith.png)](http://gemnasium.com/dannysmith/dasmith)
 
 # Danny Smith's Website
 

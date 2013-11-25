@@ -25,7 +25,7 @@ group :development do
 
   gem 'pry', '>= 0.9.12'
   gem 'rb-readline'
-  gem 'guard', '~> 2.0.5'
+  gem 'guard', '~> 2'
   gem 'guard-bundler'
   gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
 

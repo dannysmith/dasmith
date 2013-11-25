@@ -74,3 +74,7 @@ then it's possible to use the `{{image:1}}` syntax above to insert them into art
 
 Clearley this is a very personal project and is clearly a work in progress. Because it's just intended for me to use, there isn't a great deal of error handling build in. That said, feel free to clone/fork and use it yourself.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dannysmith/dasmith/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

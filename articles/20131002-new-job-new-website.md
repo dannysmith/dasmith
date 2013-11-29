@@ -33,7 +33,7 @@ After looking at the possibility of building a static-site generator, I settled 
 
 The static assets are compiled locally by [guard-sass](https://github.com/hawx/guard-sass) and [guard-jammit](https://github.com/guard/guard-jammit). When the app is spun up, it reads all of the images in `public/article-images` which are named according to a special convention,  as well as all the markdown files in `articles`.
 
-The [Article](https://github.com/dannysmith/dasmith/blob/master/lib/article.rb) class reads some metadata from the top of the file and then parses the remainder with a custom [Redcarpet](https://github.com/vmg/redcarpet) renderer, which also looks for special tags to insert the images (and any gists). this allows me to write articles like this:
+The [Article](https://github.com/dannysmith/dasmith/blob/master/lib/article.rb) class reads some metadata from the top of the file and then parses the remainder with a custom [Redcarpet](https://github.com/vmg/redcarpet) renderer, which also looks for special tags to insert the images (and any gists). This allows me to write articles like this:
 
 ````
 title: The Title of The Article

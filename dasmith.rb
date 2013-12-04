@@ -48,6 +48,10 @@ class DASmith < Sinatra::Base
   end
 
   get '/' do
+    redirect '/writing'
+  end
+
+  get '/writing' do
     @articles = @published_articles[0..(ARTICLE_PAGE_LIMIT - 1)]
     erb :index
   end
@@ -56,12 +60,12 @@ class DASmith < Sinatra::Base
     erb :about
   end
 
-  get '/articles/?' do
+  get '/writing/articles/?' do
     @articles = @published_articles
     erb :article_list
   end
 
-  get %r{/articles/([0-9]+)/?} do
+  get %r{/writing/articles/([0-9]+)/?} do
     @page = params[:captures].first.to_i
     a = (@page - 1) * ARTICLE_PAGE_LIMIT
 
@@ -75,7 +79,7 @@ class DASmith < Sinatra::Base
     end
   end
 
-  get '/articles/:slug/?' do
+  get '/writing/:slug/?' do
     @published_articles.each do |a|
       @article = a if a.slug == params[:slug]
     end

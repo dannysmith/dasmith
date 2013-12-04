@@ -2,7 +2,7 @@
 	<h1>Danny Smith</h1>
 	<nav class="nav-main container" role="navigation">
 		<ul>
-			<li><a href="/articles">Articles</a></li>
+			<li><a href="/writing/articles">Articles</a></li>
 			<li><a href="/about">About</a></li>
 		</ul>
 	</nav>
@@ -10,7 +10,7 @@
 <div class="container">
 	<% @articles.each do |article| %>
 	<article class="article">
-		<h1><a href="/articles/<%= article.slug %>"><%= article.title %></a></h1>
+		<h1><a href="/writing/<%= article.slug %>"><%= article.title %></a></h1>
 		<div class="article-body">
 			<%= article.body %>
 		</div>
@@ -19,7 +19,7 @@
 
 	<nav class="pagination clearfix">
 		<% unless @page_count == 1 %>
-			<a href="/articles/2">&larr; Older</a>
+			<a href="/writing/articles/2">&larr; Older</a>
 		<% end %>
 	</nav>
 </div>

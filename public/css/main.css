@@ -20,19 +20,22 @@ body, html {
   padding: 0; }
 
 body {
-  background: #fff;
+  background: #fdfdfd;
   color: #333332;
-  font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "myriad-pro", "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.5;
+  padding: 0 1em;
   -webkit-font-smoothing: antialiased; }
 @media screen and (min-width: 500px) {
   body {
+    padding: 0 2em;
     font-size: 20px;
-    line-height: 1.45; } }
+    line-height: 1.55; } }
 @media screen and (min-width: 1000px) {
   body {
+    padding: 0;
     font-size: 22px; } }
 
 a, a:hover, a:visited, a:active {
@@ -43,7 +46,7 @@ a:hover {
   color: black; }
 
 h1, h2, h3, h4 {
-  font-family: "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-weight: 600; }
 
 ul, ol {
@@ -58,18 +61,17 @@ ul li > span, ol li > span {
 
 .page-header {
   text-align: center;
-  font-family: "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   margin-bottom: 3em;
   padding: 0; }
 .page-header h1 {
   margin-bottom: 0;
-  margin-top: 1em;
+  margin-top: 1rem;
   font-weight: 600;
   font-size: 1.5em; }
 @media screen and (min-width: 600px) {
   .page-header h1 {
-    margin-top: 2em;
-    font-weight: 200;
+    margin-top: 2rem;
     font-size: 2em; } }
 .page-header h1:after {
   display: block;
@@ -79,19 +81,36 @@ ul li > span, ol li > span {
   max-width: 745px;
   background: url("/images/tache-2.png") no-repeat 50% 50%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+.page-header .h1-home {
+  font-family: "jaf-facitweb";
+  font-size: 2em;
+  font-weight: 200; }
+.page-header .h1-home span.danny {
+  color: rgba(0, 0, 0, 0.8); }
+.page-header .h1-home span.dot {
+  color: rgba(0, 0, 0, 0.1); }
+.page-header .h1-home span.is {
+  color: #628694; }
+.page-header .h1-home span.slash {
+  color: rgba(0, 0, 0, 0.1); }
+.page-header .h1-home span.writing {
+  color: rgba(0, 0, 0, 0.8); }
+@media screen and (min-width: 600px) {
+  .page-header .h1-home {
+    font-size: 4em; } }
 .page-header > p {
   font-size: .8em;
   color: rgba(0, 0, 0, 0.5);
   font-style: italic; }
 
 .page-footer {
-  font-family: "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-size: .7em;
   text-align: center; }
 .page-footer a {
-  color: #951e0a; }
+  color: #628694; }
 .page-footer a:hover {
-  color: #dd2c0f; }
+  color: #8eaab4; }
 
 .pagination {
   text-align: center; }
@@ -99,12 +118,12 @@ ul li > span, ol li > span {
   float: left;
   display: inline-block;
   padding: 5px 10px;
-  font-family: "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  background: #951e0a;
+  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  background: #628694;
   color: #fff;
   font-weight: 100; }
 .pagination a:hover {
-  background: #651407; }
+  background: #4e6a75; }
 .pagination a:nth-child(2) {
   float: right; }
 .pagination a.center {
@@ -149,6 +168,14 @@ code.prettyprint {
   -ms-user-select: none;
   user-select: none; }
 
+kbd {
+  font-size: 1rem;
+  padding: 0.2em 0.5em;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
 .gist .gist-file {
   border-radius: 0 !important;
   border: none !important; }
@@ -174,10 +201,10 @@ code.prettyprint {
   line-height: 1.7;
   background: #333332;
   color: white;
-  font-family: "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   margin: 0 auto; }
 .notice a, .notice a:hover {
-  color: #f68875;
+  color: #dbe4e7;
   transition: none; }
 .notice a:hover {
   border: none;
@@ -198,6 +225,10 @@ code.prettyprint {
 .nav-main li {
   display: inline;
   padding: 0 1em; }
+.nav-main a {
+  color: #628694; }
+.nav-main a:hover {
+  color: black; }
 
 figure {
   padding: 0;
@@ -223,8 +254,8 @@ table {
   border-collapse: collapse;
   border: 1px solid rgba(0, 0, 0, 0.1); }
 table th {
-  font-family: "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  border-bottom: 2px solid #951e0a; }
+  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid #628694; }
 table td, table th {
   padding: 5px;
   border-right: 1px solid rgba(0, 0, 0, 0.1); }
@@ -506,17 +537,16 @@ table tr:nth-child(even) td {
   display: block;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-  font-family: "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
+  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
 .article > h1 > a:hover {
-  color: #951e0a; }
+  color: #628694; }
 
 .article-body a {
-  color: #951e0a; }
+  color: #628694; }
 .article-body a:hover {
-  text-decoration: underline;
-  color: #dd2c0f; }
+  text-decoration: underline; }
 .article-body a:visited {
-  color: #dd2c0f; }
+  color: #c7a948; }
 .article-body h1, .article-body h2 {
   font-size: 1.2em; }
 .article-body a[rel="footnote"] {
@@ -573,7 +603,7 @@ table tr:nth-child(even) td {
 .articles-list li:last-child {
   border-bottom: none; }
 .articles-list a:hover {
-  color: #951e0a; }
+  color: #628694; }
 
 .container-about-me img {
   border-radius: 50%;
@@ -1104,3 +1134,23 @@ img.mfp-img {
 
 .mfp-close {
   outline: none; }
+
+@media screen and (min-width: 110em) {
+  .container {
+    max-width: 55em; }
+
+  .article-body {
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -moz-column-gap: 2rem;
+    -webkit-column-gap: 2rem;
+    column-gap: 2rem; }
+  .article-body h2, .article-body h3, .article-body h4 {
+    -webkit-column-break-after: avoid;
+    break-after: aviod; }
+  .article-body pre, .article-body figure, .article-body table {
+    -webkit-column-break-inside: avoid;
+    break-inside: aviod; }
+  .article-body p:first-child {
+    margin-top: 0.1em; } }

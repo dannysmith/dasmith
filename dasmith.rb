@@ -2,7 +2,7 @@
 class DASmith < Sinatra::Base
 
   $articles = []
-  ARTICLE_PAGE_LIMIT = 5
+  ARTICLE_PAGE_LIMIT = 3
   $page_count = 0
 
   configure :development do

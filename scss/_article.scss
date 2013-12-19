@@ -20,10 +20,9 @@
 	}
 	a:hover {
 		text-decoration: underline;
-		color: lighten($link-color, 15%);
 	}
 	a:visited {
-		color: lighten($link-color, 15%);
+		color: $secondary-color;
 	}
 
 	h1, h2 {

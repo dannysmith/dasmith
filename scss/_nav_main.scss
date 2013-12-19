@@ -9,4 +9,12 @@
 		display: inline;
 		padding: 0 1em;
 	}
+
+  a {
+    color: $highlight-color;
+
+    &:hover {
+      color: black;
+    }
+  }
 }

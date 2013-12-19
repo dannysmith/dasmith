@@ -1,0 +1,26 @@
+@media screen and (min-width: 110em) {
+  .container {
+    max-width: 55em;
+  }
+
+  .article-body {
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -moz-column-gap:2rem;
+    -webkit-column-gap:2rem;
+    column-gap:2rem;
+
+    h2, h3, h4 {
+      -webkit-column-break-after: avoid;
+      break-after: aviod;
+    }
+
+    pre, figure, table {
+      -webkit-column-break-inside: avoid;
+      break-inside: aviod;
+    }
+
+    p:first-child {margin-top: 0.1em;}
+  }
+}

@@ -1,5 +1,6 @@
 # DASmith main Application class.
 class DASmith < Sinatra::Base
+  helpers Sinatra::ContentFor
 
   $articles = []
   ARTICLE_PAGE_LIMIT = 3

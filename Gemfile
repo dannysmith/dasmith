@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 gem 'rake'
 gem 'sinatra'
+gem 'sinatra-contrib'
 gem 'sass'
 gem 'cucumber'
 gem 'rspec'

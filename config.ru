@@ -1,6 +1,7 @@
 # Production requires
 require 'bundler/setup'
 require 'sinatra/base'
+require 'sinatra/content_for'
 
 # Require MyApp
 Dir[File.dirname(__FILE__) + '/lib/*'].each { |f| require f }

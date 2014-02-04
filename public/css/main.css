@@ -146,28 +146,33 @@ code.prettyprint {
   overflow-x: scroll;
   word-break: inherit;
   word-wrap: inherit;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  background: #f8f8ff; }
+  font-size: 0.9em;
+  font-weight: bold; }
 
 .highlight pre > span:before {
   content: counter(preLineNumbers);
   counter-increment: preLineNumbers;
-  width: 1.5em;
+  width: 1em;
   padding-right: 1em;
   /* space after numbers */
   text-align: right;
   display: inline-block;
   color: #aaa;
-  background: #ececec;
-  border-right: 1px solid #ddd;
-  margin-right: 10px;
-  padding: 2px 8px;
+  margin-right: 0.5em;
+  padding: 2px 8px 2px 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  opacity: 0.6; }
 
+@media screen and (min-width: 400px) {
+  .highlight pre > span:before {
+    visibility: hidden; }
+
+  .highlight pre:hover > span:before {
+    visibility: visible; } }
 kbd {
   font-size: 1rem;
   padding: 0.2em 0.5em;
@@ -181,7 +186,7 @@ kbd {
   border: none !important; }
 
 .gist .gist-file .gist-data {
-  border: 1px solid #ddd !important; }
+  border: none !important; }
 
 .gist .gist-file, .gist .gist-file .gist-data .line-pre {
   font-family: "inconsolata" !important; }

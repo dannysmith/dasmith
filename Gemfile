@@ -13,6 +13,7 @@ gem 'pg'
 gem 'redcarpet', :git => 'https://github.com/vmg/redcarpet.git'
 gem 'pygments.rb'
 gem 'coveralls', require: false
+gem 'builder'
 #gem 'codeclimate-test-reporter', group: :test, require: nil
 
 group :production do

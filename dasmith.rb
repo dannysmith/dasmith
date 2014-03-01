@@ -4,6 +4,7 @@ class DASmith < Sinatra::Base
 
   $articles = []
   ARTICLE_PAGE_LIMIT = 3
+  BASE_DOMAIN = "danny.is"
   $page_count = 0
 
   configure :development do
@@ -90,6 +91,11 @@ class DASmith < Sinatra::Base
     else
       status 404
     end
+  end
+
+  get '/feed/?' do
+    @articles = @published_articles
+    builder :feed
   end
 
   # Catch Other paths, or return a 404.

@@ -6,6 +6,7 @@
 		<meta name="viewport" content="initial-scale=1">
 
 		<link rel="stylesheet" href="/css/main.css">
+		<link href="http://<%= BASE_DOMAIN %>/feed" rel="alternate" type="application/rss+xml" title="The blog of Danny Smith" />
 		<script type="text/javascript" src="//use.typekit.net/uzs6fzm.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
@@ -21,6 +22,7 @@
 					<a href="https://github.com/dannysmith" class="icon-github-alt"></a>
 					<a href="https://twitter.com/dannysmith" class="icon-twitter"></a>
 					<a href="http://www.linkedin.com/in/dannyasmith" class="icon-linkedin"></a> |
+					<a href="http://<%= BASE_DOMAIN %>/feed">RSS</a> |
 					Copyright &copy; Danny Smith <%= Date.today.year %>, except where otherwise noted.
 
 				</p>

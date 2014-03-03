@@ -16,6 +16,8 @@ gem 'coveralls', require: false
 gem 'builder'
 #gem 'codeclimate-test-reporter', group: :test, require: nil
 
+gem 'puma'
+
 group :production do
   gem 'newrelic_rpm'
 end
@@ -29,7 +31,8 @@ group :development do
   gem 'rb-readline'
   gem 'guard', '~> 2'
   gem 'guard-bundler'
-  gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
+  # gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
+  gem 'guard-puma'
 
   gem 'rack-livereload'
   gem 'guard-livereload'

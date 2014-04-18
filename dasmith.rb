@@ -34,7 +34,6 @@ class DASmith < Sinatra::Base
 
     $articles.sort! { |a, b| a.publish_date <=> b.publish_date }
     $articles.reverse!
-
   end
 
 
@@ -49,6 +48,8 @@ class DASmith < Sinatra::Base
     end
     @page_count = (@published_articles.size.to_f / ARTICLE_PAGE_LIMIT.to_f).ceil
   end
+
+  ##################### WEB ROUTES #####################
 
   get '/' do
     redirect '/writing'
@@ -94,10 +95,28 @@ class DASmith < Sinatra::Base
     end
   end
 
+  ##################### JSON ROUTES #####################
+
+  get '/articles.json' do
+
+  end
+
+  get '/articles/list.json' do
+
+  end
+
+  get '/articles/:post.json' do
+
+  end
+
+  ##################### RSS ROUTES #####################
+
   get '/feed/?' do
     @articles = @published_articles
     builder :feed
   end
+
+  ##################### OTHER ROUTES #####################
 
   # Catch Other paths, or return a 404.
   get // do

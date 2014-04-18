@@ -29,6 +29,7 @@ gem 'bourbon'
 gem 'redcarpet', :git => 'https://github.com/vmg/redcarpet.git'
 gem 'pygments.rb'
 gem 'builder'
+gem 'json'
 
 group :production do
   gem 'newrelic_rpm'
@@ -55,7 +56,8 @@ group :development do
   gem 'guard-sass'
   gem 'guard-jammit'
   gem 'guard-shell'
-  # gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
+  gem 'shotgun'
+  #gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
   # gem 'guard-migrate' # For ActiveRecord https://github.com/guard/guard-migrate
 
   # Debugging

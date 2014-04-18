@@ -1,10 +1,11 @@
 require 'redcarpet'
 require 'yaml'
 require 'date'
+require 'pry'
 require_relative './article_renderer'
 
 # Article Class Handles loading an Article
-# Expects a file path as an string and an array of all image paths.
+# Expects a file path as a string and an array of all image paths.
 class Article
   attr_accessor :title, :slug, :body, :body_as_markdown, :publish_date, :post_id, :images
 

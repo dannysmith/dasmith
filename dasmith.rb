@@ -1,5 +1,6 @@
 # DASmith main Application class.
 class DASmith < Sinatra::Base
+  use Rack::MethodOverride ##<-- Required for put delete etc
   helpers Sinatra::ContentFor
 
   $articles = []
@@ -19,7 +20,7 @@ class DASmith < Sinatra::Base
 
   configure do
 
-    # Pull all of the articl-images into @images array
+    # Pull all of the article-images into @images array
     @images = []
     Dir[File.dirname(__FILE__) + '/public/article-images/*.{png,jpg,jpeg,gif,webp,svg}'].each { |img| @images << img }
 

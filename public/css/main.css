@@ -969,7 +969,6 @@ table tr:nth-child(even) td {
   src: url("../font/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* FONT AWESOME CORE
  * -------------------------- */
 [class^="icon-"], [class*=" icon-"] {
@@ -1261,7 +1260,7 @@ button::-moz-focus-inner {
   padding: 0;
   width: 90px;
   height: 110px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 .mfp-arrow:active {
   margin-top: -54px; }
 .mfp-arrow:hover, .mfp-arrow:focus {

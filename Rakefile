@@ -1,6 +1,8 @@
 # Rakefile
 require 'pry'
 
+######### BLOG TASKS #########
+
 task :new do
   if ARGV.length == 0
     title = "new-article"
@@ -64,4 +66,18 @@ Cucumber::Rake::Task.new(:t, "Run 'all' profile, pass tags as args.") do |t|
     options.concat("--tags #{tag} ") if tag.match(/^(?:@|~)/) #Only add arguments that begin with '@' or '~'.
   end
   t.cucumber_opts = options
+end
+
+######### OTHER TASKS #########
+
+task :build do
+  require 'jammit'
+  Jammit.package!
+end
+
+task :update do
+  puts "Updating Project..."
+  puts `bundle update`
+  puts `bundle exec bourbon update --path scss`
+  puts `bower update`
 end

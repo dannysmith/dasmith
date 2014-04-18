@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Danny Smith -- Developer -- @dannysmith
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
+    Bower
+    Bourbon, Neat, Bitters
+    Sinatra, Guard, Puma and Heroku
+    Redcarpet
+    OSX, Sublime Text 3

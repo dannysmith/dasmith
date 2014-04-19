@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="/css/main.css">
 
 		<!-- RSS -->
-		<link href="http://<%= BASE_DOMAIN %>/feed" rel="alternate" type="application/rss+xml" title="The blog of Danny Smith" />
+		<link href="http://<%= ENV['BASE_DOMAIN'] %>/feed" rel="alternate" type="application/rss+xml" title="The blog of Danny Smith" />
 
 		<!-- Scripts -->
     <script src="js/vendor/modernizr.min.js"></script>
@@ -31,7 +31,8 @@
 					<a href="https://github.com/dannysmith" class="icon-github-alt"></a>
 					<a href="https://twitter.com/dannysmith" class="icon-twitter"></a>
 					<a href="http://www.linkedin.com/in/dannyasmith" class="icon-linkedin"></a> |
-					<a href="http://<%= BASE_DOMAIN %>/feed">RSS</a> |
+          <a href="http://<%= ENV['BASE_DOMAIN'] %>/feed">RSS</a> |
+					<a href="/reading">Reading List</a></li> |
 					<span class="source-org vcard copyright">Copyright &copy; Danny Smith <%= Date.today.year %>, except where otherwise noted.</span>
 				</p>
 			</div>

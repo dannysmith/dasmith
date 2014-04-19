@@ -26,6 +26,7 @@ gem 'sass'
 gem 'bourbon'
 
 # Others
+gem 'readit'
 gem 'redcarpet', :git => 'https://github.com/vmg/redcarpet.git'
 gem 'pygments.rb'
 gem 'builder'

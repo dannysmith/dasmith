@@ -4,12 +4,12 @@ class DASmith < Sinatra::Base
   helpers Sinatra::ContentFor
 
   $articles = []
-  ARTICLE_PAGE_LIMIT = 3
-  BASE_DOMAIN = "danny.is"
   $page_count = 0
 
   configure :development do
     require 'better_errors'
+    require './development-envs'
+
     use BetterErrors::Middleware
     BetterErrors.application_root = __dir__
   end
@@ -34,6 +34,10 @@ class DASmith < Sinatra::Base
 
     $articles.sort! { |a, b| a.publish_date <=> b.publish_date }
     $articles.reverse!
+
+    Readit::Config.consumer_key = ENV['READABILITY_KEY']
+    Readit::Config.consumer_secret = ENV['READABILITY_SECRET']
+    Readit::Config.parser_token = ENV['READABILITY_PARSER_TOKEN']
   end
 
 
@@ -46,7 +50,7 @@ class DASmith < Sinatra::Base
     $articles.each do |article|
       @published_articles << article unless article.publish_date > Date.today
     end
-    @page_count = (@published_articles.size.to_f / ARTICLE_PAGE_LIMIT.to_f).ceil
+    @page_count = (@published_articles.size.to_f / ENV['ARTICLE_PAGE_LIMIT'].to_f).ceil
   end
 
   ##################### WEB ROUTES #####################
@@ -56,7 +60,7 @@ class DASmith < Sinatra::Base
   end
 
   get '/writing' do
-    @articles = @published_articles[0..(ARTICLE_PAGE_LIMIT - 1)]
+    @articles = @published_articles[0..(ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
     erb :index
   end
 
@@ -71,9 +75,9 @@ class DASmith < Sinatra::Base
 
   get %r{/writing/articles/([0-9]+)/?} do
     @page = params[:captures].first.to_i
-    a = (@page - 1) * ARTICLE_PAGE_LIMIT
+    a = (@page - 1) * ENV['ARTICLE_PAGE_LIMIT']
 
-    @articles = @published_articles[a..(a + ARTICLE_PAGE_LIMIT - 1)]
+    @articles = @published_articles[a..(a + ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
 
     if @articles.nil?
       # There are no articles for that page
@@ -94,6 +98,25 @@ class DASmith < Sinatra::Base
       status 404
     end
   end
+
+
+  get '/reading' do
+
+    @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],
+                                    :site=>"https://www.readability.com/",
+                                    :access_token_path => "/api/rest/v1/oauth/access_token/")
+
+    @access_token = @consumer.get_access_token(nil, {}, {:x_auth_mode => 'client_auth',
+                                                         :x_auth_username => ENV['READABILITY_KEY'],
+                                                         :x_auth_password => ENV['READABILITY_PASSWORD'] })
+
+    @api = Readit::API.new @access_token.token, @access_token.secret
+
+    @bookmarks, @meta = @api.bookmarks(archive: 1, per_page: 50, include_meta: true)
+
+    erb :reading, layout: :layout_dark
+  end
+
 
   ##################### JSON ROUTES #####################
 

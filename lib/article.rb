@@ -1,7 +1,6 @@
 require 'redcarpet'
 require 'yaml'
 require 'date'
-require 'pry'
 require_relative './article_renderer'
 
 # Article Class Handles loading an Article

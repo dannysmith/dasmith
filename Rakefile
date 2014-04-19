@@ -1,5 +1,4 @@
 # Rakefile
-require 'pry'
 
 ######### BLOG TASKS #########
 

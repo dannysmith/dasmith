@@ -1,6 +1,6 @@
 <div class="readability">
-<%- @bookmarks.each do |bookmark| %>
-  <%- unless bookmark.article.title.match(/^https?:\/\//) %>
+<% @bookmarks.each do |bookmark| %>
+  <% unless bookmark.article.title.match(/^https?:\/\//) %>
     <div class="container">
       <div class="card">
         <figure class="front" style="background-image: url('<%= bookmark.article.lead_image_url %>')">
@@ -15,6 +15,6 @@
         </figure>
       </div>
     </div>
-  <%- end %>
-<%- end %>
+  <% end %>
+<% end %>
 </div>

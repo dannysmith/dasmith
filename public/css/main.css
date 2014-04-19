@@ -1546,6 +1546,7 @@ img.mfp-img {
   left: 0;
   right: 0;
   bottom: 0;
+  font-family: "myriad-pro", "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   color: white;
   font-size: .6em;
   padding: 1em; }

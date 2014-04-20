@@ -9,9 +9,9 @@
 		<div class="article-body entry-content">
 			<%= article.body %>
 		</div>
-		<time class="published hidden" datetime="<%= @article.publish_date.to_s %>">
+		<time class="published hidden" datetime="<%= article.publish_date.to_s %>">
 	</article>
 	<% end %>
 
-	<%= erb 'partials/_pagination' %>
+	<%= erb :'partials/_pagination' %>
 </div>

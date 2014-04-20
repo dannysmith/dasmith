@@ -75,7 +75,7 @@ class DASmith < Sinatra::Base
 
   get %r{/writing/articles/([0-9]+)/?} do
     @page = params[:captures].first.to_i
-    a = (@page - 1) * ENV['ARTICLE_PAGE_LIMIT']
+    a = (@page - 1) * ENV['ARTICLE_PAGE_LIMIT'].to_i
 
     @articles = @published_articles[a..(a + ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
 

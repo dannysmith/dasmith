@@ -4,7 +4,7 @@ slug: a-pretty-readability-archive-with-ruby-and-css
 
 #!!==========================================================
 
-I've always found it interesting to see what other people read. Not just the things that they share on twitter, but the articles they read on a daily basis. I was thinking about that yesterday when I decided it might be nice to display my [readability](https://www.readability.com) archive on this blog. A few hours later, and you can see my archived readability articles [here](http://danny.is/writing). Here's what it looks like: 
+I've always found it interesting to see what other people read. Not just the things that they share on twitter, but the articles they read on a daily basis. I was thinking about that yesterday when I decided it might be nice to display my [readability](https://www.readability.com) archive on this blog. A few hours later, and you can see my archived readability articles [here](http://danny.is/reading). Here's what it looks like: 
 
 {{image: 1}}
 

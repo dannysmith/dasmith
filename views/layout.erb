@@ -21,22 +21,9 @@
 	</head>
 	<body>
 
-			<%= yield  %>
+		<%= yield  %>
 
-		<footer class="page-footer">
-			<div class="container">
-				<p>
-					<a href="/writing/articles">Articles</a> |
-					<a href="/about">About</a> |
-					<a href="https://github.com/dannysmith" class="icon-github-alt"></a>
-					<a href="https://twitter.com/dannysmith" class="icon-twitter"></a>
-					<a href="http://www.linkedin.com/in/dannyasmith" class="icon-linkedin"></a> |
-          <a href="http://<%= ENV['BASE_DOMAIN'] %>/feed">RSS</a> |
-					<a href="/reading">Reading List</a></li> |
-					<span class="source-org vcard copyright">Copyright &copy; Danny Smith <%= Date.today.year %>, except where otherwise noted.</span>
-				</p>
-			</div>
-		</footer>
+		<%= erb :'partials/_footer' %>
 
 		<!-- Scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>

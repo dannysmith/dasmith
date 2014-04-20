@@ -343,7 +343,7 @@ body, html {
 body {
   background: #fdfdfd;
   color: #333332;
-  font-family: "myriad-pro", "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "jubilat", "jaf-facitweb", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
@@ -370,7 +370,7 @@ a:hover {
   color: black; }
 
 h1, h2, h3, h4 {
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-weight: 600; }
 
 ul, ol {
@@ -385,7 +385,7 @@ ul li > span, ol li > span {
 
 .page-header {
   text-align: center;
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   margin-bottom: 3em;
   padding: 0; }
 .page-header h1 {
@@ -428,7 +428,7 @@ ul li > span, ol li > span {
   font-style: italic; }
 
 .page-footer {
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-size: .7em;
   text-align: center; }
 .page-footer a {
@@ -442,7 +442,7 @@ ul li > span, ol li > span {
   float: left;
   display: inline-block;
   padding: 5px 10px;
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   background: #628694;
   color: #fff;
   font-weight: 100; }
@@ -521,32 +521,6 @@ kbd {
   text-shadow: none !important;
   padding: 10px 0 !important; }
 
-.notice {
-  display: none;
-  margin: 5px;
-  padding: 1em;
-  font-size: .7em;
-  font-weight: 300;
-  line-height: 1.7;
-  background: #333332;
-  color: white;
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  margin: 0 auto; }
-.notice a, .notice a:hover {
-  color: #dbe4e7;
-  transition: none; }
-.notice a:hover {
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-.notice h3 {
-  display: block;
-  max-width: 745px;
-  margin: 0 auto .3em auto; }
-.notice p {
-  display: block;
-  max-width: 745px;
-  margin: 0 auto; }
-
 .nav-main ul {
   list-style: none;
   padding: 0;
@@ -583,7 +557,7 @@ table {
   border-collapse: collapse;
   border: 1px solid rgba(0, 0, 0, 0.1); }
 table th {
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   border-bottom: 2px solid #628694; }
 table td, table th {
   padding: 5px;
@@ -866,7 +840,7 @@ table tr:nth-child(even) td {
   display: block;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
 .article > h1 > a:hover {
   color: #628694; }
 
@@ -1518,7 +1492,7 @@ img.mfp-img {
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: "jubilat", "jaf-facitweb", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: white;
   padding: 1em; }
@@ -1546,7 +1520,7 @@ img.mfp-img {
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: "myriad-pro", "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "jubilat", "jaf-facitweb", Georgia, Cambria, "Times New Roman", Times, serif;
   color: white;
   font-size: .6em;
   padding: 1em; }

@@ -1,0 +1,43 @@
+figure {
+	position: relative;
+	counter-increment: articleFigureCounter;
+	background: $light-purple;
+	margin: 0;
+	padding: 1em 1em 1em 0;
+
+	img {
+		width: 100%;
+	}
+
+	img:hover {
+		cursor: -webkit-zoom-in;
+		cursor: -moz-zoom-in;
+	}
+
+	> figcaption {
+		font-size: .75em;
+		color: $black;
+		text-align: center;
+
+		@media screen and (min-width: 62em) {
+			font-size: 1em;
+		}
+
+		@media screen and (min-width: 80em) {
+			display: block;
+			position: absolute;
+			top: 1.25em;
+			left: 0;
+			width: 10em;
+			text-align: left;
+			font-size: .75em;
+			padding: .5em;
+			background: $dark-purple;
+			color: $white;
+		}
+	}
+
+	> figcaption:before {
+		content: "Figure " counter(articleFigureCounter) ": "
+	}
+}

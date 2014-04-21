@@ -1,0 +1,56 @@
+.top-bar {
+  height: $header-bar-height;
+  > div {
+    float: left;
+    height: $header-bar-height;
+  }
+}
+
+.top-bar-1 {background-color: $navy; width: 14%;}
+.top-bar-2 {background-color: $dark-purple; width: 20%;}
+.top-bar-3 {background-color: $light-purple; width: 11%;}
+.top-bar-4 {background-color: $red; width: 27%;}
+.top-bar-5 {background-color: $mint; width: 13%;}
+.top-bar-6 {background-color: $green; width: 15%;}
+
+.page-header {
+  text-align: center;
+  position: relative;
+
+  .logo {
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    border: 5px solid $white;
+    background: $light-purple url('/images/newlogo.png') center;
+    background-size: cover;
+    margin: 1em auto .5em;
+    z-index: 2;
+    @media screen and (max-width: 31em) {margin-top: -.3em;}
+  }
+
+  h1 {
+    font-family: "Inconsolata";
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0;
+    color: $black;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0; margin: 0;
+  }
+
+  li {
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: .7em;
+    padding: .7em;
+
+    a {color: $grey;}
+    a:hover {color: inherit;}
+  }
+}

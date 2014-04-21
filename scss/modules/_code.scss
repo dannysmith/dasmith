@@ -3,32 +3,34 @@
 .gist,
 code,
 .highlight pre {
-	font-size: 16px;
 	font-family: "inconsolata", Courier, monospace;
 }
 
 // Inline Code Tags
 code.prettyprint {
   padding: 2px 4px;
-  color: rgb(221, 17, 68);
-  background-color: rgb(247, 247, 249);
+  color: $red;
   border: 1px solid rgb(225, 225, 232);
   border-radius: 2px;
 }
 
 // Fenced Blocks of Code
 .highlight pre {
+  position: relative;
   counter-reset: preLineNumbers;
   white-space: pre;
   overflow-x: scroll;
   word-break: inherit;
   word-wrap: inherit;
   font-size: 0.9em;
-  font-weight: bold;
-  //border: 2px solid rgba(0,0,0,0.1);
-  //background: #f8f8ff;
+  //font-weight: bold;
+  padding: 1em 0;
+
+     border-top: 1px solid rgba(0,0,0,0.075);
+  border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
+// Line numbers
 .highlight pre > span:before {
   content: counter(preLineNumbers);
   counter-increment: preLineNumbers;
@@ -37,9 +39,7 @@ code.prettyprint {
   padding-right: 1em; /* space after numbers */
   text-align: right;
   display: inline-block;
-  color: #aaa;
-  //background: #ececec;
-  //border-right: 1px solid #ddd;
+  color: $grey;
   margin-right: 0.5em;
   padding: 2px 8px 2px 0;
   -webkit-touch-callout: none;

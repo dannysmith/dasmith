@@ -1,12 +1,9 @@
 <% content_for :title do %>Articles by Danny Smith<% end %>
-<header class="page-header">
-	<h1><a href="/">Articles</a></h1>
-	<p>by <a href="/about">Danny Smith</a></p>
-</header>
-<div class="container">
-	<ul class="articles-list">
-		<% @articles.each do |article| %>
-			<li><a href="/writing/<%= article.slug %>"><%= article.title %></a></li>
-		<% end %>
-	</ul>
-</div>
+
+<%= erb :'partials/_page_header' %>
+
+<ul class="articles-list articles-list-page">
+<% @articles.each do |article| %>
+	<li><a href="/writing/<%= article.slug %>"><%= article.title %></a></li>
+<% end %>
+</ul>

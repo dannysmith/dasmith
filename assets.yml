@@ -10,7 +10,7 @@ javascripts:
     - javascripts/application.js
   js/vendor/jquery.min:
     - bower_components/jquery/dist/jquery.js
-  js/vendor/modenizr.min:
+  js/vendor/modernizr.min:
     - bower_components/modernizr/modernizr.js
 
 stylesheets:

@@ -1,14 +1,7 @@
 <% content_for :title do %>danny.is/writing<% end %>
-<header class="page-header">
-	<h1 class='h1-home'><span class="danny">danny</span><span class="dot">.</span><span class="is">is</span><span class="slash">/</span><span class="writing">writing</span></h1>
-	<nav class="nav-main container" role="navigation">
-		<ul>
-			<li><a href="/writing/articles">Articles</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/reading">Reading</a></li>
-		</ul>
-	</nav>
-</header>
+
+<%= erb :'partials/_page_header' %>
+
 <div class="container">
 	<% @articles.each do |article| %>
 	<article class="article">
@@ -18,10 +11,4 @@
 		</div>
 	</article>
 	<% end %>
-
-	<nav class="pagination clearfix">
-		<% unless @page_count == 1 %>
-			<a href="/writing/articles/2">&larr; Older</a>
-		<% end %>
-	</nav>
 </div>

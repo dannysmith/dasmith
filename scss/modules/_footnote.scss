@@ -1,0 +1,27 @@
+.footnotes {
+  li {font-size: .75em;}
+
+  hr {
+    background-color: rgba(0,0,0,0.075);
+    color: rgba(0,0,0,0.075);
+    height: 1px;
+    border: none;
+  }
+
+  p {
+    padding: 0 5px;
+    border-radius: 5px;
+  }
+}
+
+p.flash {
+  background: $cream;
+}
+
+a[rel='footnote'],
+a[rev='footnote'] {
+  padding: 0 5px;
+  background: $cream;
+  color: $dark-purple;
+  border-radius: 5px;
+}

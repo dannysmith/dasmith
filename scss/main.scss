@@ -9,23 +9,23 @@
 // Helpers & Base
 @import "helpers";
 @import "base";
+@import "layout";
 
 // Modules
-@import "page_header";
-@import "page_footer";
-@import "pagination";
-@import "code";
-@import "notice";
-@import "nav_main";
-@import "figure";
-@import "syntax";
-@import "article";
-@import "article_list";
-@import "about";
-@import "font-awesome";
-@import "magnific_popup";
-@import "big_screens";
-@import "readability";
+@import "modules/page_header";
+@import "modules/page_footer";
+@import "modules/table";
+@import "modules/code";
+@import "modules/nav_main";
+@import "modules/figure";
+@import "modules/syntax";
+@import "modules/article";
+@import "modules/article_list";
+@import "modules/about";
+@import "modules/font-awesome";
+@import "modules/magnific_popup";
+@import "modules/readability";
+@import "modules/footnote";
 
 // Shame
 @import "shame";

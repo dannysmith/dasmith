@@ -1,20 +1,34 @@
 <div class="readability">
-<% @bookmarks.each do |bookmark| %>
-  <% unless bookmark.article.title.match(/^https?:\/\//) %>
-    <div class="container">
-      <div class="card">
-        <figure class="front" style="background-image: url('<%= bookmark.article.lead_image_url %>')">
-          <a href="<%= bookmark.article.url %>">
-            <%= bookmark.article.title %>
-          </a>
-        </figure>
-        <figure class="back">
-          <a href="<%= bookmark.article.url %>">
-            <%= bookmark.article.excerpt %>
-          </a>
-        </figure>
-      </div>
+  <div class="container">
+    <div class="card">
+      <figure class="front" style="background-image: url('/images/newlogo.png')">
+        <a href="/">
+          Home Page
+        </a>
+      </figure>
+      <figure class="back">
+        <a href="/">
+          Back to The Blog
+        </a>
+      </figure>
     </div>
+  </div>
+  <% @bookmarks.each do |bookmark| %>
+    <% unless bookmark.article.title.match(/^https?:\/\//) %>
+      <div class="container">
+        <div class="card">
+          <figure class="front" style="background-image: url('<%= bookmark.article.lead_image_url %>')">
+            <a href="<%= bookmark.article.url %>">
+              <%= bookmark.article.title %>
+            </a>
+          </figure>
+          <figure class="back">
+            <a href="<%= bookmark.article.url %>">
+              <%= bookmark.article.excerpt %>
+            </a>
+          </figure>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 </div>

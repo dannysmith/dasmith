@@ -61,6 +61,7 @@ class DASmith < Sinatra::Base
 
   get '/writing' do
     @articles = @published_articles[0..(ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
+    @more_articles = @published_articles[ENV['ARTICLE_PAGE_LIMIT'].to_i..-1]
     erb :index
   end
 
@@ -78,6 +79,7 @@ class DASmith < Sinatra::Base
     a = (@page - 1) * ENV['ARTICLE_PAGE_LIMIT'].to_i
 
     @articles = @published_articles[a..(a + ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
+    @more_articles = @published_articles[ENV['ARTICLE_PAGE_LIMIT'].to_i..-1]
 
     if @articles.nil?
       # There are no articles for that page

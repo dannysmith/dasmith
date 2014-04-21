@@ -1,17 +1,8 @@
 <% content_for :title do %>About Danny Smith<% end %>
 
-<header class="page-header">
-	<h1><a href="/">Who am I?</a></h1>
-		<nav class="nav-main container" role="navigation">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/writing/articles">Articles</a></li>
-			<li><a href="/reading">Reading</a></li>
-		</ul>
-	</nav>
-</header>
-<div class="container container-about-me article-body">
-	<img src="/images/danny.jpeg" alt="A ridiculous picture of Danny Smith">
+<%= erb :'partials/_page_header' %>
+
+<div class="container-about-me">
 	<p>I'm a chap with a moustache who does a great many things – some of them well; some of them poorly. Chief among these things:</p>
 	<ul>
 		<li><span>I design user interfaces</span></li>

@@ -1,8 +1,9 @@
 <% content_for :title do %>About Danny Smith<% end %>
 
-<%= erb :'partials/_page_header' %>
+<%= erb :'partials/_page_header', locals: {section_title: 'about'} %>
 
 <div class="container-about-me">
+	<h1>About Danny</h1>
 	<p>I'm a chap with a moustache who does a great many things – some of them well; some of them poorly. Chief among these things:</p>
 	<ul>
 		<li><span>I design user interfaces</span></li>

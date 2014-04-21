@@ -1,7 +1,7 @@
 <header class="page-header">
   <a href="/">
-    <div class="logo"></div>
-    <h1>danny.is/writing</h1>
+    <div class="logo" style="background-image: url('<%= @logo_path %>')"></div>
+    <h1>danny.is/<%= defined?(section_title) ? section_title : "writing" %> </h1>
   </a>
   <nav class="nav-main" role="navigation">
     <ul>

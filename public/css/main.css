@@ -500,7 +500,7 @@ ul li > span, ol li > span {
   height: 7em;
   border-radius: 50%;
   border: 5px solid white;
-  background: #bcafb8 url("/images/newlogo.png") center;
+  background: #bcafb8 center;
   background-size: cover;
   margin: 1em auto .5em;
   z-index: 2; }
@@ -577,7 +577,8 @@ code.prettyprint {
   padding: 2px 4px;
   color: #8f3643;
   border: 1px solid #e1e1e8;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-size: .7em; }
 
 .highlight pre {
   position: relative;
@@ -1042,9 +1043,11 @@ figure > figcaption:before {
   color: #889093; }
 
 .container-about-me {
-  margin: 5em auto;
+  margin: 1em auto;
   padding: 0;
   max-width: 30em; }
+.container-about-me h1 {
+  text-align: center; }
 
 /*!
  *  Font Awesome 3.2.1

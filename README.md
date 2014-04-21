@@ -2,7 +2,7 @@
 
 # Danny Smith's Website
 
-This is [http://dasmith.co.uk]. It's a simple [Sinatra](http://www.sinatrarb.com/) application that parses [markdown](http://daringfireball.net/projects/markdown/) files and turns them into a simple blog. It was thrown together in a day and so is a little rough around the edges. Why did I build this instead of using a static site genrator like [Middleman](http://middlemanapp.com/)? Well, for a number of reasons:
+This is [danny.is](http://danny.is). It's a simple [Sinatra](http://www.sinatrarb.com/) application that parses [markdown](http://daringfireball.net/projects/markdown/) files and turns them into a simple blog. It was thrown together in a day and so is a little rough around the edges. Why did I build this instead of using a static site genrator like [Middleman](http://middlemanapp.com/)? Well, for a number of reasons:
 
 * I want *absolute* control over everything. I'm not a fan of magic unless I understand it.
 * I wanted an app, rather than a static site. Although I don;t do much at the moment, I might want to add some dynamic stuff in the future.

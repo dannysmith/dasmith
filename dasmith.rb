@@ -51,6 +51,8 @@ class DASmith < Sinatra::Base
       @published_articles << article unless article.publish_date > Date.today
     end
     @page_count = (@published_articles.size.to_f / ENV['ARTICLE_PAGE_LIMIT'].to_f).ceil
+
+    @logo_path = "/images/logo#{rand(1..7)}.png"
   end
 
   ##################### WEB ROUTES #####################
@@ -62,6 +64,7 @@ class DASmith < Sinatra::Base
   get '/writing' do
     @articles = @published_articles[0..(ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
     @more_articles = @published_articles[ENV['ARTICLE_PAGE_LIMIT'].to_i..-1]
+    @logo_path = "/images/logo1.png"
     erb :index
   end
 
@@ -90,8 +93,13 @@ class DASmith < Sinatra::Base
   end
 
   get '/writing/:slug/?' do
+    @more_articles = []
     @published_articles.each do |a|
-      @article = a if a.slug == params[:slug]
+      if a.slug == params[:slug]
+        @article = a
+      else
+        @more_articles << a
+      end
     end
 
     if @article

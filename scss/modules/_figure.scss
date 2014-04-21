@@ -1,13 +1,12 @@
 figure {
-	padding: 0; margin: 2em 0;
-	max-width: $max-width;
-	text-align: center;
-
+	position: relative;
 	counter-increment: articleFigureCounter;
+	background: $light-purple;
+	margin: 0;
+	padding: 1em 1em 1em 0;
 
 	img {
-		max-width: 100%;
-		border: 1px solid rgba(0,0,0,0.1);
+		width: 100%;
 	}
 
 	img:hover {
@@ -16,32 +15,29 @@ figure {
 	}
 
 	> figcaption {
-		font-size: .7em;
-		font-style: italic;
-		color: lighten($base-text-color, 20%);
+		font-size: .75em;
+		color: $black;
+		text-align: center;
+
+		@media screen and (min-width: 62em) {
+			font-size: 1em;
+		}
+
+		@media screen and (min-width: 80em) {
+			display: block;
+			position: absolute;
+			top: 1.25em;
+			left: 0;
+			width: 10em;
+			text-align: left;
+			font-size: .75em;
+			padding: .5em;
+			background: $dark-purple;
+			color: $white;
+		}
 	}
 
 	> figcaption:before {
 		content: "Figure " counter(articleFigureCounter) ": "
-	}
-}
-
-table {
-	width: 100%;
-	border-collapse: collapse;
-	border: 1px solid rgba(0,0,0,0.1);
-
-	th {
-		font-family: $sans-font;
-		border-bottom: 2px solid $highlight-color;
-	}
-
-	td, th {
-		padding: 5px;
-		border-right: 1px solid rgba(0,0,0,0.1);
-	}
-
-	tr:nth-child(even) td {
-		background: rgba(200,200,200,0.1);
 	}
 }

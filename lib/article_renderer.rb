@@ -67,5 +67,11 @@ class ArticleRenderer < Redcarpet::Render::HTML
   def list_item(text, list_type)
     "<li><span>#{text}</span></li>"
   end
+
+  def table(header, body)
+    "<div class=\"table-wrapper\">
+       <table>#{header}#{body}</table>
+     </div>"
+  end
 end
 

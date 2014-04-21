@@ -9,11 +9,12 @@
 // Helpers & Base
 @import "helpers";
 @import "base";
+@import "layout";
 
 // Modules
 @import "modules/page_header";
 @import "modules/page_footer";
-@import "modules/pagination";
+@import "modules/table";
 @import "modules/code";
 @import "modules/nav_main";
 @import "modules/figure";
@@ -24,6 +25,7 @@
 @import "modules/font-awesome";
 @import "modules/magnific_popup";
 @import "modules/readability";
+@import "modules/footnote";
 
 // Shame
 @import "shame";

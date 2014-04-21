@@ -1,0 +1,70 @@
+@mixin a-centre($breakpoint, $margin) {
+  margin-left: 1em;
+  margin-right: 1em;
+  @media screen and (min-width: $breakpoint) {
+    margin-left: $margin;
+    margin-right: $margin;
+  }
+}
+
+@mixin a-left($breakpoint, $margin) {
+  margin-right: 1em;
+  padding-left: 1em;
+  @media screen and (min-width: $breakpoint) {
+    margin-right: $margin;
+    padding-left: $margin;
+  }
+}
+
+@mixin a-right($breakpoint, $margin) {
+  margin-left: 1em;
+  @media screen and (min-width: $breakpoint) {
+    margin-left: $margin;
+  }
+}
+
+
+
+// Layout
+
+.article {
+  > h1 {
+    @include a-centre(31em, 5%);
+    @include a-centre(62em, 15%);
+    @include a-centre(80em, 25%);
+  }
+}
+
+.article-body {
+  > p,
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > ul,
+  > ol,
+  > .table-wrapper,
+  > .footnotes,
+  > .gist {
+    @include a-centre(31em, 5%);
+    @include a-centre(62em, 15%);
+    @include a-centre(80em, 25%);
+  }
+
+  > figure,
+  > blockquote {
+    @include a-left(31em, 5%);
+    @include a-left(62em, 15%);
+    @include a-left(80em, 25%);
+  }
+
+  > .highlight {
+    @include a-right(31em, 5%);
+    @include a-right(62em, 15%);
+    @include a-right(80em, 25%);
+  }
+}
+
+.highlight, .article-image {
+    margin: 3em 0;
+}

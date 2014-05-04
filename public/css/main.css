@@ -624,6 +624,10 @@ kbd {
   border-radius: 3px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
 
+i {
+  font-family: "inconsolata", Courier, monospace;
+  word-wrap: break-word; }
+
 .gist .gist-file {
   border-radius: 0 !important;
   border: none !important; }
@@ -982,7 +986,8 @@ figure > figcaption:before {
   margin-left: 0;
   padding-top: 1em;
   padding-right: 1em;
-  padding-bottom: 1em; }
+  padding-bottom: 1em;
+  margin-top: 3em; }
 .article-body blockquote p {
   font-size: 1.3em; }
 .article-body blockquote footer {

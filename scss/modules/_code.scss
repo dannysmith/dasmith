@@ -71,6 +71,13 @@ kbd {
 
 
 
+// Code that's just big blocks of HEX or RegExp or similar. It should wrap in a block.
+i {
+  font-family: "inconsolata", Courier, monospace;
+  word-wrap: break-word;
+}
+
+
 //Gist Code Overrides
 
 .gist .gist-file {

@@ -52,7 +52,7 @@ class DASmith < Sinatra::Base
     end
     @page_count = (@published_articles.size.to_f / ENV['ARTICLE_PAGE_LIMIT'].to_f).ceil
 
-    @logo_path = "/images/logo#{rand(1..7)}.png"
+    @logo_path = "/images/logo#{rand(1..6)}.png"
   end
 
   ##################### WEB ROUTES #####################

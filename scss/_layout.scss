@@ -45,7 +45,8 @@
   > ol,
   > .table-wrapper,
   > .footnotes,
-  > .gist {
+  > .gist,
+  > aside {
     @include a-centre(31em, 5%);
     @include a-centre(62em, 15%);
     @include a-centre(80em, 25%);

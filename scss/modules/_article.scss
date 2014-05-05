@@ -96,5 +96,26 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+	> aside {
+		position: relative;
+		font-size: .8em;
+		color: $dark-purple;
+		border: 1px solid $mint;
+		border-left-width: 5px;
+		border-radius: 3px;
+		padding: 0.5em 1em;
+
+		&:before {
+			content: "aside";
+			font-style: italic;
+			font-family: $serif-font;
+			position: absolute;
+			bottom: 0; right: 0;
+			font-size: 1.5em;
+			color: $light-purple;
+			line-height: 1;
+		}
+	}
 }
 

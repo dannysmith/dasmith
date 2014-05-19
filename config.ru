@@ -19,7 +19,9 @@ if ENV['RACK_ENV'] == "development"
   use Rack::LiveReload
 end
 
-# Performance optimization
-# use Rack::Deflater #Enable GZip Compression
+if ENV['RACK_ENV'] == "production"
+  # Performance optimization
+  use Rack::Deflater #Enable GZip Compression
+end
 
 run DASmith

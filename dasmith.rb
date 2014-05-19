@@ -53,6 +53,9 @@ class DASmith < Sinatra::Base
     @page_count = (@published_articles.size.to_f / ENV['ARTICLE_PAGE_LIMIT'].to_f).ceil
 
     @logo_path = "/images/logo#{rand(1..6)}.png"
+
+    # Switch on Caching
+    cache_control :public, :must_revalidate, :max_age => 60
   end
 
   ##################### WEB ROUTES #####################

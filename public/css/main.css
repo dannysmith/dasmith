@@ -961,6 +961,11 @@ figure > figcaption:before {
 .article-body h1, .article-body h2 {
   font-size: 1.2em;
   margin-top: 2em; }
+.article-body p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
 .article-body a[rel="footnote"] {
   font-size: .7em; }
 .article-body a[rel="footnote"]:hover {

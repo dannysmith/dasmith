@@ -21,6 +21,14 @@
 		margin-top: 2em;
 	}
 
+	// Paragraphs
+	p {
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+	}
+
 	//Footnotes
 	a[rel="footnote"] {
 		font-size: .7em;

@@ -965,7 +965,18 @@ figure > figcaption:before {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
-  hyphens: auto; }
+  -o-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  -o-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -o-hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-chars: 6 3 3; }
 .article-body a[rel="footnote"] {
   font-size: .7em; }
 .article-body a[rel="footnote"]:hover {

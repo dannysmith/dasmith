@@ -69,7 +69,7 @@ brew install ruby-build
 
 If you've already got homebrew installed, check that you have `brew --repository/Library/Contributions/brew_bash_completion.sh` in your `.bash_profile`.
 
-Get rid of the default gems from before you were using RVM (I also updated the system gems just so I had a 'clean' system installation of ruby -- not that I'll ever use it):
+Get rid of the default gems from before you were using RVM (I also updated the the system gems and rubygems itself just so I had a 'clean' system installation of ruby):
 
 ````bash
 which ruby
@@ -77,6 +77,7 @@ ruby -v
 gem list
 for i in `gem list --no-versions`; do sudo gem uninstall -aIx $i; done
 gem update --system
+gem update
 ````
 
 Double-check for old versions, just in case:

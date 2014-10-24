@@ -1,6 +1,6 @@
 # DASmith main Application class.
 class DASmith < Sinatra::Base
-  use Rack::MethodOverride ##<-- Required for put delete etc
+  use Rack::MethodOverride ## <-- Required for put delete etc
   helpers Sinatra::ContentFor
 
   $articles = []
@@ -27,7 +27,7 @@ class DASmith < Sinatra::Base
     # Pull in the markdown files and put them in the $articles array.
     puts 'Loading Articles...'
     Dir[File.dirname(__FILE__) + '/articles/*.md'].each do |f|
-      article = Article.new(f, @images)
+      article = Article.new f, @images
       puts File.basename f
       $articles << article
     end
@@ -40,10 +40,6 @@ class DASmith < Sinatra::Base
     Readit::Config.parser_token = ENV['READABILITY_PARSER_TOKEN']
   end
 
-
-
-
-
   before do
     # Put only the published articles in an array.
     @published_articles = []
@@ -55,7 +51,7 @@ class DASmith < Sinatra::Base
     @logo_path = "/images/logo#{rand(1..6)}.png"
 
     # Switch on Caching
-    cache_control :public, :must_revalidate, :max_age => 60
+    cache_control :public, :must_revalidate, max_age: 60
   end
 
   ##################### WEB ROUTES #####################
@@ -67,7 +63,7 @@ class DASmith < Sinatra::Base
   get '/writing' do
     @articles = @published_articles[0..(ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
     @more_articles = @published_articles[ENV['ARTICLE_PAGE_LIMIT'].to_i..-1]
-    @logo_path = "/images/logo1.png"
+    @logo_path = '/images/logo1.png'
     erb :index
   end
 
@@ -116,12 +112,12 @@ class DASmith < Sinatra::Base
   get '/reading' do
 
     @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],
-                                    :site=>"https://www.readability.com/",
-                                    :access_token_path => "/api/rest/v1/oauth/access_token/")
+                                    site: 'https://www.readability.com/',
+                                    access_token_path: '/api/rest/v1/oauth/access_token/')
 
-    @access_token = @consumer.get_access_token(nil, {}, {:x_auth_mode => 'client_auth',
-                                                         :x_auth_username => ENV['READABILITY_KEY'],
-                                                         :x_auth_password => ENV['READABILITY_PASSWORD'] })
+    @access_token = @consumer.get_access_token(nil, {}, x_auth_mode: 'client_auth',
+                                                        x_auth_username: ENV['READABILITY_KEY'],
+                                                        x_auth_password: ENV['READABILITY_PASSWORD'])
 
     @api = Readit::API.new @access_token.token, @access_token.secret
 
@@ -129,7 +125,6 @@ class DASmith < Sinatra::Base
 
     erb :reading, layout: :layout_dark
   end
-
 
   ##################### JSON ROUTES #####################
 

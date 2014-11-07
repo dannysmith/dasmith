@@ -108,7 +108,6 @@ class DASmith < Sinatra::Base
     end
   end
 
-
   get '/reading' do
 
     @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],

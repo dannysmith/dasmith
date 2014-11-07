@@ -9,7 +9,7 @@ notification :growl
 #   watch 'dasmith.rb'
 # end
 
-guard 'puma', :port => 3001 do
+guard 'puma', port: 3001 do
   watch('Gemfile.lock')
   watch %r{^(lib|models)/.*\.rb}
   watch %r{^articles/.*\.md}
@@ -27,9 +27,9 @@ guard :sass, input: 'scss', output: 'public/css', style: 'expanded', all_on_star
 
 # Concatinate JS using Jammit (could use for CSS too).
 guard :jammit,
-  :config_path => "assets.yml",
-  :output_folder => "./public",
-  :package_on_start => true do
+  config_path: 'assets.yml',
+  output_folder: './public',
+  package_on_start: true do
     watch %r{javascripts/.+\.js$}
     watch 'public/css/main.css'
     watch 'assets.yml'

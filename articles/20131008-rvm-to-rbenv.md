@@ -86,19 +86,24 @@ Double-check for old versions, just in case:
 /usr/bin/gem list --no-versions
 ````
 
-Install ruby using rbenv and set 2.0.0 as the global default:
+Install [rbenv-default-gems](https://github.com/sstephenson/rbenv-default-gems) and include the gems that I always want installed with new ruby versions:
 
 ````bash
-rbenv install 1.9.3-p448
-rbenv install 2.0.0-p247
-rbenv global 2.0.0-p247
+brew install rbenv-default-gems
+echo -e "bundler\nhirb\nbrice\nawesome_print\njson\nrake\http\npry" >> ~/.rbenv/default-gems
 ````
 
-Install any global gems -- there is some stuff I don't want to manage in bundles:
+Install ruby using rbenv and set 2.1.4 as the global default:
+
+````bash
+rbenv install 1.9.3-p550
+rbenv install 2.1.4
+````
+
+Rehash and check that the right version is installed, and that all the gems have been installed correctly:
 
 ````bash
 ruby --version
-gem install bundler hirb json rake rdoc rerun sass shotgun guard guard-shotgun thor wirble showterm http pry bundler
 rbenv rehash
 gem list
 ````
@@ -119,9 +124,9 @@ The last thing I did was `cd` into a project using 1.9.3 and check everything wa
 
 ````bash
 cd /old-project
-ruby -v #=> 2.0.0-p247
-rbenv local 1.9.3-p448
-ruby -v #=> 1.9.3-p448
+ruby -v #=> 2.1.4-pXXX
+rbenv local 1.9.3-p550
+ruby -v #=> 1.9.3-p550
 bundle install # Does it work?
 cd ..
 ruby -v #=> 2.0.0-p247
@@ -132,16 +137,3 @@ sudo /usr/libexec/locate.updatedb # Update locate database
 That's it.
 
 Like I said, this isn't meant to be a complete walkthrough, I just hope that some of the bits here will be useful to anyone else doing the same thing.
-
-
-
-
-
-
-
-
-
-
-
-
-

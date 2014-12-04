@@ -12,20 +12,23 @@
 @import "layout";
 
 // Modules
-@import "modules/page_header";
-@import "modules/page_footer";
-@import "modules/table";
-@import "modules/code";
-@import "modules/nav_main";
-@import "modules/figure";
-@import "modules/syntax";
+@import "modules/about";
 @import "modules/article";
 @import "modules/article_list";
-@import "modules/about";
+@import "modules/article_list_page";
+@import "modules/aside";
+@import "modules/blockquote";
+@import "modules/code";
+@import "modules/figure";
 @import "modules/font-awesome";
-@import "modules/magnific_popup";
-@import "modules/readability";
 @import "modules/footnote";
+@import "modules/magnific_popup";
+@import "modules/nav_main";
+@import "modules/page_footer";
+@import "modules/page_header";
+@import "modules/readability";
+@import "modules/syntax";
+@import "modules/table";
 
 // Shame
 @import "shame";

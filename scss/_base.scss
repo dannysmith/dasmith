@@ -46,6 +46,27 @@ a:visited,
 a:active {
   text-decoration: none;
   color: $navy;
+  background-image: linear-gradient(to bottom, $white 75%, #333332 75%);
+  background-size: 2px 2px;
+  background-position: 0px 24px;
+  background-repeat: repeat-x;
+
+  text-shadow: 2px 0 $white,
+              -2px 0 $white,
+              -3px 0 $white,
+               0 2px $white,
+              -1px 1px $white,
+               1px 1px $white;
+}
+
+h1 {
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    background: none;
+    text-shadow: none;
+  }
 }
 
 a:hover {

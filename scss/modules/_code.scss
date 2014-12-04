@@ -8,9 +8,10 @@ code,
 
 // Inline Code Tags
 code.prettyprint {
-  padding: 2px 4px;
+  display: inline-block;
+  padding: 0 8px;
   color: $red;
-  border: 1px solid rgb(225, 225, 232);
+  border: 1px solid rgba(225, 225, 232, .8);
   border-radius: 2px;
   font-size: .8em;
 }
@@ -24,7 +25,6 @@ code.prettyprint {
   word-break: inherit;
   word-wrap: inherit;
   font-size: 0.9em;
-  //font-weight: bold;
   padding: 1em 0;
 
      border-top: 1px solid rgba(0,0,0,0.075);
@@ -52,6 +52,7 @@ code.prettyprint {
   opacity: 0.6;
 }
 
+// Make line numbers appear on hover at wider viewports
 @media screen and (min-width: 400px) {
   .highlight pre > span:before {visibility: hidden;}
   .highlight pre:hover > span:before {visibility: visible;}
@@ -59,7 +60,6 @@ code.prettyprint {
 
 
 // Keyboard Tags
-
 kbd {
   font-size: 1rem;
   padding: 0.2em 0.5em;
@@ -86,7 +86,6 @@ i {
 }
 
 .gist .gist-file .gist-data {
-  //border: 1px solid #ddd !important;
 	border: none !important;
 }
 .gist .gist-file,

@@ -1,4 +1,4 @@
-.articles-list {
+.article-list ul {
 	list-style: none;
   font-size: 1em;
   margin: 0 auto 2em;
@@ -13,16 +13,25 @@
     margin: 0;
     border-bottom: 1px solid rgba(0,0,0,0.3);
   }
+
   li:last-child {border-bottom: none;}
 
-  li a {color: $white;}
+  a {
+    text-shadow: none;
+    background: none;
+  }
 }
 
-.articles-list-page {
-  margin: 5em auto;
-  text-align: center;
-  li:nth-child(n+1) a  {color: $navy;}
-  li:nth-child(2n+2) a {color: $dark-purple;}
-  li:nth-child(3n+3) a {color: $red}
-  li:nth-child(4n+4) a {color: $green}
+.article-list h2 {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 2em 0 0 0;
+  @media screen and (max-width: 51em) {
+    padding: 1em;
+  }
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 1em;
+  color: rgba(0,0,0,0.3);
 }

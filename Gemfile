@@ -55,7 +55,7 @@ group :development do
   gem 'rack-livereload'
   gem 'guard-livereload'
   gem 'guard-sass'
-  gem 'guard-jammit'
+  gem 'guard-jammit', git: 'https://github.com/dannysmith/guard-jammit.git'
   gem 'guard-shell'
   gem 'shotgun'
   # gem 'guard-shotgun', git:'https://github.com/rchampourlier/guard-shotgun.git'

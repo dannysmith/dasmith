@@ -567,7 +567,7 @@ ul li > span, ol li > span {
 .articles-list-page li:nth-child(3n+3) a {
   color: #8F3643; }
 .articles-list-page li:nth-child(4n+4) a {
-  color: #889093; }
+  color: #455645; }
 
 .article-body > aside {
   position: relative;
@@ -1342,7 +1342,7 @@ img.mfp-img {
   width: 13%; }
 
 .top-bar-6 {
-  background-color: #889093;
+  background-color: #455645;
   width: 15%; }
 
 .page-header {
@@ -1373,19 +1373,19 @@ img.mfp-img {
 
 .readability .container {
   float: left;
-  margin: 0;
+  margin: 1em;
   padding: 0;
   width: 200px;
   height: 200px;
   perspective: 1000;
   -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  overflow: hidden; }
+  -moz-perspective: 1000; }
 
 .readability .container:hover .card, .readability .container.hover .card {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg); }
+  -moz-transform: rotateY(180deg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
 
 .readability .card {
   position: relative;
@@ -1428,6 +1428,19 @@ img.mfp-img {
   color: white;
   padding: 1em; }
 
+.readability .back a {
+  position: absolute;
+  background: #ffffff;
+  border: 5px solid #8F3643;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "myriad-pro", "ff-tisa-web-pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  color: #8F3643;
+  font-size: .6em;
+  padding: 1em; }
+
 .readability .container:nth-child(n+1) .front a {
   background: rgba(30, 0, 0, 0.6);
   color: rgba(255, 255, 255, 0.8); }
@@ -1444,17 +1457,21 @@ img.mfp-img {
   background: rgba(0, 30, 30, 0.6);
   color: rgba(255, 255, 255, 0.8); }
 
-.readability .back a {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-family: "jubilat", "jaf-facitweb", Georgia, Cambria, "Times New Roman", Times, serif;
-  color: white;
-  font-size: .6em;
-  padding: 1em; }
+.readability .container:nth-child(n+1) .back a {
+  color: #8F3643;
+  border-color: #8F3643; }
+
+.readability .container:nth-child(2n+2) .back a {
+  color: #455645;
+  border-color: #455645; }
+
+.readability .container:nth-child(3n+3) .back a {
+  color: #3D223B;
+  border-color: #3D223B; }
+
+.readability .container:nth-child(4n+4) .back a {
+  color: #4C5A78;
+  border-color: #4C5A78; }
 
 .highlight {
   background-color: #ffffff; }

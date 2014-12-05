@@ -124,7 +124,7 @@ class DASmith < Sinatra::Base
 
     @bookmarks, @meta = @api.bookmarks(archive: 1, per_page: 50, include_meta: true)
 
-    erb :reading, layout: :layout_dark
+    erb :reading
   end
 
   ##################### JSON ROUTES #####################

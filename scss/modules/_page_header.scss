@@ -1,3 +1,4 @@
+// Top Colour Bars
 .top-bar {
   height: $header-bar-height;
   > div {
@@ -13,6 +14,8 @@
 .top-bar-5 {background-color: $mint; width: 13%;}
 .top-bar-6 {background-color: $green; width: 15%;}
 
+
+// Page Header
 .page-header {
   text-align: center;
   position: relative;
@@ -35,22 +38,5 @@
     font-size: 1em;
     margin: 0;
     color: $black;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0; margin: 0;
-  }
-
-  li {
-    display: inline;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: .7em;
-    padding: .7em;
-
-    a {color: $grey;}
-    a:hover {color: inherit;}
   }
 }

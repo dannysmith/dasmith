@@ -72,72 +72,9 @@
 		background: $cream;
 	}
 
-	// Blockquote
-	blockquote {
-		position: relative;
-		font-style: italic;
-		background: $navy;
-		color: $white;
-		margin-left: 0;
-		padding-top: 1em;
-		padding-right: 1em;
-		padding-bottom: 1em;
-		margin-top: 3em;
-		margin-bottom: 3em;
-
-		p {font-size: 1.3em;}
-
-		footer {
-			font-size: .75em;
-			color: $black;
-			text-align: right;
-
-			a {color: $white;}
-
-			@media screen and (min-width: 62em) {
-				font-size: 1em;
-			}
-
-			@media screen and (min-width: 80em) {
-				display: block;
-				position: absolute;
-				top: 1.25em;
-				left: 0;
-				width: 10em;
-				text-align: left;
-				font-size: .75em;
-				padding: .5em;
-				background: $blue;
-				color: $navy;
-				a {color: $navy;}
-			}
-		}
-	}
-
 	> img {
 		display: block;
 		margin: 0 auto;
-	}
-
-	> aside {
-		position: relative;
-		font-size: .8em;
-		color: $dark-purple;
-		border: 1px solid $mint;
-		border-left-width: 5px;
-		border-radius: 3px;
-		padding: 0.5em 1em;
-
-		&:before {
-			content: "aside";
-			font-style: italic;
-			font-family: $serif-font;
-			position: absolute;
-			bottom: 0; right: 0;
-			font-size: 1.5em;
-			color: $light-purple;
-			line-height: 1;
-		}
 	}
 }
 

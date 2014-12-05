@@ -1,0 +1,36 @@
+// Blockquote
+blockquote {
+  position: relative;
+  font-style: italic;
+  background: $navy;
+  color: $white;
+  margin-left: 0;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  p {font-size: 1.3em;}
+
+  footer {
+    font-size: .75em;
+    text-align: right;
+    color: $white;
+    a, a:hover {
+      color: $white;
+      text-shadow: none;
+    }
+
+    @media screen and (min-width: 80em) {
+      display: block;
+      position: absolute;
+      top: 1.25em;
+      left: 0;
+      width: 10em;
+      text-align: left;
+      font-size: .75em;
+      padding: .5em;
+    }
+  }
+}

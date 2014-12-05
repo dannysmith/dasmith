@@ -2,33 +2,31 @@
   background: $navy;
   color: $white;
 
-  h2 {
-    max-width: 40em;
-    margin: 0 auto;
-    padding: 2em 0 0 0;
-    @media screen and (max-width: 51em) {
-      padding: 1em;
-    }
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 1em;
-    color: rgba(0,0,0,0.3);
+  a {color: $white;}
+
+  .article-list a:hover,
+  .article-list a:hover,
+  .article-list a:active {
+    padding-left: .25em;
+  }
+}
+
+.metalinks {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  font-size: .7em;
+
+  li {
+    display: inline;
+    line-height: 3;
+    padding: 0 .5em;
+    color: $white;
   }
 
-  .metalinks {
-    list-style: none;
-    margin: 0;
-    text-align: center;
-    font-size: .7em;
-
-    li {
-      display: inline;
-      line-height: 3;
-      padding: 0 .5em;
-      color: $white;
-    }
-
-    a {color: $white;}
+  a {
+    text-shadow: none;
+    background: none;
+    color: $white;
   }
 }

@@ -32,9 +32,11 @@ class DASmith < Sinatra::Base
       $articles << article
     end
 
+    # Sort in publish date order
     $articles.sort! { |a, b| a.publish_date <=> b.publish_date }
     $articles.reverse!
 
+    # Set up Readit config
     Readit::Config.consumer_key = ENV['READABILITY_KEY']
     Readit::Config.consumer_secret = ENV['READABILITY_SECRET']
     Readit::Config.parser_token = ENV['READABILITY_PARSER_TOKEN']
@@ -108,7 +110,6 @@ class DASmith < Sinatra::Base
     end
   end
 
-
   get '/reading' do
 
     @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],
@@ -123,7 +124,7 @@ class DASmith < Sinatra::Base
 
     @bookmarks, @meta = @api.bookmarks(archive: 1, per_page: 50, include_meta: true)
 
-    erb :reading, layout: :layout_dark
+    erb :reading
   end
 
   ##################### JSON ROUTES #####################

@@ -1,14 +1,7 @@
 <header class="page-header">
   <a href="/">
     <div class="logo" style="background-image: url('<%= @logo_path %>')"></div>
-    <h1>danny.is/<%= defined?(section_title) ? section_title : "writing" %> </h1>
+    <h1>danny.is/<%= defined?(section_title) ? section_title : "writing" %></h1>
   </a>
-  <nav class="nav-main" role="navigation">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/writing/articles">Articles</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/reading">Reading</a></li>
-    </ul>
-  </nav>
+  <%= erb :'partials/_navigation'%>
 </header>

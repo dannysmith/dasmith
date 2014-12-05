@@ -1,18 +1,8 @@
-<div class="readability">
-  <div class="container">
-    <div class="card">
-      <figure class="front" style="background-image: url('<%= @logo_path %>')">
-        <a href="/">
-          Home Page
-        </a>
-      </figure>
-      <figure class="back">
-        <a href="/">
-          Back to The Blog
-        </a>
-      </figure>
-    </div>
-  </div>
+<% content_for :title do %>Reading List<% end %>
+
+<%= erb :'partials/_page_header', locals: {section_title: 'reading'} %>
+
+<div class="readability clearfix">
   <% @bookmarks.each do |bookmark| %>
     <% unless bookmark.article.title.match(/^https?:\/\//) %>
       <div class="container">

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.1.4'
 
 gem 'rake'
 
@@ -12,7 +12,7 @@ gem 'cucumber'
 gem 'rspec'
 gem 'rack-test'
 gem 'coveralls', require: false
-#gem 'codeclimate-test-reporter', group: :test, require: nil
+# gem 'codeclimate-test-reporter', group: :test, require: nil
 
 # Server
 gem 'thin'
@@ -27,7 +27,7 @@ gem 'bourbon'
 
 # Others
 gem 'readit'
-gem 'redcarpet', :git => 'https://github.com/vmg/redcarpet.git'
+gem 'redcarpet', git: 'https://github.com/vmg/redcarpet.git'
 gem 'pygments.rb'
 gem 'builder'
 gem 'json'
@@ -46,7 +46,7 @@ group :development do
 
   # Minification
   gem 'jammit'
-  gem "uglifier"
+  gem 'uglifier'
 
   # Guard
   gem 'guard', '~> 2'
@@ -55,10 +55,10 @@ group :development do
   gem 'rack-livereload'
   gem 'guard-livereload'
   gem 'guard-sass'
-  gem 'guard-jammit'
+  gem 'guard-jammit', git: 'https://github.com/dannysmith/guard-jammit.git'
   gem 'guard-shell'
   gem 'shotgun'
-  #gem 'guard-shotgun', :git => 'https://github.com/rchampourlier/guard-shotgun.git'
+  # gem 'guard-shotgun', git:'https://github.com/rchampourlier/guard-shotgun.git'
   # gem 'guard-migrate' # For ActiveRecord https://github.com/guard/guard-migrate
 
   # Debugging
@@ -67,6 +67,6 @@ group :development do
 
   # Better Errors
   gem 'binding_of_caller'
-	gem 'better_errors'
+  gem 'better_errors'
 
 end

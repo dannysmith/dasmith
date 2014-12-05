@@ -2,8 +2,10 @@
 
 <%= erb :'partials/_page_header' %>
 
-<ul class="articles-list articles-list-page">
-<% @articles.each do |article| %>
-	<li><a href="/writing/<%= article.slug %>"><%= article.title %></a></li>
-<% end %>
-</ul>
+<div class="article-list articles-list-page">
+  <ul>
+  <% @articles.each do |article| %>
+  	<li><a href="/writing/<%= article.slug %>"><%= article.title %></a></li>
+  <% end %>
+  </ul>
+</div>

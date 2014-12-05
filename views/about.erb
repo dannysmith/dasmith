@@ -2,20 +2,22 @@
 
 <%= erb :'partials/_page_header', locals: {section_title: 'about'} %>
 
-<div class="container-about-me">
-	<h1>About Danny</h1>
-	<p>I'm a chap with a moustache who does a great many things – some of them well; some of them poorly. Chief among these things:</p>
-	<ul>
-		<li><span>I design user interfaces</span></li>
-		<li><span>I <a href="https://github.com/dannysmith">build websites</a> with <a href="http://https://www.ruby-lang.org">ruby</a> and <a href="http://sass-lang.com">Sass</a>.</span></li>
-		<li><span>I <a href="https://www.facebook.com/dannysmithmusic">play slide guitar, harmonica and sing blues music</a>.</span></li>
-		<li><span>I train developers in test at a <a href="http://www.spartaglobal.com">firm</a> in Richmond.</span></li>
-		<li><span>I teach people how to be <a href="https://www.facebook.com/acoctt">military skill-at-arms instructors</a>.</span></li>
-		<li><span>I manage the quality of weapons training plans and documentation for the <a href="http://www.raf.mod.uk/aircadets/">air cadet organisation</a> (So that one's a bit boring).</span></li>
-		<li><span>I twiddle my moustache.</span></li>
-		<li><span>I <a href="http://<%= ENV['BASE_DOMAIN'] %>/writing/articles">write</a> about any, and all, of the above.</span></li>
-	</ul>
+<div class="container">
+	<section class="article">
+		<h1><a href="/about">About Danny</a></h1>
+		<div class="article-body">
+			<p>I'm a chap with a moustache who does a great many things – some of them well; some of them poorly. Chief among these things:</p>
+			<ul>
+				<li><span>I <a href="https://github.com/dannysmith">build things</a> with <a href="http://https://www.ruby-lang.org">ruby</a> and <a href="http://sass-lang.com">Sass</a>.</span></li>
+				<li><span>I <a href="http://spartaglobal.com/academy">train developers</a>.</span></li>
+				<li><span>I <a href="https://www.facebook.com/dannysmithmusic">play slide guitar, harmonica and sing blues music</a>.</span></li>
+				<li><span>I teach people how to be <a href="https://www.facebook.com/acoctt">military skill-at-arms instructors</a>.</span></li>
+				<li><span>I twiddle my moustache.</span></li>
+				<li><span>I <a href="http://<%= ENV['BASE_DOMAIN'] %>/writing/articles">write</a> about any, and all, of the above.</span></li>
+			</ul>
 
-	<p>You can find me on <a href="https://twitter.com/dannysmith">twitter</a>, <a href="http://www.linkedin.com/in/dannyasmith">LinkedIn</a>, <a href="https://github.com/dannysmith">GitHub</a>, <a href="https://speakerdeck.com/dannysmith">Speakerdeck</a> and <a href="http://www.slideshare.net/dannysmith">Slideshare</a>.</p>
-	<p>Drop me a line.</p>
+			<p>You can find me on <a href="https://twitter.com/dannysmith">twitter</a>, <a href="http://www.linkedin.com/in/dannyasmith">LinkedIn</a>, <a href="https://github.com/dannysmith">GitHub</a>, <a href="https://speakerdeck.com/dannysmith">Speakerdeck</a> and <a href="http://www.slideshare.net/dannysmith">Slideshare</a>.</p>
+			<p>Drop me a line.</p>
+		</div>
+	</section>
 </div>

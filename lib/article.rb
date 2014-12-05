@@ -14,7 +14,7 @@ class Article
     meta = YAML.load(data[0])
     date = File.basename(file).split('-')[0]
 
-    if date.match /[0-9]{8}/
+    if date.match(/[0-9]{8}/)
       year = date[0..3].to_i
       month = date[4..5].to_i
       day = date[6..8].to_i

@@ -1,0 +1,17 @@
+<% content_for :title do %>Agile Toolkit<% end %>
+<%= erb :'partials/_page_header', locals: {section_title: 'agile'} %>
+
+<div class="article-body agile-intro">
+  <p>A series of tips, snippets and links that might be useful to agile teams and coaches.</p>
+</div>
+
+<ul class="agile-toolkit-list clearfix">
+  <% @notes.each do |note| -%>
+    <li>
+      <h3><%= note[:title] %></h3>
+      <div class="atkl-content">
+        <%= note[:content] %>
+      </div>
+    </li>
+  <% end -%>
+</ul>

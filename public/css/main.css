@@ -472,6 +472,37 @@ ul li > span, ol li > span {
 .highlight, .article-image {
   margin: 3em 0; }
 
+.agile-toolkit-list {
+  list-style-type: none;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0; }
+.agile-toolkit-list li {
+  display: block;
+  padding: 0;
+  color: #070707;
+  width: 80%;
+  border: 1px solid #8F3643;
+  margin: 1em auto 2em; }
+@media screen and (min-width: 40em) {
+  .agile-toolkit-list li {
+    width: 45%;
+    float: left;
+    margin: 1em 2.5% 3em; } }
+.agile-toolkit-list h3 {
+  text-align: center;
+  background: #8F3643;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 100;
+  padding: .25em; }
+
+.atkl-content {
+  padding: 1em; }
+
+.agile-intro {
+  text-align: center; }
+
 .article {
   margin-bottom: 5em;
   counter-reset: articleFigureCounter; }
@@ -556,6 +587,10 @@ ul li > span, ol li > span {
 @media screen and (max-width: 51em) {
   .article-list h2 {
     padding: 1em; } }
+
+.article-list-description {
+  color: #BDBDBD;
+  font-size: .8em; }
 
 .articles-list-page {
   margin: 5em auto;

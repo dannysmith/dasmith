@@ -31,6 +31,7 @@ gem 'redcarpet', git: 'https://github.com/vmg/redcarpet.git'
 gem 'pygments.rb'
 gem 'builder'
 gem 'json'
+gem 'evernote_oauth'
 
 group :production do
   gem 'newrelic_rpm'
@@ -63,6 +64,7 @@ group :development do
 
   # Debugging
   gem 'pry', '>= 0.9.12'
+  gem 'awesome_print'
   gem 'rubocop'
 
   # Better Errors

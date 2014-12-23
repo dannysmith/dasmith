@@ -5,6 +5,9 @@ require 'sinatra/content_for'
 require 'readit'
 require 'cgi'
 require 'json'
+require 'oauth'
+require 'oauth/consumer'
+require "evernote_oauth"
 
 # Require MyApp
 Dir[File.dirname(__FILE__) + '/lib/*'].each { |f| require f }
@@ -14,6 +17,7 @@ require './dasmith'
 
 # Development Requires
 if ENV['RACK_ENV'] == "development"
+  require 'pry'
   require 'rack-livereload'
   # Use livereload
   use Rack::LiveReload

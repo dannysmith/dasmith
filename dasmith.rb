@@ -110,6 +110,9 @@ class DASmith < Sinatra::Base
     end
   end
 
+
+
+  ####################### READABILITY ###################
   get '/reading' do
 
     @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],
@@ -126,6 +129,35 @@ class DASmith < Sinatra::Base
 
     erb :reading
   end
+
+
+  ###################### EVERNOTE AGILE NOTES ############
+
+  get '/agile/?' do
+    # NOTE: TOKEN WILL EXPIRE ON 22 DEC 2015.
+    # You can Renew it Here: https://dev.evernote.com/doc/articles/authentication.php#devtoken
+    if Date.today > Date.parse('2015-12-22')
+      "Ooops. It seems my Evernote API key has Expired. Could you tweet @dannysmith and let me know. Muchas gracias!"
+    else
+      @notes = get_evernote_notes 'notebook:"Agile Toolkit" tag:"published"'
+      erb :agile
+    end
+  end
+
+
+  ###################### EVERNOTE LINKS ############
+
+  get '/noting/?' do
+    if Date.today > Date.parse('2015-12-22')
+      "Ooops. It seems my Evernote API key has Expired. Could you tweet @dannysmith and let me know. Muchas gracias!"
+    else
+      @links = get_evernote_notes 'notebook:"danny.is Links"'
+      erb :links
+    end
+  end
+
+
+
 
   ##################### JSON ROUTES #####################
 
@@ -170,4 +202,36 @@ class DASmith < Sinatra::Base
     status 404
     erb :page404
   end
+
+
+
+
+  private
+
+  def get_evernote_notes(filter)
+    client = EvernoteOAuth::Client.new(
+      token: ENV['EVERNOTE_DEV_TOKEN'],
+      sandbox: false
+    )
+    note_store = client.note_store
+
+    # Create Filters
+    ev_filter = Evernote::EDAM::NoteStore::NoteFilter.new
+    ev_filter.words = filter
+
+    # Get Notes
+    notes_list = note_store.findNotes(ev_filter, 0, 1000)
+    notes = []
+
+    notes_list.notes.each do |note|
+      notes << {
+        title: note.title,
+        content: note_store.getNoteContent(note.guid),
+        url: note.attributes.sourceURL
+      }
+    end
+    return notes
+  end
+
+
 end

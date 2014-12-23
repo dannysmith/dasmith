@@ -3,9 +3,7 @@ ENV['READABILITY_KEY'] = ''
 ENV['READABILITY_SECRET'] = ''
 ENV['ARTICLE_PAGE_LIMIT'] = '3'
 ENV['READABILITY_PASSWORD'] = ''
-
-# heroku config:add BASE_DOMAIN="danny.is"
-# heroku config:add READABILITY_KEY=""
-# heroku config:add READABILITY_SECRET=""
-# heroku config:add ARTICLE_PAGE_LIMIT=3
-# heroku config:add READABILITY_PASSWORD=""
+ENV['EVERNOTE_CONSUMER_KEY'] = ''
+ENV['EVERNOTE_CONSUMER_SECRET'] = ''
+ENV['EVERNOTE_DEV_TOKEN'] = ''
+ENV['EVERNOTE_NOTESTORE_URL'] = ''

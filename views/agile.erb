@@ -6,12 +6,12 @@
 </div>
 
 <ul class="agile-toolkit-list clearfix">
-  <% @notes.each do |note| -%>
+  <% @notes.each do |note| %>
     <li>
       <h3><%= note[:title] %></h3>
       <div class="atkl-content">
         <%= note[:content] %>
       </div>
     </li>
-  <% end -%>
+  <% end %>
 </ul>

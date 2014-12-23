@@ -3,11 +3,11 @@
 
 <div class="article-list articles-list-page">
   <ul>
-  <% @links.each do |link| -%>
+  <% @links.each do |link| %>
     <li>
       <a href="<%= link[:url] %>"><%= link[:title] %></a>
       <div class="article-list-description"><%= link[:content] %></div>
     </li>
-  <% end -%>
+  <% end %>
   </ul>
 </div>

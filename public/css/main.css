@@ -482,25 +482,33 @@ ul li > span, ol li > span {
   padding: 0;
   color: #070707;
   width: 80%;
-  border: 1px solid #8F3643;
-  margin: 1em auto 2em; }
+  border: 1px solid #BDBDBD;
+  margin: 1em auto 2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  box-shadow: 0 2px 4px #e6e6e6; }
 @media screen and (min-width: 40em) {
   .agile-toolkit-list li {
     width: 45%;
     float: left;
     margin: 1em 2.5% 3em; } }
+.agile-toolkit-list li:hover .atkl-content {
+  background-color: #ffffff; }
 .agile-toolkit-list h3 {
-  text-align: center;
-  background: #8F3643;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
   margin: 0;
-  color: #ffffff;
-  font-weight: 100;
-  padding: .25em; }
+  color: #4C5A78;
+  padding: 1em; }
 
 .atkl-content {
   padding: 1em; }
 
-.agile-intro {
+.page-intro {
   text-align: center; }
 
 .article {
@@ -1407,7 +1415,7 @@ img.mfp-img {
   text-align: center; }
 
 .readability .container {
-  float: left;
+  display: inline-block;
   margin: 1em;
   padding: 0;
   width: 200px;

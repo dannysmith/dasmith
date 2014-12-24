@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.4'
+ruby '2.1.5'
 
 gem 'rake'
 
@@ -50,6 +50,7 @@ group :development do
   gem 'uglifier'
 
   # Guard
+  gem 'foreman'
   gem 'guard', '~> 2'
   gem 'guard-bundler'
   gem 'guard-foreman'

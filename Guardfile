@@ -1,6 +1,7 @@
 # # Guardfile
 notification :growl
 
+# Restart Server when files are changed.
 guard :foreman, port: 3001 do
   watch('Gemfile.lock')
   watch %r{^(lib|models)/.*\.rb}
@@ -33,8 +34,3 @@ guard :livereload do
   watch %r{public/.+\.(css|js|html)}
   watch %r{scss/.+\.(css|scss|sass)}
 end
-
-# guard :migrate do
-#   watch(%r{^db/migrate/(\d+).+\.rb})
-#   watch('db/seeds.rb')
-# end

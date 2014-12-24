@@ -2,6 +2,10 @@
 
 <%= erb :'partials/_page_header', locals: {section_title: 'reading'} %>
 
+<div class="article-body page-intro">
+  <p>Articles that I've recently archived in <a href="http://readability.com">readability</a>.</p>
+</div>
+
 <div class="readability clearfix">
   <% @bookmarks.each do |bookmark| %>
     <% unless bookmark.article.title.match(/^https?:\/\//) %>

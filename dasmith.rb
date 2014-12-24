@@ -162,7 +162,7 @@ class DASmith < Sinatra::Base
   ##################### JSON ROUTES #####################
 
   get '/articles.json' do
-
+    binding.pry
   end
 
   get '/articles/list.json' do

@@ -52,7 +52,7 @@ group :development do
   # Guard
   gem 'guard', '~> 2'
   gem 'guard-bundler'
-  gem 'guard-puma'
+  gem 'guard-foreman'
   gem 'rack-livereload'
   gem 'guard-livereload'
   gem 'guard-sass'

@@ -32,6 +32,16 @@ class DASmith < Sinatra::Base
       $articles << article
     end
 
+    # Load Draft Articles if we're in development
+    if ENV['RACK_ENV'] == 'development'
+      puts 'Loading Draft Articles...'
+      Dir[File.dirname(__FILE__) + '/articles/drafts/*.md'].each do |f|
+        article = Article.new f, @images
+        puts File.basename f
+        $articles << article
+      end
+    end
+
     # Sort in publish date order
     $articles.sort! { |a, b| a.publish_date <=> b.publish_date }
     $articles.reverse!

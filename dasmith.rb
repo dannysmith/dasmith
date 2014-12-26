@@ -230,7 +230,7 @@ class DASmith < Sinatra::Base
         url: note.attributes.sourceURL
       }
     end
-    return notes
+    return notes.reverse
   end
 
 

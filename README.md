@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/dannysmith/dasmith.png?label=ready&title=Ready)](https://waffle.io/dannysmith/dasmith)
 [![Build Status](https://travis-ci.org/dannysmith/dasmith.png?branch=master)](https://travis-ci.org/dannysmith/dasmith) [![Coverage Status](https://coveralls.io/repos/dannysmith/dasmith/badge.png)](https://coveralls.io/r/dannysmith/dasmith) [![Dependency Status](https://gemnasium.com/dannysmith/dasmith.png)](http://gemnasium.com/dannysmith/dasmith)
 
 # danny.is

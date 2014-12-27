@@ -36,7 +36,14 @@
   color: rgba(0,0,0,0.3);
 }
 
+// For use in the "notes" page.
 .article-list-description {
   color: $grey;
   font-size: .8em;
+
+  // This should override any styles applied using the style arrtibute, which have been pulled in through evernote.
+  div {
+    text-align: center !important;
+    color: $grey !important;
+  }
 }

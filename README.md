@@ -3,6 +3,8 @@
 
 # danny.is
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dannysmith/dasmith?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is [danny.is](http://danny.is). It's a [Sinatra](http://www.sinatrarb.com/) application that parses [markdown](http://daringfireball.net/projects/markdown/) files and turns them into a simple blog. It was thrown together in a day and so is a little rough around the edges. Why did I build this instead of using a static site genrator like [Middleman](http://middlemanapp.com/)? Well, for a number of reasons:
 
 * I want *absolute* control over everything. I'm not a fan of magic unless I understand it.

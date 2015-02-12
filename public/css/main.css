@@ -547,6 +547,8 @@ ul li > span, ol li > span {
   font-size: .7em; }
 .article-body a[rel="footnote"]:hover {
   text-decoration: none; }
+.article-body > img {
+  max-width: 100%; }
 .article-body del {
   position: relative;
   text-decoration: none;

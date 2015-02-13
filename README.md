@@ -1,9 +1,7 @@
-[![Stories in Ready](https://badge.waffle.io/dannysmith/dasmith.png?label=ready&title=Ready)](https://waffle.io/dannysmith/dasmith)
-[![Build Status](https://travis-ci.org/dannysmith/dasmith.png?branch=master)](https://travis-ci.org/dannysmith/dasmith) [![Coverage Status](https://coveralls.io/repos/dannysmith/dasmith/badge.png)](https://coveralls.io/r/dannysmith/dasmith) [![Dependency Status](https://gemnasium.com/dannysmith/dasmith.png)](http://gemnasium.com/dannysmith/dasmith)
-
 # danny.is
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dannysmith/dasmith?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dannysmith/dasmith?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Stories in Ready](https://badge.waffle.io/dannysmith/dasmith.png?label=ready&title=Ready)](https://waffle.io/dannysmith/dasmith)
+[![Build Status](https://travis-ci.org/dannysmith/dasmith.png?branch=master)](https://travis-ci.org/dannysmith/dasmith) [![Coverage Status](https://coveralls.io/repos/dannysmith/dasmith/badge.png)](https://coveralls.io/r/dannysmith/dasmith) [![Dependency Status](https://gemnasium.com/dannysmith/dasmith.png)](http://gemnasium.com/dannysmith/dasmith)
 
 This is [danny.is](http://danny.is). It's a [Sinatra](http://www.sinatrarb.com/) application that parses [markdown](http://daringfireball.net/projects/markdown/) files and turns them into a simple blog. It was thrown together in a day and so is a little rough around the edges. Why did I build this instead of using a static site genrator like [Middleman](http://middlemanapp.com/)? Well, for a number of reasons:
 

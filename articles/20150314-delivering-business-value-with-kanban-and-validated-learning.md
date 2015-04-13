@@ -43,7 +43,7 @@ Those two issues I've been pondering could be summarised as:
 
 While discussing [Grockit](https://grockit.com)'s system of work, Ries describes a simple method that I expect would go a long way towards addressing these: Add a *Validated* column to your Kanban board and give it a limit.
 
-What do I mean by *validated*? Grockit defined this as: "Knowing weather the story was a good idea to have been done in the first place".
+What do I mean by *validated*? Grockit defined this as: "Knowing whether the story was a good idea to have been done in the first place".
 
 We're essentially changing our definition of done to say "A story isn't done until we've proved, through actual observation, that is has real business value".
 

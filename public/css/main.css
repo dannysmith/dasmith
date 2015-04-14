@@ -618,6 +618,11 @@ blockquote ul span, blockquote ol span {
 .article-body > img {
   display: block;
   margin: 0 auto; }
+.article-body hr {
+  width: 30%;
+  border-top: rgba(0, 0, 0, 0.4);
+  color: transparent;
+  margin: 3em auto; }
 
 .article-list ul {
   list-style: none;

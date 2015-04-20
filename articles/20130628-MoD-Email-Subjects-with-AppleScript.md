@@ -1,5 +1,5 @@
 title: MoD Email Subjects with AppleScript
-post_id: 13
+article_id: 13
 slug: mod-email-subject-lines-with-applescript-osx
 
 #!!==========================================================

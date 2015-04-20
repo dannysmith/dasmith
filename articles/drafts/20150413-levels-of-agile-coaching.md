@@ -1,5 +1,5 @@
 title: "Levels of Application: Agile Coaching"
-post_id: 17
+article_id: 17
 slug: levels-of-agile-coaching
 
 #!!==========================================================

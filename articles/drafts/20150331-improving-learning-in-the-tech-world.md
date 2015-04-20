@@ -1,5 +1,5 @@
 title: DRAFT
-post_id: 16
+article_id: 16
 slug: rethinking-academies
 
 #!!==========================================================

@@ -2,10 +2,10 @@
 require 'sinatra'
 require 'rack/test'
 require 'rspec'
-require 'coveralls'
+# require 'coveralls'
 # require 'codeclimate-test-reporter'
 
-Coveralls.wear!
+# Coveralls.wear!
 # CodeClimate::TestReporter.start
 
 # Require my app

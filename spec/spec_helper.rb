@@ -1,3 +1,5 @@
+ENV['RACK_ENV']='test'
+
 # Require test gems
 require 'sinatra'
 require 'rack/test'

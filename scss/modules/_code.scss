@@ -1,20 +1,20 @@
 
 // All Code, everywhere - is not applied to plain <pre> elements.
-.gist,
-code,
-.highlight pre {
-	font-family: "inconsolata", Courier, monospace;
-}
+// .gist,
+// code,
+// .highlight pre {
+// 	font-family: "inconsolata", Courier, monospace;
+// }
 
-// Inline Code Tags
-code.prettyprint {
-  display: inline-block;
-  padding: 0 8px;
-  color: $red;
-  border: 1px solid rgba(225, 225, 232, .8);
-  border-radius: 2px;
-  font-size: .8em;
-}
+// // Inline Code Tags
+// code.prettyprint {
+//   display: inline-block;
+//   padding: 0 8px;
+//   color: $red;
+//   border: 1px solid rgba(225, 225, 232, .8);
+//   border-radius: 2px;
+//   font-size: .8em;
+// }
 
 // Fenced Blocks of Code
 .highlight pre {

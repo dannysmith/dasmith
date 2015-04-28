@@ -1,5 +1,5 @@
 title: New Job, New Website
-post_id: 2
+article_id: 2
 slug: new-job-new-website
 
 #!!==========================================================

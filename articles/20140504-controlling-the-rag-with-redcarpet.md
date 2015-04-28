@@ -1,5 +1,5 @@
 title: Controlling the Rag with Redcarpet
-post_id: 6
+article_id: 6
 slug: controlling-the-rag-with-redcarpet
 
 #!!==========================================================

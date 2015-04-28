@@ -3,8 +3,7 @@ class DASmith < Sinatra::Base
   use Rack::MethodOverride ## <-- Required for put delete etc
   helpers Sinatra::ContentFor
 
-  $articles = []
-  $page_count = 0
+  # -------------------------- CONFIG ------------------------ #
 
   configure :development do
     require 'better_errors'
@@ -18,47 +17,28 @@ class DASmith < Sinatra::Base
     require 'newrelic_rpm'
   end
 
+
   configure do
-
-    # Pull all of the article-images into @images array
-    @images = []
-    Dir[File.dirname(__FILE__) + '/public/article-images/*.{png,jpg,jpeg,gif,webp,svg}'].each { |img| @images << img }
-
-    # Pull in the markdown files and put them in the $articles array.
-    puts 'Loading Articles...'
-    Dir[File.dirname(__FILE__) + '/articles/*.md'].each do |f|
-      article = Article.new f, @images
-      puts File.basename f
-      $articles << article
-    end
-
-    # Load Draft Articles if we're in development
-    if ENV['RACK_ENV'] == 'development'
-      puts 'Loading Draft Articles...'
-      Dir[File.dirname(__FILE__) + '/articles/drafts/*.md'].each do |f|
-        article = Article.new f, @images
-        puts File.basename f
-        $articles << article
-      end
-    end
-
-    # Sort in publish date order
-    $articles.sort! { |a, b| a.publish_date <=> b.publish_date }
-    $articles.reverse!
 
     # Set up Readit config
     Readit::Config.consumer_key = ENV['READABILITY_KEY']
     Readit::Config.consumer_secret = ENV['READABILITY_SECRET']
     Readit::Config.parser_token = ENV['READABILITY_PARSER_TOKEN']
+
+    # Read in Articles
+    Article.configure do |config|
+      config.articles_path = 'articles'
+      config.draft_articles_path = 'articles/drafts'
+      config.images_path = 'public/article-images'
+      config.articles_per_page = 3
+      config.development_mode = true if ENV['RACK_ENV'] == 'development'
+    end
   end
 
+  # -------------------------- HOOKS------------------------ #
+
+
   before do
-    # Put only the published articles in an array.
-    @published_articles = []
-    $articles.each do |article|
-      @published_articles << article unless article.publish_date > Date.today
-    end
-    @page_count = (@published_articles.size.to_f / ENV['ARTICLE_PAGE_LIMIT'].to_f).ceil
 
     @logo_path = "/images/logo#{rand(1..6)}.png"
 
@@ -66,15 +46,22 @@ class DASmith < Sinatra::Base
     cache_control :public, :must_revalidate, max_age: 60
   end
 
-  ##################### WEB ROUTES #####################
+
+
+
+
+
+
+
+  # -------------------------- Web Routes ------------------------ #
 
   get '/' do
     redirect '/writing'
   end
 
   get '/writing' do
-    @articles = @published_articles[0..(ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
-    @more_articles = @published_articles[ENV['ARTICLE_PAGE_LIMIT'].to_i..-1]
+    @articles = [Article.latest]
+    @more_articles = Article.published
     @logo_path = '/images/logo1.png'
     erb :index
   end
@@ -84,16 +71,15 @@ class DASmith < Sinatra::Base
   end
 
   get '/writing/articles/?' do
-    @articles = @published_articles
+    @articles = Article.published
     erb :article_list
   end
 
   get %r{/writing/articles/([0-9]+)/?} do
     @page = params[:captures].first.to_i
-    a = (@page - 1) * ENV['ARTICLE_PAGE_LIMIT'].to_i
+    @articles = Article.published(page: page)
 
-    @articles = @published_articles[a..(a + ENV['ARTICLE_PAGE_LIMIT'].to_i - 1)]
-    @more_articles = @published_articles[ENV['ARTICLE_PAGE_LIMIT'].to_i..-1]
+    @more_articles = Article.published
 
     if @articles.nil?
       # There are no articles for that page
@@ -105,7 +91,7 @@ class DASmith < Sinatra::Base
 
   get '/writing/:slug/?' do
     @more_articles = []
-    @published_articles.each do |a|
+    Article.published.each do |a|
       if a.slug == params[:slug]
         @article = a
       else
@@ -122,7 +108,8 @@ class DASmith < Sinatra::Base
 
 
 
-  ####################### READABILITY ###################
+  # -------------------------- Readability ------------------------ #
+
   get '/reading' do
 
     @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],

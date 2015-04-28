@@ -20,13 +20,8 @@ class ArticleRenderer < Redcarpet::Render::HTML
   include Redcarpet::Render::SmartyPants
 
   def initialize(images = [], options = {})
-    super options
     @images = images
-  end
-
-  def block_code(code, language)
-    require 'pygments'
-    Pygments.highlight(code, lexer: language, options: { linespans: 'line' })
+    super options
   end
 
   def paragraph(text)
@@ -36,33 +31,50 @@ class ArticleRenderer < Redcarpet::Render::HTML
       # Just render the usual text and add a &nbsp between the last two words
       "<p>#{text.reverse.split(' ', 2).join('&nbsp;'.reverse).reverse}</p>\n\n"
     else
-      case tag[1]
+
+      # More meaningful names
+      tag_type = tag[1]
+      tag_data = tag[2]
+
+
+      case tag_type
+
+      # Handle the auto-insertion of Gists
       when 'gist'
-        "<script src=\"#{tag[2]}.js\"></script>"
+        "<script src=\"#{tag_data}.js\"></script>"
+
+
+      # Handle the auto-insertion of Images
       when 'image'
         begin
-          # Build the image embed code
-          # Check in images to see if they exist, if so add the url and alt text from the hash.
-          image = @images[tag[2].to_i]
+          binding.pry
+          image = @images[tag_data.to_i - 1]
 
           "<figure class=\"article-image\">
-              <a href=\"/article-images/#{image[:url]}\">
-                <img src=\"/article-images/#{image[:url]}\" alt=\"#{image[:title]}\" />
+              <a href=\"#{image.url}\">
+                <img src=\"#{image.url}\" alt=\"#{image.title}\" />
               </a>
-            <figcaption>#{image[:title]}</figcaption>
+            <figcaption>#{image.title}</figcaption>
           </figure>"
         rescue Exception => e
-          "<p style='color: red; background: yellow; font-weight: bold;'>#{text} (malformed image tag, or image does not exist: #{e.message})</p>"
+          warn "!!!!!!! Malformed image tag for #{image}: #{e}"
+          "<!-- Malformed image tag for #{image}-->"
         end
       when 'imageraw'
         begin
-          image = @images[tag[2].to_i]
-          "<img src=\"/article-images/#{image[:url]}\" alt=\"#{image[:title]}\" />"
+          image = @images[tag_data.to_i - 1]
+          "<img src=\"/article-images/#{image.url}\" alt=\"#{image.title}\" />"
         rescue Exception => e
-          "<p style='color: red; background: yellow; font-weight: bold;'>#{text} (malformed imageraw tag, or image does not exist: #{e.message})</p>"
+          warn "!!!!!!! Malformed image tag for #{image}: #{e}"
+          "<!-- Malformed image tag for #{image}-->"
         end
       end
     end
+  end
+
+  def block_code(code, language)
+    require 'pygments'
+    Pygments.highlight(code, lexer: language, options: { linespans: 'line' })
   end
 
   # Prevent Bold, Emphasised or Linked text breaking if it's short.

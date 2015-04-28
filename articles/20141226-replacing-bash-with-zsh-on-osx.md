@@ -1,5 +1,5 @@
 title: Replacing Bash with ZSH on OSX
-post_id: 9
+article_id: 9
 slug: replacing-bash-with-zsh
 
 #!!==========================================================

@@ -1,5 +1,5 @@
 title: Switching from RVM to rbenv
-post_id: 3
+article_id: 3
 slug: switching-from-rvm-to-rbenv
 
 #!!==========================================================

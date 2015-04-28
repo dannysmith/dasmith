@@ -95,6 +95,11 @@ ul, ol {
   li > span {
     color: $black;
   }
+
+  blockquote & {
+    color: inherit;
+    span {color: inherit;}
+  }
 }
 
 

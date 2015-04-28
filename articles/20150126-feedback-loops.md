@@ -1,5 +1,5 @@
 title: Agile Feedback Loops
-post_id: 10
+article_id: 10
 slug: feedback-loops
 
 #!!==========================================================

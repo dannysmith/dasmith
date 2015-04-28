@@ -1,5 +1,5 @@
 title: What is Good Design (and the Government Digital Service)
-post_id: 11
+article_id: 11
 slug: what-is-good-design
 
 #!!==========================================================

@@ -1,5 +1,5 @@
 title: A pretty readability archive with ruby, sinatra and css transitions
-post_id: 5
+article_id: 5
 slug: a-pretty-readability-archive-with-ruby-and-css
 
 #!!==========================================================

@@ -1,5 +1,5 @@
 title: Writing Testable Code
-post_id: 7
+article_id: 7
 slug: writing-testable-code
 
 #!!==========================================================

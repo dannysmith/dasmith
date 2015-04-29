@@ -8,7 +8,7 @@ class DASmith < Sinatra::Base
 
   configure :development do
     require 'better_errors'
-    require './development-envs'
+    require './development-envs' unless ENV['RACK_ENV'] == "test"
 
     use BetterErrors::Middleware
     BetterErrors.application_root = __dir__

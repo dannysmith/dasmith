@@ -1,6 +1,7 @@
 ENV['RACK_ENV']='test'
 
 # Require test gems
+require 'bundler/setup'
 require 'sinatra'
 require 'rack/test'
 require 'rspec'
@@ -19,7 +20,6 @@ require "evernote_oauth"
 
 # Require my app
 Dir[File.dirname(__FILE__) + '/../lib/*'].each { |f| require f }
-Dir[File.dirname(__FILE__) + '/../models/*'].each { |f| require f }
 require File.dirname(__FILE__) + '/../dasmith.rb'
 
 # setup test environment

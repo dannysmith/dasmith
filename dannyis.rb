@@ -1,4 +1,3 @@
-require 'pry'
 require 'yaml'
 require 'redcarpet'
 require 'active_support/all'

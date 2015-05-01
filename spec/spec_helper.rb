@@ -5,7 +5,7 @@ require 'dotenv'
 
 # Test
 require 'rspec'
-require 'pry'
+require 'pry' unless ENV['RACK_ENV'] == 'production'
 require 'fileutils'
 require 'factory_girl'
 

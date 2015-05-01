@@ -45,6 +45,7 @@ GEM
     method_source (0.8.2)
     minitest (5.6.0)
     multi_json (1.10.1)
+    newrelic_rpm (3.11.2.286)
     oauth (0.4.7)
     posix-spawn (0.3.9)
     pry (0.10.1)
@@ -123,6 +124,7 @@ DEPENDENCIES
   evernote_oauth
   factory_girl
   foreman
+  newrelic_rpm
   pry
   puma
   pygments.rb

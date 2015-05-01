@@ -25,7 +25,7 @@ gem 'evernote_oauth'
 gem 'readit'
 
 group :production do
-
+gem 'newrelic_rpm'
 end
 
 group :test do

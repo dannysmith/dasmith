@@ -14,7 +14,6 @@
     "grunt-exec": "^0.4.6",
     "grunt-foreman": "0.0.9",
     "grunt-newer": "^1.1.0",
-    "grunt-px-to-rem": "^0.4.0",
     "time-grunt": "^1.1.1"
   }
 }

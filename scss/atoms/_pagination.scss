@@ -1,0 +1,102 @@
+// .c-article__pagination
+
+.o-pagination {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  li {
+    position: relative;
+    color: $white;
+    font-family: $typeFaceTisa;
+  }
+
+  li:before {display: none;}
+
+  &__icon {
+    display: block;
+    position: relative;
+    height: $size-paginationButton;
+    width: $size-paginationButton;
+    line-height: $size-paginationButton * .92; //Magic number to vertically align the text properly.
+    text-align: center;
+    font-size: $type--larger;
+    z-index: $zIndex-3-paginationIcon;
+    background-color: inherit;
+
+          transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+  }
+
+  &__text {
+    height: $size-paginationButton;
+    display: block;
+    position: absolute;
+    line-height: $size-paginationButton * .95; //Magic number to vertically align the text properly.
+    top: 0;
+    font-size: $type--small;
+    white-space: nowrap;
+    z-index: $zIndex-2-paginationText;
+    background-color: inherit;
+
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+  }
+
+  &--left {
+    background-color: $red;
+    float: left;
+    text-align: left;
+
+    & .o-pagination__text {
+      right: 0;
+      margin-left: $size-paginationButton;
+      padding-right: 1rem;
+    }
+  }
+
+  &--right {
+    background-color: $navy;
+    float: right;
+    text-align: right;
+
+    & .o-pagination__text {
+      left: 0;
+      margin-right: $size-paginationButton;
+      padding-left: 1rem;
+    }
+  }
+
+  // Slide out the text
+  &--right:hover .o-pagination__text {
+    -webkit-transform: translate(-100%);
+       -moz-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+
+  &--left:hover .o-pagination__text {
+    -webkit-transform: translate(100%);
+       -moz-transform: translate(100%);
+            transform: translate(100%);
+  }
+
+  // Rotate the icon
+  &--right:hover .o-pagination__icon {
+    border-radius: 50%; // So it looks less odd when it rotates.
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+  &--left:hover .o-pagination__icon {
+    border-radius: 50%; // So it looks less odd when it rotates.
+    -webkit-transform: rotate(-360deg);
+       -moz-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+

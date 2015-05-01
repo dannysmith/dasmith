@@ -1,8 +1,0 @@
-.articles-list-page {
-  margin: 5em auto;
-  text-align: center;
-  li:nth-child(n+1) a  {color: $navy;}
-  li:nth-child(2n+2) a {color: $dark-purple;}
-  li:nth-child(3n+3) a {color: $red}
-  li:nth-child(4n+4) a {color: $green}
-}

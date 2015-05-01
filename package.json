@@ -1,0 +1,20 @@
+{
+  "name": "danny.is",
+  "author": "Danny Smith",
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "latest",
+    "grunt-check-gems": "0.0.2",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
+    "grunt-foreman": "0.0.9",
+    "grunt-newer": "^1.1.0",
+    "grunt-px-to-rem": "^0.4.0",
+    "time-grunt": "^1.1.1"
+  }
+}

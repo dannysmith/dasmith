@@ -1,7 +1,7 @@
-<header class="page-header">
-  <a href="/">
-    <div class="logo" style="background-image: url('<%= @logo_path %>')"></div>
-    <h1>danny.is/<%= defined?(section_title) ? section_title : "writing" %></h1>
+<header class="c-page-header">
+  <a href="/" class="c-page-header__logo-link">
+    <div class="c-page-header__logo" style="background-image: url('<%= @logo_path %>')"></div>
   </a>
-  <%= erb :'partials/_navigation'%>
+  <h1 class="c-page-header__heading"><a href="/">danny<span class="c-page-header__heading__dot">.</span>is</a></h1>
+  <h2 class="c-page-header__subheading"><%= defined?(section_title) ? section_title : "writing" %></h2>
 </header>

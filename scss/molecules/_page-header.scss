@@ -1,0 +1,41 @@
+.c-page-header {
+    text-align: center;
+    position: relative;
+
+  &__logo-link {
+    width: $size--logoSize;
+  }
+
+  &__logo {
+    width: $size--logoSize;
+    height: $size--logoSize;
+    margin: 1em auto .5em;
+    @media screen and (max-width: 31em) {margin-top: -.3em;}
+    border-radius: 50%;
+    border: 5px solid $color--background;
+    background: $color--logoBG center;
+    background-size: cover;
+    z-index: $zIndex-2--logo;
+  }
+
+  &__heading {
+    margin: 0;
+    @media screen and (max-width: 31em) {margin-top: -.3em;}
+    font-family: $type--siteHeadingFace;
+    font-size: $type--jumbo;
+    color: $color--siteHeadingText;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+
+    &__dot {color: $color--sideHeadingDot}
+  }
+
+  &__subheading {
+    margin: 0;
+    font-family: $type--siteHeadingFace;
+    font-size: $type--large;
+    color: $color--siteSubeadingText;
+    font-weight: 100;
+  }
+}

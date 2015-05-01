@@ -1,5 +1,5 @@
 title: New Job, New Website
-post_id: 2
+article_id: 2
 slug: new-job-new-website
 
 #!!==========================================================
@@ -71,9 +71,9 @@ and
 
 and blockquotes:
 
-<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-<footer>by <a href="http://www.lipsum.com/">Mr Lorem</a></footer></blockquote>
+> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+-- by Mr Lorem
 
 and Images:
 

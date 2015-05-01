@@ -1,0 +1,24 @@
+.gist,
+code,
+.highlight pre {
+  font-family: $type--codeFace;
+}
+
+// Inline Code Tags
+code.prettyprint {
+  display: inline-block;
+  padding: 0 8px;
+  color: $color--codeInlineText;
+  border: 1px solid $color--codeInlineBorder;
+  border-radius: 2px;
+  font-size: $type--small;
+}
+
+// Keyboard Tags
+kbd {
+  padding: 0.2em 0.6em;
+  border: 1px solid #ccc;
+  background: $white;
+  border-radius: 3px;
+  box-shadow: 0 .1em 0 rgba(0,0,0,0.2);
+}

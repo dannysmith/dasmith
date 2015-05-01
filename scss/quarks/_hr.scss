@@ -1,0 +1,10 @@
+// A better-looking Horizontal rule
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $color--horizontalRule;
+    width: $size--horizontalRuleWidth;
+    margin: 3rem auto;
+    padding: 0;
+}

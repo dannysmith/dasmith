@@ -1,0 +1,72 @@
+// Fenced Blocks of Code
+
+.highlight {
+  background-color: $light-purple;
+  @include pull-right-with-margin(0, 0);
+  @include pull-right-with-margin($size-contentWidthBreakpoint1, $size-contentWidthMargin1);
+  @include pull-right-with-margin($size-contentWidthBreakpoint2, $size-contentWidthMargin2);
+  @include pull-right-with-margin($size-contentWidthBreakpoint3, $size-contentWidthMargin3);
+
+  transition: all .1s;
+  -webkit-transition: all 1s;
+
+   // Extend the pre block to be full width to the right on hover
+  &:hover {
+    padding-right: 0;
+  }
+}
+
+.highlight:not(table) pre { // Gists are in a table, and shouldn't be styled
+  position: relative;
+  font-size: $type--small;
+  counter-reset: preLineNumbers;
+  white-space: pre;
+  overflow-x: scroll;
+  color: $rc-white;
+  background-color: $color--code--background;
+  padding: 1rem 0;
+
+  // Suitable selection color for code
+  & span::-moz-selection {background-color: saturate(lighten($color--code--background, 15%), 5%);}
+  & span::selection {background-color: saturate(lighten($color--code--background, 15%), 5%);}
+
+  // Make Red's stand out more.
+  & span.no::-moz-selection,
+  & span.nv::-moz-selection {color: saturate(lighten($rc-red, 20%), 30%);}
+  & span.no::selection,
+  & span.nv::-moz-selection {color: saturate(lighten($rc-red, 20%), 30%);}
+
+  & span.nf::-moz-selection {color: saturate(darken($rc-lightOrange, 20%), 10%);}
+  & span.nf::selection {color: saturate(darken($rc-lightOrange, 20%), 10%);}
+}
+
+// Line numbers
+.highlight pre > span:before {
+  content: counter(preLineNumbers);
+  counter-increment: preLineNumbers;
+  width: 1.5em;
+
+  padding-right: .5em; /* space after numbers */
+  text-align: right;
+  display: inline-block;
+  color: lighten($color--code--background, 20%);
+  margin-right: 0.5em;
+  padding: 2px 8px 2px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0.6;
+}
+
+
+// Code that's just big blocks of HEX or RegExp or similar. It should wrap in a block.
+pre.u-code  {
+  border: 1px solid lighten($color--nonCodePre, 50%);
+  border-radius: 2pxi;
+  padding: 1rem;
+  font-family: $type--codeFace;
+  color: $color--nonCodePre;
+  word-wrap: break-word;
+}

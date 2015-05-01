@@ -1,0 +1,35 @@
+// SCALE FOR Z-INDICIES
+// ====================
+// This scale should be used for all z-indexes. If a new context is needed, it
+// should be added to the z-index applications section and given an appropriate index.
+// This idea came from here: https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06
+
+
+// Z-Index Scale (do not use these)
+// ----------------------------------------------
+$zIndex-1: 100;
+$zIndex-2: 200;
+$zIndex-3: 300;
+$zIndex-4: 400;
+$zIndex-5: 500;
+$zIndex-6: 600;
+$zIndex-7: 700;
+$zIndex-8: 800;
+$zIndex-9: 900;
+$zIndex-10: 1000;
+
+// Z-Index Applications
+// ----------------------------------------------
+$zIndex-1--screenForeground:      $zIndex-1;
+$zIndex-2--logo:                  $zIndex-2;
+$zIndex-2-paginationText:         $zIndex-2;
+$zIndex-2--surfaceOverlay:        $zIndex-2;
+$zIndex-3-paginationIcon:         $zIndex-3;
+$zIndex-3--figureOverlay:         $zIndex-3;
+$zIndex-4--paginationOverride:    $zIndex-4;
+$zIndex-4--progressBar:           $zIndex-4;
+$zIndex-5--nav:                   $zIndex-5;
+$zIndex-6--dialog:                $zIndex-6;
+$zIndex-7--navSiteOverlay:        $zIndex-7;
+$zIndex-8--navSidebar:            $zIndex-8;
+$zIndex-10--dev:                  $zIndex-10;

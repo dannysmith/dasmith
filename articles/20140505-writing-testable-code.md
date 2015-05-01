@@ -1,5 +1,5 @@
 title: Writing Testable Code
-post_id: 7
+article_id: 7
 slug: writing-testable-code
 
 #!!==========================================================
@@ -142,9 +142,7 @@ Using the example above, we might have both the List and Grid HTML in the DOM, a
 
 By adding a `.visible` class to dropdowns and popups which have been displayed through a hover event, it's also easier to check that they are visible before interacting with them. Even better, include a way to make the element visible through a simple JS call, or by adding the `.visible` class from the test code. This avoids the need to hover at all.
 
-<aside>
-In this age of mobile devices, it's not usually a good idea to rely soley on hover events to display dropdown menus and the like. What happens on a touch device where a user *can't* hover? Or when a user is browsing with a screen reader? Of course, if all of your hover elements also respond to click/tap events, it makes things a lot easier for UI automation.
-</aside>
+aside> In this age of mobile devices, it's not usually a good idea to rely soley on hover events to display dropdown menus and the like. What happens on a touch device where a user *can't* hover? Or when a user is browsing with a screen reader? Of course, if all of your hover elements also respond to click/tap events, it makes things a lot easier for UI automation.
 
 
 ### 6. Avoid complex DOM structures and clever JS that changes the DOM in complicated and unintuitive ways
@@ -187,10 +185,7 @@ In a more complex system with millions of interdependant variables in play, it's
 
 Of course, this is more about architecture than testing, so perhaps I should just say *"Think about your app's architecture, and prefer small self-contained modules over monolithic systems."*
 
-<aside>
-For the love of god, document your modules and APIs properly, including code examples. You could consider using some sort of documentation generator that means it's always up-to-date.
-</aside>
-
+aside> For the love of god, document your modules and APIs properly, including code examples. You could consider using some sort of documentation generator that means it's always up-to-date.
 
 ### 10. Make sure your code is structured, and unit tests cover everything.
 This is a no-brainer. If a UI Acceptance Test fails and there isn't complete unit test coverage, it can be a nightmare to identify the source of the failure.

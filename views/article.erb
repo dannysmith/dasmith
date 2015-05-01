@@ -1,20 +1,42 @@
 <% content_for :title do %><%= @article.title%> by Danny Smith<% end %>
-
+<progress class="c-reading-progress-indicator" value="0"></progress>
 <%= erb :'partials/_page_header' %>
 
-<div class="container">
-	<article class="article hentry">
-    <h1><a href="/writing/<%= @article.slug %>"><%= @article.title %></a></h1>
-		<div class="article-body entry-content">
-			<%= @article.body %>
-		</div>
-		<time class="published hidden" datetime="<%= @article.publish_date.to_s %>">
-	</article>
-  <div id="disqus_thread"></div>
+<div class="article-container">
+  <article class="c-article hentry">
+    <h1 class="c-article__title"><a href="/writing/<%= @article.slug %>"><%= @article.title %></a></h1>
+    <p class="u-hidden author vcard">Author: <a class="url fn" href="<%= ENV['BASE_DOMAIN']%>">Danny Smith</a></p>
+    <div class="c-article__body u-contains-standard-links entry-content">
+      <%= @article.body %>
+    </div>
+
+    <footer class="c-article__footer u-clearfix">
+    <time class="u-hidden published updated" datetime="<%= @article.date.to_s %>"></time>
+    <hr>
+    <p class="c-article__footer__meta">Published in <%= @article.date.strftime('%B %Y') %> by Danny Smith.</p>
+      <ol class="o-pagination">
+        <% if @article.newer %>
+          <li class="o-pagination--left">
+            <a class="o-pagination__icon" href="<%= @article.older.url%>"><i class="u-icon u-icon-arrow-circle-left"></i></a>
+            <a class="o-pagination__text" href="<%= @article.newer.url%>"><%= @article.newer.title %></a>
+          </li>
+        <% end %>
+        <% if @article.older %>
+          <li class="o-pagination--right">
+            <a class="o-pagination__icon" href="<%= @article.older.url%>"><i class="u-icon u-icon-arrow-circle-right"></i></a>
+            <a class="o-pagination__text" href="<%= @article.older.url%>"><%= @article.older.title %></a>
+          </li>
+        <% end %>
+      </ol>
+    </footer>
+  </article>
+
+
+  <div id="c-disqus disqus_thread"></div>
   <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'dannyis'; // required: replace example with your forum shortname
-      var disqus_identifier = '<%= @article.post_id %>';
+      var disqus_identifier = '<%= @article.article_id %>';
       var disqus_title = '<%= @article.title %>';
 
       /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -24,5 +46,6 @@
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <noscript></noscript>
+
 </div>

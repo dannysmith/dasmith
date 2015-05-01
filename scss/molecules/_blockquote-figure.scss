@@ -1,0 +1,23 @@
+.c-blockquote {
+  background: $color--blockquoteBG;
+  padding: 1rem;
+  color: $color--blockquoteText;
+
+  &__content {
+    font-family: $type--blockquoteFace;
+    font-style: italic;
+    font-size: $type--large;
+
+    @media screen and (min-width: $size-contentWidthBreakpoint3) {
+      text-align: left;
+      font-size: $type--larger;
+    }
+  }
+
+  &__footer {
+    color: $color--blockquoteLabelText;
+    background-color: $color--blockquoteLabelBG;
+    padding: .25em 1em;
+    margin-top: 1rem;
+  }
+}

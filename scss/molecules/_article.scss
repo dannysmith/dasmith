@@ -1,0 +1,43 @@
+.c-article {
+  counter-reset: articleFigureCounter;
+
+  &__title,
+  &__body > * {
+    // Center everything using percentage margins at different breakpoints.
+    // You can change the values in sizes.scss
+    @include center-with-margin($size-contentWidthBreakpoint1, $size-contentWidthMargin1);
+    @include center-with-margin($size-contentWidthBreakpoint2, $size-contentWidthMargin2);
+    @include center-with-margin($size-contentWidthBreakpoint3, $size-contentWidthMargin3);
+  }
+
+  &__title {
+    font-size: $type--larger;
+    @media screen and (min-width: 600px) {
+      font-size: $type--largest;
+      text-align: center;
+    }
+    @media screen and (min-width: 1000px) {
+      font-size: $type--jumbo;
+    }
+    border-bottom: 1px solid rgba(0,0,0,0.075);
+    padding-bottom: $type--base * 2;
+    margin-bottom: $type--base * 2;
+  }
+
+  &__body {
+    // Set the first paragraph in a different typeface
+    > p:nth-child(1) {
+      font-weight: 300;
+      font-family: $type--highlightParaFace;
+      font-size: $type--large;
+      margin-bottom: $type--base * 2;
+    }
+
+    // Raw Images
+    > img {
+      display: block;
+      margin: 0 auto; // Center small images
+      max-width: 100%; // Constrain raw images to be only 100% wide;
+    }
+  }
+}

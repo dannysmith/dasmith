@@ -1,27 +1,25 @@
-<footer class="page-footer">
+<footer class="c-page-footer">
 
   <% unless @more_articles.nil? %>
-    <div class="article-list">
-      <h2>Read More</h2>
-      <ul>
-      <% @more_articles.each do |article| %>
-        <li><a href="/writing/<%= article.slug %>"><%= article.title %></a></li>
-      <% end %>
-      </ul>
+    <div class="c-page-footer__recent-articles u-clearfix">
+      <h2>Recent Articles</h2>
+      <div class="c-page-footer__recent-articles__items">
+        <% @more_articles.each do |article| %>
+          <aside class="o-article-box u-contains-standard-links">
+            <a  class="o-article-box__title" href="<%= article.url %>">
+              <h2><%= article.title %></h2>
+            </a>
+            <div class="o-article-box__body">
+              <%= article.intro characters: 800 %>
+              <a href="<%= article.url %>"> read&#8230;</a>
+            </div>
+          </aside>
+        <% end %>
+      </div>
     </div>
   <% end %>
 
-  <ul class="metalinks">
-    <li><a href="/writing/articles">Articles</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="http://<%= ENV['BASE_DOMAIN'] %>/feed">RSS</a></li>
-    <li><a href="/reading">Reading List</a></li>
-    <li><a href="/noting">Notebook</a></li>
-    <li><a href="/agile">Agile Notes</a></li>
-    <li><a href="https://github.com/dannysmith" class="icon-github-alt">&nbsp;Github</a></li>
-    <li><a href="https://twitter.com/dannysmith" class="icon-twitter">&nbsp;Twitter</a></li>
-    <li><a href="http://www.linkedin.com/in/dannyasmith" class="icon-linkedin">&nbsp;LinkedIn</a></li>
-    <li><a href="https://medium.com/@dannysmith">Medium</a></li>
-    <li class="source-org vcard copyright">Copyright &copy; Danny Smith <%= Date.today.year %>, except where otherwise noted.</li>
-  </ul>
+  <div class="c-page-footer__copyright">
+    <p class="source-org vcard">Copyright &copy; Danny Smith <%= Date.today.year %>, except where otherwise noted.</p>
+  </div>
 </footer>

@@ -1,0 +1,16 @@
+.c-article__footer hr {
+  margin-bottom: 1rem;
+  border-top-color: rgba(0,0,0,0.1);
+}
+
+.c-article__footer__meta {
+  text-align: center;
+  font-style: italic;
+  color: rgba(0,0,0,0.2);
+  font-size: $type--smallest;
+}
+
+// Move the pagination up
+.c-article__footer ol.o-pagination {
+  margin-top: -3rem;
+}

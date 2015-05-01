@@ -1,5 +1,5 @@
 title: On Sass and Other CSS Preprocessors
-post_id: 4
+article_id: 4
 slug: sass-and-other-css-preprocessors
 
 #!!==========================================================

@@ -1,11 +1,10 @@
 <% content_for :title do %>Articles by Danny Smith<% end %>
-
 <%= erb :'partials/_page_header' %>
 
 <div class="article-list articles-list-page">
   <ul>
   <% @articles.each do |article| %>
-  	<li><a href="/writing/<%= article.slug %>"><%= article.title %></a></li>
+    <li><a href="/writing/<%= article.slug %>"><%= article.title %></a></li>
   <% end %>
   </ul>
 </div>

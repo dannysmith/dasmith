@@ -1,0 +1,28 @@
+ul, ol {
+  margin-top: $type--base;
+  margin-bottom: $type--base;
+  padding-left: 0;
+  list-style-type: none;
+  line-height: 1.25;
+
+  li:before {
+    content: "\00BB\0020\0020";
+    color: $red;
+    font-size: 1.5rem
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    list-style-position: inside;
+
+    li {
+      padding-left: $type--base;
+    }
+
+    li:before {
+      content: "\203A\0020\0020";
+    }
+  }
+}

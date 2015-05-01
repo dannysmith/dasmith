@@ -1,107 +1,93 @@
-// General Styles
+// Set box-sizing and a 1s transition on all elements
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 
-  transition: all .2s;
-  -webkit-transition: all .2s;
+  transition: all .1s;
+  -webkit-transition: all .1s;
 }
 
 body, html {
+  // Remove default padding/margin from body.
   margin: 0;
   padding: 0;
+
+  // Prevent scrolling when sidebar is open
+  height: 100%;
+  overflow-x: hidden;
 }
 
-body {
-	background: $white;
-	color: $black;
+// Allow the container to scroll, rather than the body.
+#container {
+  height: 100%;
+  overflow: auto;
+}
 
-  font-family: $sans-font;
-  font-weight: 400;
-  font-size: 18px;
+// Remove styling from links
+// Styling should be applied to links inside the modules that describe them
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  // Set base typography for body.
+  font-family: $type--bodyFace;
+  font-weight: 100;
+  font-size: $type--base--smallWidth;
   line-height: 1.5;
 
-  -webkit-font-smoothing: antialiased;
-
+  // Increase base typography
   @media screen and (min-width: 500px) {
-    font-size: 20px;
+    font-size: $type--base--mediumWidth;
     line-height: 1.55;
   }
 
   @media screen and (min-width: 1000px) {
-    font-size: 22px;
+    font-size: $type--base--wideWidth;
   }
 }
 
-body.dark-body {
-  background: $dark-purple;
-  color: $white;
-}
-
-
-// Links
-a,
-a:hover,
-a:visited,
-a:active {
-  text-decoration: none;
-  color: $navy;
-  background-image: linear-gradient(to bottom, $white 75%, #333332 75%);
-  background-size: 2px 2px;
-  background-position: 0px 24px;
-  background-repeat: repeat-x;
-
-  text-shadow: 2px 0 $white,
-              -2px 0 $white,
-              -3px 0 $white,
-               0 2px $white,
-              -1px 1px $white,
-               1px 1px $white;
-}
-
-h1 {
-  a,
-  a:hover,
-  a:visited,
-  a:active {
-    background: none;
+// Remove text-shadow in selection highlight and set selection colour.
+// These selection rule sets have to be separate.
+::-moz-selection {
+    background-color: $color--textSelection;
     text-shadow: none;
-  }
+}
+::selection {
+    background-color: $color--textSelection;
+    text-shadow: none;
 }
 
-a:hover {
-  color: $red;
+// Remove the gap between audio, canvas, iframes,
+// images, videos and the bottom of their containers:
+// https://github.com/h5bp/html5-boilerplate/issues/440
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
 }
 
-
-// Headings
-h1, h2, h3, h4 {
-  font-family: $sans-font;
-  font-weight: 600;
+// Remove default fieldset styles.
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-  font-size: 1.2em;
-  @media screen and (min-width: 31em) {font-size: 1.5em}
-  @media screen and (min-width: 62em) {font-size: 1.8em}
-  @media screen and (min-width: 70em) {font-size: 2em}
+// Allow only vertical resizing of textareas.
+textarea {
+    resize: vertical;
 }
 
-
-// Lists
-ul, ol {
-  color: $red;
-
-  li > span {
-    color: $black;
-  }
-
-  blockquote & {
-    color: inherit;
-    span {color: inherit;}
-  }
+// remove margin from blockquotes
+blockquote {
+  margin: 0;
 }
-
-
-
 

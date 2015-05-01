@@ -1,0 +1,49 @@
+// This object is used by blockquotes and images inside articles.
+// It should only be used inside articles
+// The "article.c-article >" is included so the sepector is more specific than ".c-article > *"
+article.c-article .o-pull-block {
+  position: relative;
+  text-align: center;
+
+  &__content {}
+  &__footer {
+    display: inline-block;
+    text-align: center;
+  }
+
+  &--left {
+    @include pull-left-with-margin($size-contentWidthBreakpoint1, $size-contentWidthMargin1);
+    @include pull-left-with-margin($size-contentWidthBreakpoint2, $size-contentWidthMargin2);
+    @include pull-left-with-margin($size-contentWidthBreakpoint3, $size-contentWidthMargin3);
+  }
+  &--right {
+    @include pull-right-with-margin($size-contentWidthBreakpoint1, $size-contentWidthMargin1);
+    @include pull-right-with-margin($size-contentWidthBreakpoint2, $size-contentWidthMargin2);
+    @include pull-right-with-margin($size-contentWidthBreakpoint3, $size-contentWidthMargin3);
+  }
+  &--both {
+    @include pull-both-with-margin()
+  }
+}
+
+// Position the label to either the left or right at wider viewports.
+@media screen and (min-width: $size-contentWidthBreakpoint3) {
+  article.c-article .o-pull-block__footer {
+      display: block;
+      position: absolute;
+      top: 0;
+      max-width: $size-contentWidthMargin3;
+      text-align: left;
+    }
+  article.c-article .o-pull-block--left .o-pull-block__footer {
+      left: 0;
+      text-align: left;
+    }
+
+  article.c-article .o-pull-block--right .o-pull-block__footer {
+      right: 0;
+      text-align: right;
+    }
+}
+
+

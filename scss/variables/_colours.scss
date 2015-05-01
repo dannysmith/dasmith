@@ -1,0 +1,152 @@
+// SCALE FOR COLOURS
+// =================
+// This scale should be used for *all* site colours.
+// If a new colour is needed, it should be added to the colour applications section and given
+// an appropriate size.
+
+
+// Color Scale (do not use these)
+// ----------------------------------------------
+$light-purple: #BCAFB8;
+$dark-purple: #3D223B;
+$red: #8F3643;
+$navy: #4C5A78;
+$blue: #A3C2ED;
+$cream: #F5D1BA;
+$brown: #B19B8C;
+$mint: #B1D9D1;
+$light-mint: lighten(#B1D9D1, 15%);
+$green: #455645;
+$black: #070707;
+$white: #ffffff;
+$grey: #BDBDBD;
+
+// Original Railscasts Theme Code Colours
+// $rc-black: #303030;
+// $rc-white: #e6e1dc;
+// $rc-blue: #6d9cbe;
+// $rc-brown: #bc9457;
+// $rc-purple: #d0d0f2;
+// $rc-red: #cf4232;
+// $rc-lightGreen: #a0bc5e;
+// $rc-darkGreen: #4d7d3a;
+// $rc-blue: #6d979c;
+// $rc-lightOrange: #ffc66d;
+// $rc-darkOrange: #cc7732;
+
+// Using some colours from the site theme
+$rc-black: #303030;
+$rc-white: $white;
+$rc-blue: $blue;
+$rc-brown: #bc9457;
+$rc-purple: $light-purple;
+$rc-red: lighten($red, 10%);
+$rc-lightGreen: $mint;
+$rc-darkGreen: $green;
+$rc-blue: $blue;
+$rc-lightOrange: $cream;
+$rc-darkOrange: #cc7732;
+
+// Color Applications
+// ----------------------------------------------
+$color--background:                     $white;
+$color--fgText:                         $black;
+$color--linkUnderline:                  $mint;
+$color--linkHover:                      $red;
+$color--textSelection:                  $mint;
+$color--horizontalRule:                 $light-purple;
+$color--logoBG:                         $light-purple;
+$color--markedText:                     $cream;
+$color--nonCodePre:                     $navy;
+
+// Rainbow Bar Colouring
+$color--rainbowBar1:                    $navy;
+$color--rainbowBar2:                    $dark-purple;
+$color--rainbowBar3:                    $light-purple;
+$color--rainbowBar4:                    $red;
+$color--rainbowBar5:                    $mint;
+$color--rainbowBar6:                    $green;
+
+// Main Heading Colouring
+$color--siteHeadingText:                $black;
+$color--sideHeadingDot:                 $navy;
+$color--siteSubeadingText:              $navy;
+
+// Sidebar Colouring
+$color--sidebarMenuLinkHover:           $red;
+$color--sidebarMenuLinkIconHover:       $mint;
+$color--sidebarMenuLinkBG:              rgba($white, .9);
+$color--sidebarLinkColor:               $white;
+$color--sidebarBackground:              $red;
+$color--sidebarOverlay:                 rgba($navy, .6);
+$color--sidebarLinkBackground:          darken($red, 10%);
+
+// Progress Bar Colouring
+$color--readingProgressBarColor:        $red;
+
+// Inline code Colouring
+$color--codeInlineText:                 $red;
+$color--codeInlineBorder:               lighten($navy, 50%);
+
+// Table colouring
+$color--tableBorder:                    rgba($black, .1);
+$color--tableAlternateRow:              rgba($navy, .05);
+$color--tableHeaderUnderline:           $red;
+
+// Image Figure Colouring
+$color--imageFigureBG:                  $red;
+$color--imageFigureLabelBG:             darken($red, 10%);
+$color--imageFigureLabelText:           $white;
+
+// Blockquote Colouring
+$color--blockquoteBG:                   $navy;
+$color--blockquoteLabelBG:              darken($navy, 10%);
+$color--blockquoteLabelText:            $white;
+$color--blockquoteText:                 $white;
+
+// Code Colouring
+$color--code--background:               $rc-black;
+$color--code--pullBG:                   $light-purple;
+
+// Aside
+$color--asideBG:                        $blue;
+
+// Article Box Colours
+$color--articleBoxBG:                   $white;
+$color--articleBoxFG:                   $black;
+$color--articleBoxBorder:               $red;
+
+$color--articleBoxBG-dark:              $navy;
+$color--articleBoxFG-dark:              $white;
+$color--articleBoxBorder-dark:          $mint;
+
+// Page Footer
+$color--pageFooterBG:                   $light-mint;
+$color--copyrightNoticeBG:              $navy;
+$color--copyrightNoticeFG:              $white;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

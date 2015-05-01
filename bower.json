@@ -1,0 +1,23 @@
+{
+  "name": "danny.is",
+  "version": "1.0.1",
+  "authors": [
+    "Danny Smith <danny@dasmith.co.uk>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor"
+  ],
+  "dependencies": {
+    "jquery": "~1",
+    "magnific-popup": "~1.0.0",
+    "normalize-scss": "~3.0.3",
+    "pushy": "~0.9.2"
+  },
+  "devDependencies": {
+    "fontawesome": "~4.3.0",
+    "grid.scss": "jeromev/grid.scss"
+  }
+}

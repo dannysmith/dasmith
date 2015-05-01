@@ -1,0 +1,14 @@
+.o-article-box {
+  background: $color--articleBoxBG;
+  color: $color--articleBoxFG;
+  border: 2px solid $color--articleBoxBorder;
+  font-size: $type--smaller;
+  display: block;
+  padding: 1rem;
+
+  h2 {
+    font-size: $type--base;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}

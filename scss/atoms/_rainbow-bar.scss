@@ -1,0 +1,13 @@
+.c-rainbow-bar {
+  height: $size--heightHeaderBar;
+  > div {
+    float: left;
+    height: $size--heightHeaderBar;
+  }
+  > div:nth-child(1) {background-color: $color--rainbowBar1; width: 14%;}
+  > div:nth-child(2) {background-color: $color--rainbowBar2; width: 20%;}
+  > div:nth-child(3) {background-color: $color--rainbowBar3; width: 11%;}
+  > div:nth-child(4) {background-color: $color--rainbowBar4; width: 27%;}
+  > div:nth-child(5) {background-color: $color--rainbowBar5; width: 13%;}
+  > div:nth-child(6) {background-color: $color--rainbowBar6; width: 15%;}
+}

@@ -1,0 +1,127 @@
+.menu-btn {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.4;
+  top: 1rem;
+  left: 1rem;
+  text-align: center;
+  font-size: $type--larger;
+  z-index: $zIndex-5--nav;
+  background: $color--sidebarMenuLinkBG;
+  border-radius: 50%;
+  &:hover {color: $color--sidebarMenuLinkHover;}
+}
+
+.c-main-navigation {
+  font-size: $type--base;
+  color: $color--sidebarLinkColor;
+
+  a:hover,
+  a:active {
+    background: $color--sidebarLinkBackground;
+    > i {color: $color--sidebarMenuLinkIconHover;}
+  }
+}
+
+
+/*! Pushy - v0.9.2 - 2014-9-13
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+
+/* Menu Appearance */
+
+.pushy {
+    position: fixed;
+    width: $size--sidebarMenuWidth;
+    height: 100%;
+    top: 0;
+    z-index: $zIndex-8--navSidebar;
+    background: $color--sidebarBackground;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+}
+
+/* Menu Movement */
+
+.pushy-left {
+    -webkit-transform: translate3d(-$size--sidebarMenuWidth,0,0);
+    -moz-transform: translate3d(-$size--sidebarMenuWidth,0,0);
+    -ms-transform: translate3d(-$size--sidebarMenuWidth,0,0);
+    -o-transform: translate3d(-$size--sidebarMenuWidth,0,0);
+    transform: translate3d(-$size--sidebarMenuWidth,0,0);
+}
+
+.pushy-open {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.container-push, .push-push {
+    -webkit-transform: translate3d($size--sidebarMenuWidth,0,0);
+    -moz-transform: translate3d($size--sidebarMenuWidth,0,0);
+    -ms-transform: translate3d($size--sidebarMenuWidth,0,0);
+    -o-transform: translate3d($size--sidebarMenuWidth,0,0);
+    transform: translate3d($size--sidebarMenuWidth,0,0);
+}
+
+/* Menu Transitions */
+
+.pushy, #container, .push {
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
+          -moz-transition: -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
+              -o-transition: -o-transform .2s cubic-bezier(.16, .68, .43, .99);
+                    transition: transform .2s cubic-bezier(.16, .68, .43, .991);
+}
+
+/* Site Overlay */
+
+.site-overlay {
+    display: none;
+}
+
+.pushy-active .site-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zIndex-7--navSiteOverlay;
+    background-color: $color--sidebarOverlay;
+    -webkit-animation: fade 500ms;
+    -moz-animation: fade 500ms;
+    -ms-animation: fade 500ms;
+    -o-animation: fade 500ms;
+    animation: fade 500ms;
+}
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fade {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes fade {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+// @-ms-keyframes fade {
+//     0%   { opacity: 0; }
+//     100% { opacity: 1; }
+// }​
+

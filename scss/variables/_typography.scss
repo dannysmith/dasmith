@@ -1,0 +1,60 @@
+// SCALE FOR TYPOGRAPHY
+// ====================
+// This scale should be used for *all* type sizes.
+// If a new size is needed, it should be added to the type applications section and given
+// an appropriate size. this scale is based on http://typecast.com/blog/a-more-modern-scale-for-web-typography
+
+
+// Type Scale (do not use these)
+// ---------------------------------------------
+
+// These values are used to set the base font of the html element at different viewport widths,
+//   and to calculate the values.
+$typeBaseAtNarrowWidth:     18;
+$typeBaseAtMediumWidth:     20;
+$typeBaseAtWideWidth:       22;
+
+// This is the default font hierachy, calculated in ems.
+$typeSize1:       (48 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSize2:       (36 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSize3:       (28 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSize4:       (22 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSize5:       (20 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSize6:       (18 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSizePara:    (18 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSizeSmall:   (16 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSizeXSmall:  (12 / $typeBaseAtNarrowWidth) * 1rem;
+$typeSizeXXSmall: (10 / $typeBaseAtNarrowWidth) * 1rem;
+
+// Typefaces (do not use these)
+// ----------------------------------------------
+$typeFaceMyriad:      "myriad-pro", sans-serif;
+$typeFaceJubilat:     "jubilat", sans-serif;
+$typeFaceTisa:        "ff-tisa-web-pro", sans-serif;
+$typeFaceInconsolata: "inconsolata", Courier, monospace;
+
+// Type Applications
+// ----------------------------------------------
+
+// Base font sizes that should be set in pixels
+$type--base--smallWidth:        $typeBaseAtNarrowWidth * 1px;
+$type--base--mediumWidth:       $typeBaseAtMediumWidth * 1px;
+$type--base--wideWidth:         $typeBaseAtWideWidth * 1px;
+
+$type--smallest:                $typeSizeXXSmall;
+$type--smaller:                 $typeSizeXSmall;
+$type--small:                   $typeSizeSmall;
+$type--base:                    $typeSizePara;
+$type--large:                   $typeSize5;
+$type--larger:                  $typeSize3;
+$type--largest:                 $typeSize2;
+$type--jumbo:                   $typeSize1;
+
+$type--siteHeadingFace:         $typeFaceMyriad;
+$type--siteSubeadingFace:       $typeFaceMyriad;
+$type--headingFace:             $typeFaceTisa;
+$type--bodyFace:                $typeFaceMyriad;
+$type--highlightParaFace:       $typeFaceJubilat;
+$type--pageHeadingFace:         $typeFaceMyriad;
+$type--codeFace:                $typeFaceInconsolata;
+$type--blockquoteFace:          $typeFaceJubilat;

@@ -3,12 +3,12 @@
 <%= erb :'partials/_page_header' %>
 
 <div class="container">
-	<% @articles.each do |article| %>
-	<article class="article">
-		<h1><a href="/writing/<%= article.slug %>"><%= article.title %></a></h1>
-		<div class="article-body">
-			<%= article.body %>
-		</div>
-	</article>
-	<% end %>
+  <% @articles.each do |article| %>
+  <article class="article">
+    <h1><a href="/writing/<%= article.slug %>"><%= article.title %></a></h1>
+    <div class="article-body">
+      <%= article.body %>
+    </div>
+  </article>
+  <% end %>
 </div>

@@ -112,7 +112,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-foreman");
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('build', ['check-gems', 'rspec', 'sass', 'concat', 'uglify', 'cssmin', 'imagemin']);
+    grunt.registerTask('build', ['check-gems', 'sass', 'concat', 'uglify', 'cssmin', 'imagemin']);
     grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin', 'newer:imagemin']);
     grunt.registerTask('rspec', 'exec:rspec_fast');
     grunt.registerTask('rspec:all', 'exec:rspec_all');

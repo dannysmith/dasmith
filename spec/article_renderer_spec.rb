@@ -12,7 +12,6 @@ describe DannyIs::ArticleRenderer do
                                        url: '/article-images/2-2-this-is-file-two.png') }
   let(:images) { [image1,image2] }
   let(:parser) { Redcarpet::Markdown.new(DannyIs::ArticleRenderer.new(images, prettify: true),  autolink: false,
-                                           space_after_headers: true,
                                            prettify: true,
                                            no_intra_emphasis: true,
                                            fenced_code_blocks: true,

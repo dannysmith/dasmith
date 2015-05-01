@@ -22,7 +22,6 @@ module DannyIs
 
     REDCARPET_OPTIONS = {
      autolink: false,
-     space_after_headers: true,
      prettify: true,
      no_intra_emphasis: true,
      fenced_code_blocks: true,

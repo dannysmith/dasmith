@@ -5,3 +5,6 @@ development-envs.rb
 articles/.Ulysses-Group.plist
 articles/.UlyssesRoot
 articles/**/.Ulysses-Group.plist
+node_modules/**/*
+vendor/**/*
+

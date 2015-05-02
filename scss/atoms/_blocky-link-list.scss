@@ -16,4 +16,11 @@
     height: 3em;
     padding: .75em;
   }
+
+  &--colored {
+    li:nth-child(n+1) a  {color: $color--stripedList1;}
+    li:nth-child(2n+2) a {color: $color--stripedList2;}
+    li:nth-child(3n+3) a {color: $color--stripedList3}
+    li:nth-child(4n+4) a {color: $color--stripedList4}
+  }
 }

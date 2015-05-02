@@ -1,13 +1,8 @@
 <% content_for :title do %>Nothing to see here<% end %>
 
-<%= erb :'partials/_page_header' %>
+<%= erb :'partials/_page_header', locals: {section_title: '404'}%>
 
-<div class="container article-body">
-  <blockquote>
-    <p>Of all the unhappy people in the world, the unhappiest are those who have not found something they want to do.</p>
-    <footer>
-      <a href="http://en.wikipedia.org/wiki/Lin_Yutang">Lin Yutang</a>
-    </footer>
-  </blockquote>
-  <p>I'm afraid whatever you're looking for, isn't here.</p>
+<div class="u-center">
+  <img src="/images/404bg.jpg">
+  <h3 class="u-jumbo-notice">Whatever you're looking for, it isn't here.</h3>
 </div>

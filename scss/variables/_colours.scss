@@ -58,6 +58,8 @@ $color--horizontalRule:                 $light-purple;
 $color--logoBG:                         $light-purple;
 $color--markedText:                     $cream;
 $color--nonCodePre:                     $navy;
+$color--footnoteText:                   lighten($black, 60%);
+$color--articleFootermeta:              lighten($black, 60%);
 
 // Rainbow Bar Colouring
 $color--rainbowBar1:                    $navy;
@@ -125,8 +127,11 @@ $color--pageFooterBG:                   $light-mint;
 $color--copyrightNoticeBG:              $navy;
 $color--copyrightNoticeFG:              $white;
 
-
-
+// Striped List coloring
+$color--stripedList1:                   $navy;
+$color--stripedList2:                   $dark-purple;
+$color--stripedList3:                   $red;
+$color--stripedList4:                   $green;
 
 
 

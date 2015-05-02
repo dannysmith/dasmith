@@ -44,5 +44,11 @@ $(function() {
       progressBar.attr('value', value);
     });
 
+    // Possible fix for mobile problems
+    $('#container').bind('touchmove', function(){
+      value = $('#container').scrollTop();
+      progressBar.attr('value', value);
+    });
+
 
 });

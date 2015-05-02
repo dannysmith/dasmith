@@ -76,6 +76,7 @@ module DannyIs
 
       if @articles.nil? || @articles.empty?
         status 404
+        erb :page404
       else
         erb :articles_page
       end
@@ -91,6 +92,7 @@ module DannyIs
         erb :article
       else
         status 404
+        erb :page404
       end
     end
 

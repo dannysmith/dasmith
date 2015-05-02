@@ -1,0 +1,18 @@
+.c-article-list {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  li {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+
+    &:hover {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    @media screen and (min-width: $size-contentWidthBreakpoint2) {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}

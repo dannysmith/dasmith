@@ -1,4 +1,29 @@
   p {
     margin-top: 0;
     margin-bottom: $type--base;
+    letter-spacing: $type--defaultLetterSpacing;
+    text-align: justify;
+
+    -webkit-hyphenate-limit-after: 4;
+       -moz-hyphenate-limit-after: 4;
+        -ms-hyphenate-limit-after: 4;
+            hyphenate-limit-after: 4;
+
+    -webkit-hyphenate-limit-before: 3;
+       -moz-hyphenate-limit-before: 3;
+        -ms-hyphenate-limit-before: 3;
+            hyphenate-limit-before: 3;
+
+    -webkit-hyphenate-limit-lines: 1;
+       -moz-hyphenate-limit-lines: 1;
+        -ms-hyphenate-limit-lines: 1;
+            hyphenate-limit-lines: 1;
+
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+
+    word-break: break-word; //Non-standard for webkit
+    word-wrap: break-word;
   }

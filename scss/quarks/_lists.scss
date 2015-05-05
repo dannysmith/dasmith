@@ -4,6 +4,7 @@ ul, ol {
   padding-left: 0;
   list-style-type: none;
   line-height: 1.25;
+  letter-spacing: $type--defaultLetterSpacing;
 
   li:before {
     content: "\00BB\0020\0020";

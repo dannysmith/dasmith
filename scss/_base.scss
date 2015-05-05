@@ -21,7 +21,7 @@ body, html {
 #container {
   height: 100%;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; //Needed because we're scrolling the container not the window.
 }
 
 // Remove styling from links

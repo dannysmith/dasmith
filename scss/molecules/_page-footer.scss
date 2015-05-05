@@ -1,41 +1,26 @@
 .c-page-footer {
   background-color: $color--pageFooterBG;
+  border-top: .5rem solid $color--pageFooterTopBorder;
 }
 
 .c-page-footer__recent-articles {
-  margin: auto;
+
+  > h2 {
+    text-align: center;
+    color: $white;
+  }
 
   &__items {
-    @media screen and (min-width: 40em) {
-         -moz-column-count: 2;
-      -webkit-column-count: 2;
-              column-count: 2;
-           -moz-column-gap: 1rem;
-        -webkit-column-gap: 1rem;
-                column-gap: 1rem;
-    }
-    @media screen and (min-width: $size-contentWidthBreakpoint2) {
-         -moz-column-count: 3;
-      -webkit-column-count: 4;
-              column-count: 5;
-    }
-    @media screen and (min-width: $size-contentWidthBreakpoint3) {
-         -moz-column-count: 3;
-      -webkit-column-count: 4;
-              column-count: 5;
-    }
+    @include center-with-margin($size-contentWidthBreakpoint1, $size-contentWidthMargin1);
+    @include center-with-margin($size-contentWidthBreakpoint2, $size-contentWidthMargin2);
+    @include center-with-margin($size-contentWidthBreakpoint3, $size-contentWidthMargin3);
   }
 
   .o-article-box {
     margin: 1rem;
+    border-color: $color--pageFooterBoxBorder;
 
-    @media screen and (min-width: 50em) {
-      display: inline-block;
-    }
-  }
-
-  > h2 {
-    text-align: center;
+    > h2 {text-align: center;}
   }
 }
 

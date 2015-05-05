@@ -1,6 +1,7 @@
 $(function() {
 
   // Image Zoomer
+  //-------------
   // $('.article-image > a').magnificPopup({type: 'image'});
 
   // Footnote Scrolling
@@ -10,7 +11,7 @@ $(function() {
     }, 1000);
   });
 
-    // Progress bar indicator
+  // Progress bar indicator
   // ----------------------
   // This takes the height of an article and then scrolls displays the ammount left in a progressbar element.
   // See https://css-tricks.com/reading-position-indicator/
@@ -51,4 +52,19 @@ $(function() {
     });
 
 
+    // Disable pointer events when scrolling
+    //--------------------------------------
+    var body = document.body,
+    timer;
+
+    window.addEventListener('scroll', function() {
+      clearTimeout(timer);
+      if(!body.classList.contains('u-disable-hover')) {
+        body.classList.add('u-disable-hover')
+      }
+
+      timer = setTimeout(function(){
+        body.classList.remove('u-disable-hover')
+      },500);
+    }, false);
 });

@@ -7,12 +7,22 @@
   @include pull-right-with-margin($size-contentWidthBreakpoint2, $size-contentWidthMargin2);
   @include pull-right-with-margin($size-contentWidthBreakpoint3, $size-contentWidthMargin3);
 
-  transition: all .1s;
-  -webkit-transition: all 1s;
+  // Set transitions when user mouses out of a code block
+  transition: background-color 3s, padding .5s;
+  -webkit-transition: background-color 3s, padding .5s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 
-   // Extend the pre block to be full width to the right on hover
+  // Extend the pre block to be full width to the right on hover
   &:hover {
     padding-right: 0;
+    background-color: $color--code--background;
+
+    // Set transitions when user mouses into a code block.
+    transition: background-color .5s, padding 1s;
+    -webkit-transition: background-color .5s, padding 1s;
+    -webkit-transition-delay: .25s;
+    transition-delay: .25s;
   }
 }
 

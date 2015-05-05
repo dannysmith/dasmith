@@ -117,16 +117,18 @@ $color--asideBG:                        $blue;
 // Article Box Colours
 $color--articleBoxBG:                   $white;
 $color--articleBoxFG:                   $black;
-$color--articleBoxBorder:               $red;
+$color--articleBoxBorder:               $mint;
 
 $color--articleBoxBG-dark:              $navy;
 $color--articleBoxFG-dark:              $white;
 $color--articleBoxBorder-dark:          $mint;
 
 // Page Footer
-$color--pageFooterBG:                   $light-mint;
-$color--copyrightNoticeBG:              $navy;
+$color--pageFooterBG:                   $navy;
+$color--copyrightNoticeBG:              darken($navy, 10%);
 $color--copyrightNoticeFG:              $white;
+$color--pageFooterBoxBorder:            transparent;
+$color--pageFooterTopBorder:            transparent;
 
 // Striped List coloring
 $color--stripedList1:                   $navy;

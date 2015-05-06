@@ -76,7 +76,7 @@ To summarise, I'm suggesting that there are three levels we should work at to ch
 
 Not at all. Three days after I drafted this article I stumbled across [this presentation](http://www.slideshare.net/mcottmeyer/exploring-agile-transformation-and-scaling-patterns) by Mike Cottmeyer of [LeadingAgile](http://leadingagile.com/). It outlines an iterative approach to  transformation based on the three levels we've just discussed.  One of his key takeaways is this:
 
-<blockquote><p>To lead sustainable organizational change, you have to address the structure of the organization, your practices and tools, and also the people in the organization.</p></blockquote> 
+> To lead sustainable organizational change, you have to address the structure of the organization, your practices and tools, and also the people in the organization.
 
 I agree wholeheartedly with him.
 

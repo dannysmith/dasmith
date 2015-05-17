@@ -1,5 +1,7 @@
 module DannyIs
   class ArticleRenderer < ::Redcarpet::Render::HTML
+    require 'rouge'
+
     include ::Redcarpet::Render::SmartyPants
 
     def initialize(images = [], options = {})
@@ -9,9 +11,15 @@ module DannyIs
 
     def block_code(code, language)
       require 'pygments'
-      Pygments.highlight(code, lexer: language, options: { linespans: 'line' })
+      Pygments.highlight(code, lexer: language, options: { linespans: 'line', cssclass: "highlight highlight-#{language}" })
+    rescue MentosError => e
+      if e.message.include? 'ClassNotFound: no lexer'
+         # If we recieve a Python-generated error message for no lexer, just use text.
+        Pygments.highlight(code, lexer: 'text', options: { linespans: 'line', cssclass: "highlight highlight-#{language} highlight-unknown" })
+      else
+        raise e
+      end
     end
-
 
     # Wrap tables in a containing div.
     def table(header, body)

@@ -170,6 +170,12 @@ textarea { resize: vertical; }
 
 blockquote { margin: 0; }
 
+.highlight.highlight-markdown { background: transparent; padding-right: 0; }
+.highlight.highlight-markdown pre { background-color: #f2f2f2; color: #212121; white-space: pre-wrap; }
+.highlight.highlight-markdown pre::selection, .highlight.highlight-markdown pre span::selection { background-color: #F5D1BA; }
+.highlight.highlight-markdown pre::-moz-selection, .highlight.highlight-markdown pre span::-moz-selection { background-color: #F5D1BA; }
+.highlight.highlight-markdown:hover { background-color: transparent; }
+
 p { margin-top: 0; margin-bottom: 1rem; }
 
 h1, h2, h3, h4 { text-rendering: optimizeLegibility; }
@@ -180,7 +186,9 @@ h2 { font-size: 1.55556rem; margin-top: 2rem; margin-bottom: 1rem; }
 
 h3 { font-size: 1.11111rem; margin-top: 2rem; margin-bottom: 0; }
 
-h4 { margin-top: 1rem; margin-bottom: 0; }
+h4, h5 { font-size: 1.11111rem; margin-top: 1rem; margin-bottom: 0; }
+
+h5 { font-weight: normal; }
 
 table { border-collapse: collapse; border: 1px solid rgba(7, 7, 7, 0.1); width: 100%; }
 table th { border-bottom: 2px solid #8F3643; }
@@ -535,15 +543,15 @@ article.c-article .o-pull-block--both { margin-left: 0; margin-right: 0; padding
 @media screen and (min-width: 80em) { .highlight { margin-left: 25%; padding-right: 25%; } }
 .highlight:hover { padding-right: 0; background-color: #303030; transition: background-color .5s, padding 1s; -webkit-transition: background-color .5s, padding 1s; -webkit-transition-delay: .25s; transition-delay: .25s; }
 
-.highlight:not(table) pre { position: relative; font-size: 0.88889rem; counter-reset: preLineNumbers; white-space: pre; overflow-x: scroll; color: #ffffff; background-color: #303030; padding: 1rem 0; }
-.highlight:not(table) pre span::-moz-selection { background-color: #5b5252; }
-.highlight:not(table) pre span::selection { background-color: #5b5252; }
+.highlight:not(table) pre { position: relative; font-size: 0.88889rem; counter-reset: preLineNumbers; white-space: pre; overflow-x: scroll; color: #ffffff; background-color: #303030; padding: 1rem; padding-left: 2rem; }
+.highlight:not(table) pre::-moz-selection, .highlight:not(table) pre span::-moz-selection { background-color: #5b5252; }
+.highlight:not(table) pre::selection, .highlight:not(table) pre span::selection { background-color: #5b5252; }
 .highlight:not(table) pre span.no::-moz-selection, .highlight:not(table) pre span.nv::-moz-selection { color: #eb7384; }
 .highlight:not(table) pre span.no::selection, .highlight:not(table) pre span.nv::-moz-selection { color: #eb7384; }
 .highlight:not(table) pre span.nf::-moz-selection { color: #f19458; }
 .highlight:not(table) pre span.nf::selection { color: #f19458; }
 
-.highlight pre > span:before { content: counter(preLineNumbers); counter-increment: preLineNumbers; width: 1.5em; padding-right: .5em; /* space after numbers */ text-align: right; display: inline-block; color: #636363; margin-right: 0.5em; padding: 2px 8px 2px 0; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; opacity: 0.6; }
+.highlight pre > span:before { content: counter(preLineNumbers); counter-increment: preLineNumbers; width: 1.5em; padding-right: .5em; /* space after numbers */ text-align: right; display: inline-block; color: #636363; margin-right: 0.5em; margin-left: -2rem; padding: 2px 8px 2px 0; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; opacity: 0.6; }
 
 pre.u-code { border: 1px solid #dbdfe8; border-radius: 2pxi; padding: 1rem; font-family: "inconsolata", Courier, monospace; color: #4C5A78; word-wrap: break-word; }
 

@@ -34,11 +34,21 @@
   overflow-x: scroll;
   color: $rc-white;
   background-color: $color--code--background;
-  padding: 1rem 0;
+  padding: 1rem;
+  padding-left: 2rem;
 
   // Suitable selection color for code
-  & span::-moz-selection {background-color: saturate(lighten($color--code--background, 15%), 5%);}
-  & span::selection {background-color: saturate(lighten($color--code--background, 15%), 5%);}
+  &::-moz-selection,
+  & span::-moz-selection {
+    background-color: saturate(lighten($color--code--background, 15%), 5%);
+  }
+
+  &::selection,
+  & span::selection {
+    background-color: saturate(lighten($color--code--background, 15%), 5%);
+  }
+
+
 
   // Make Red's stand out more.
   & span.no::-moz-selection,
@@ -61,6 +71,7 @@
   display: inline-block;
   color: lighten($color--code--background, 20%);
   margin-right: 0.5em;
+  margin-left: -2rem;
   padding: 2px 8px 2px 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

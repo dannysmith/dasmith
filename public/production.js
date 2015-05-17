@@ -142,20 +142,28 @@ $(function() {
       max = docHeight - winHeight;
       progressBar.attr('max', max);
 
-      value =  $('#container').scrollTop();
-      progressBar.attr('value', value);
+      progressBar.attr('value', $('#container').scrollTop());
     });
 
     // Fill the progress bar when the user scrolls.
     $('#container').scroll(function(){
-      value = $('#container').scrollTop();
-      progressBar.attr('value', value);
+        progressBar.attr('value', $('#container').scrollTop());
     });
 
-    // Possible fix for mobile problems
+    // Fix possible mobile issues
     $('#container').bind('touchmove', function(){
-      value = $('#container').scrollTop();
-      progressBar.attr('value', value);
+      progressBar.attr('value', $('#container').scrollTop());
+    });
+
+    // Recalculate when the window is loaded (ie. all images have been loaded)
+    $(window).load(function() {
+      winHeight = $(window).height(),
+      docHeight = $(".c-article").height();
+
+      max = docHeight - winHeight;
+      progressBar.attr('max', max);
+
+      progressBar.attr('value', $('#container').scrollTop());
     });
 
 

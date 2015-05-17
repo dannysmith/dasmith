@@ -136,7 +136,7 @@ module DannyIs
       # Extract frontmatter
       frontmatter = extract_frontmatter_as_yaml(file, @body_as_markdown)
       @title = frontmatter[:title]
-      @slug = "#{frontmatter[:slug]}-#{@date.strftime("%d%m%y")}"
+      @slug = "#{frontmatter[:slug]}-#{@date.strftime("%y%m%d")}"
       @article_id = frontmatter[:article_id].to_i
 
       # Read in Images

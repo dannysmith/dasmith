@@ -2,6 +2,7 @@
 // They usually operate on simple HTML tags, although exceptionally they may
 // take the form of an object. In that case, they should be prefixed with o-.
 
+@import "markdown-syntax";
 @import "paragraphs";
 @import "headings";
 @import "tables";

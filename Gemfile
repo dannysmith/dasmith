@@ -19,6 +19,7 @@ gem 'builder'
 gem 'sass'
 gem 'redcarpet'
 gem 'pygments.rb'
+gem 'rouge'
 
 # Integrations
 gem 'evernote_oauth'

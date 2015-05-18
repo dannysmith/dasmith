@@ -70,7 +70,7 @@ To summarise, I'm suggesting that there are three levels we should work at to ch
 2. The Delivery Team
 3. The Organisation
 
- Although it's impossible to tackle each of these in isolation,  agile transformation can sometimes focus more on the process than the people. For me, though, **Agile is all about the people**.
+Although it's impossible to tackle each of these in isolation,  agile transformation can sometimes focus more on the process than the people. For me, though, **Agile is all about the people**.
  
 # Is this a new idea?
 

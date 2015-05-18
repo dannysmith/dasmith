@@ -63,7 +63,7 @@ slug: draft-article
     expect(article.body_as_markdown).to eq article1_content
     expect(article.images.size).to eq 2
     expect(article.date).to eq DateTime.parse '20150101'
-    expect(article.slug).to eq 'this-is-the-slug-010115'
+    expect(article.slug).to eq 'this-is-the-slug-150101'
     expect(article.title).to eq 'This is the title'
   end
 
@@ -186,7 +186,7 @@ slug: draft-article
       end
 
       it "should find articles by their slug" do
-        expect(DannyIs::Article.find(slug: 'this-is-the-slug-010115').article_id).to eq 1
+        expect(DannyIs::Article.find(slug: 'this-is-the-slug-150101').article_id).to eq 1
       end
     end
 

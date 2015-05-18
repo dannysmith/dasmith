@@ -8,9 +8,9 @@ describe DannyIs::ReadingList do
       expect(bookmarks.first).to be_a DannyIs::ReadingList::Item
     end
 
-    it "loads a pocket reading list", integration_test: true do
-      bookmarks = DannyIs::ReadingList.load(:pocket)
-    end
+    # it "loads a pocket reading list", integration_test: true do
+    #   bookmarks = DannyIs::ReadingList.load(:pocket)
+    # end
 
     it "combines all reading lists", integration_test: true do
       bookmarks = DannyIs::ReadingList.load

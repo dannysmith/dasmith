@@ -53,13 +53,17 @@ module DannyIs
     def block_quote(quote)
       matches = quote.split("--").map(&:strip)
 
+      if matches[1]
+        footer = "<footer class=\"c-blockquote__footer o-pull-block__footer\">
+  <span>#{matches[1].gsub('</p>','')}</span>
+  </footer>"
+      end
+
       "<blockquote class=\"c-blockquote o-pull-block o-pull-block--left\">
   <div class=\"c-blockquote__content o-pull-block__content\">
     #{matches[0] + "</p>"}
   </div>
-  <footer class=\"c-blockquote__footer o-pull-block__footer\">
-  <span>#{matches[1].gsub('</p>','')}</span>
-  </footer>
+  #{footer unless footer.nil?}
 </blockquote>\n"
     end
 

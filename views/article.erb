@@ -17,7 +17,7 @@
       <ol class="o-pagination">
         <% if @article.newer %>
           <li class="o-pagination--left">
-            <a class="o-pagination__icon" href="<%= @article.older.url%>"><i class="u-icon u-icon-arrow-circle-left"></i></a>
+            <a class="o-pagination__icon" href="<%= @article.newer.url%>"><i class="u-icon u-icon-arrow-circle-left"></i></a>
             <a class="o-pagination__text" href="<%= @article.newer.url%>"><%= @article.newer.title %></a>
           </li>
         <% end %>

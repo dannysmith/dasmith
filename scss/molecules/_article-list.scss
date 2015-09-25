@@ -6,6 +6,12 @@
   li {
     border-bottom: 1px solid rgba(0,0,0,0.05);
 
+    a {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
     &:hover {
       background-color: rgba(0,0,0,0.05);
     }

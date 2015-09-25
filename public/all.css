@@ -471,7 +471,7 @@ article.c-article .o-pull-block--both { margin-left: 0; margin-right: 0; padding
 .c-page-header__heading__dot { color: #4C5A78; }
 .c-page-header__subheading { margin: 0; font-family: "myriad-pro", sans-serif; font-size: 1.11111rem; color: #4C5A78; font-weight: 100; }
 
-.menu-btn { position: absolute; width: 1.5em; height: 1.5em; line-height: 1.4; top: 1rem; left: 1rem; text-align: center; font-size: 1.55556rem; z-index: 500; background: rgba(255, 255, 255, 0.9); border-radius: 50%; }
+.menu-btn { position: absolute; width: 1.7em; height: 1.7em; line-height: 1.65; top: 1rem; left: 1rem; text-align: center; font-size: 1.55556rem; z-index: 500; background: rgba(255, 255, 255, 0.9); border-radius: 50%; }
 .menu-btn:hover { color: #8F3643; }
 
 .c-main-navigation { font-size: 1rem; color: #ffffff; }
@@ -578,6 +578,7 @@ pre.u-code { border: 1px solid #dbdfe8; border-radius: 2pxi; padding: 1rem; font
 
 .c-article-list { text-align: center; padding-top: 3rem; padding-bottom: 3rem; }
 .c-article-list li { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+.c-article-list li a { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .c-article-list li:hover { background-color: rgba(0, 0, 0, 0.05); }
 @media screen and (min-width: 62em) { .c-article-list li { width: 70%; margin: 0 auto; } }
 

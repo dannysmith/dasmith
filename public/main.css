@@ -459,8 +459,11 @@ article.c-article .o-pull-block--both { margin-left: 0; margin-right: 0; padding
 .o-pagination--right:hover .o-pagination__text { -webkit-transform: translate(-100%); -moz-transform: translate(-100%); transform: translate(-100%); }
 .o-pagination--left:hover .o-pagination__text { -webkit-transform: translate(100%); -moz-transform: translate(100%); transform: translate(100%); }
 
-.o-article-box { background: #ffffff; color: #070707; border: 2px solid #B1D9D1; font-size: 0.66667rem; display: block; padding: 1rem; }
-.o-article-box h2 { font-size: 1rem; margin: 0; margin-bottom: 1rem; }
+.o-article-box { position: relative; background: #ffffff; color: #070707; border: 2px solid #B1D9D1; font-size: 0.66667rem; display: block; padding: 1rem; }
+.o-article-box h2 { font-size: 1rem; margin: 0; }
+.o-article-box p { margin-bottom: .5em; }
+.o-article-box .u-icon-quote-right { position: absolute; bottom: 0.2em; right: 0.2em; font-size: 2em; color: #4C5A78; }
+.o-article-box .u-icon-quote-left { position: absolute; top: 0; left: -1.5em; font-size: 2em; color: #ffffff; opacity: .5; }
 
 .c-page-header { text-align: center; position: relative; }
 .c-page-header__logo-link { width: 8rem; }
@@ -563,7 +566,7 @@ pre.u-code { border: 1px solid #dbdfe8; border-radius: 2pxi; padding: 1rem; font
 
 .c-article__footer ol.o-pagination { margin-top: -3rem; }
 
-.c-page-footer { background-color: #4C5A78; border-top: 0.5rem solid transparent; }
+.c-page-footer { background: #4C5A78 url(/images/tile7.png) repeat center; border-top: 0.5rem solid transparent; }
 
 .c-page-footer__recent-articles > h2 { text-align: center; color: #ffffff; }
 .c-page-footer__recent-articles__items { margin-left: 1rem; margin-right: 1rem; margin-left: 1rem; margin-right: 1rem; margin-left: 1rem; margin-right: 1rem; }
@@ -571,7 +574,6 @@ pre.u-code { border: 1px solid #dbdfe8; border-radius: 2pxi; padding: 1rem; font
 @media screen and (min-width: 62em) { .c-page-footer__recent-articles__items { margin-left: 15%; margin-right: 15%; } }
 @media screen and (min-width: 80em) { .c-page-footer__recent-articles__items { margin-left: 25%; margin-right: 25%; } }
 .c-page-footer__recent-articles .o-article-box { margin: 1rem; border-color: transparent; }
-.c-page-footer__recent-articles .o-article-box > h2 { text-align: center; }
 
 .c-page-footer__copyright { text-align: right; font-size: 0.66667rem; background-color: #384359; color: #ffffff; padding: 0.5rem; }
 .c-page-footer__copyright p { margin: 0; }

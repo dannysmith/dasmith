@@ -1,5 +1,5 @@
 .c-page-footer {
-  background-color: $color--pageFooterBG;
+  background: $color--pageFooterBG url(/images/tile7.png) repeat center;
   border-top: .5rem solid $color--pageFooterTopBorder;
 }
 
@@ -19,8 +19,6 @@
   .o-article-box {
     margin: 1rem;
     border-color: $color--pageFooterBoxBorder;
-
-    > h2 {text-align: center;}
   }
 }
 

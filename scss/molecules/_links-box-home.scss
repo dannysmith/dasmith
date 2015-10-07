@@ -1,0 +1,24 @@
+.c-links-box {
+  background-color: $red;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon-list {
+    font-size: $type--jumbo;
+    color: $white;
+
+    span {display: none;} //Hide text except for icons
+
+    a {
+      display: inline-block;
+      transition: all .1s ease-in;
+    }
+
+    a:hover {
+      transform: scale(1.4);
+      text-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  }
+}

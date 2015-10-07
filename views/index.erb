@@ -1,14 +1,40 @@
 <% content_for :title do %>Danny Smith is Writing<% end %>
 
-<%= erb :'partials/_page_header' %>
-
-<div class="container">
-  <% @articles.each do |article| %>
-  <article class="article">
-    <h1><a href="/writing/<%= article.slug %>"><%= article.title %></a></h1>
-    <div class="article-body">
-      <%= article.body %>
+<div class="c-homepage-grid">
+  <section class="o-flexgrid-box c-homepage-grid__box c-site-info-box">
+    <div class="c-site-info-box__avatar o-avatar" style="background-image: url('<%= @logo_path %>')"></div>
+    <hgroup class="c-site-info-box__hgroup">
+      <h1 class="c-site-heading c-site-info-box__heading"><a href="/">danny<span class="c-site-info-box__heading__dot">.</span>is</a></h1>
+      <h2 class="c-site-subheading c-site-info-box__subheading">here</h2>
+    </hgroup>
+  </section>
+  <section class="o-flexgrid-box c-homepage-grid__box c-article-box">
+    <h2><a href="/writing/<%= @article.slug %>"><%= @article.title %></a></h2>
+    <p class="c-article-box__date"><%= @article.date.strftime('%B %Y') %></p>
+    <div class="c-article-box__copy">
+      <%= @article.intro characters: 600 %>
     </div>
-  </article>
-  <% end %>
+    <a href="/writing/<%= @article.slug %>" class="c-article-box__overlay">
+      <p>Read &ldquo;<%= @article.title %>&rdquo;</p>
+    </a>
+  </section>
+  <section class="o-flexgrid-box c-homepage-grid__box c-instagram-box">
+    <a href="<%= @last_gram.link %>">
+      <img src="<%= @last_gram_src %>" alt="Instagram">
+    </a>
+    <div class="c-instagram-box__meta">
+      <p><i class="u-icon u-icon-instagram"></i> <%= @last_gram.title %></p>
+    </div>
+  </section>
+  <section class="o-flexgrid-box c-homepage-grid__box c-map-box">
+  </section>
+  <section class="o-flexgrid-box c-homepage-grid__box ">
+  </section>
+  <section class="o-flexgrid-box c-homepage-grid__box c-links-box">
+    <ul class="u-plain-list c-links-box__icon-list">
+      <li><a href="http://twitter.com/dannysmith"><i class="u-icon u-icon-social-twitter-circular"></i><span> Twitter</span></a></li>
+      <li><a href="http://www.linkedin.com/in/dannyasmith"><i class="u-icon u-icon-social-linkedin-circular"></i><span> LinkedIn</span></a></li>
+      <li><a href="http://instagram.com/dannysmith"><i class="u-icon u-icon-social-instagram-circular"></i><span> Instagram</span></a></li>
+    </ul>
+  </section>
 </div>

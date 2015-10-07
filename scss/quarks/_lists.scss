@@ -27,3 +27,8 @@ ul, ol {
     }
   }
 }
+
+ol.u-plain-list,
+ul.u-plain-list {
+  li:before {content: "";}
+}

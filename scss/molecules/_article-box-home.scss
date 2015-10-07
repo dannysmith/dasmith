@@ -1,0 +1,40 @@
+.c-article-box {
+  position: relative;
+  background-color: $white;
+  border: .75rem solid $navy;
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+
+  > h2 {margin: 0;}
+
+  &__copy {
+    font-size: $type--small;
+  }
+
+  &__date {
+    color: $red;
+    font-size: $type--smaller;
+    font-style: italic;
+  }
+
+  &__overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    background: rgba($navy, .9);
+    text-align: center;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    z-index: $zIndex-2--homePageArticleOverlay;
+  }
+
+  &:hover &__overlay {
+    opacity: 1;
+    color: $white;
+
+  }
+}

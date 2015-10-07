@@ -1,0 +1,44 @@
+.c-site-info-box {
+  background: $red;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // White bar behind avatar.
+  &:after {
+    content: " ";
+    background: $white;
+    position: absolute;
+    height: 2.5em;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__avatar {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    top: 0;
+    right: 1em;
+  }
+
+  &__hgroup {
+    position: relative;
+  }
+
+  &__heading {
+    color: $white;
+    margin: 0;
+
+    &__dot {color: $mint;}
+  }
+
+  &__subheading {
+    margin: 0;
+    color: $white;
+    font-weight: 50;
+  }
+
+}

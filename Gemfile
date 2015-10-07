@@ -24,6 +24,7 @@ gem 'rouge'
 # Integrations
 gem 'evernote_oauth'
 gem 'readit'
+gem 'simple-rss'
 
 group :production do
 gem 'newrelic_rpm'

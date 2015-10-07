@@ -1,5 +1,7 @@
 require 'yaml'
 require 'redcarpet'
+require 'open-uri'
+require 'simple-rss'
 require 'active_support/all'
 #TODO: Cherry-pick only the activesupport modules I need
 
@@ -44,7 +46,17 @@ module DannyIs
     end
 
     get '/writing/?' do
-      @articles = [Article.latest]
+      @article = Article.latest
+
+      # Really hacky way of getting latest instagram photo!
+      # TODO: Clean this up.
+      @last_gram = SimpleRSS.parse(open('http://instagrss-mgng.rhcloud.com/dannysmith')).items.first
+      description = CGI.unescapeHTML(@last_gram.description)
+      regexp = /low<\/a><\/div>\n<div><a href=\"(.+)>image size:standard/
+      @last_gram_src = description.match(regexp).captures.first
+      @last_gram.title
+      @last_gram.link
+
       erb :index
     end
 

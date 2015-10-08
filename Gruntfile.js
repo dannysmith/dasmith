@@ -47,7 +47,7 @@ module.exports = function(grunt) {
                 dest: 'public/jquery.min.js'
             },
             css: {
-                src: ['public/main.css'],
+                src: ['public/main.css', 'vendor/animate.css/animate.css'],
                 dest: 'public/all.css'
             }
         },

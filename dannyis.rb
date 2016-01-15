@@ -50,12 +50,17 @@ module DannyIs
 
       # Really hacky way of getting latest instagram photo!
       # TODO: Clean this up.
-      @last_gram = SimpleRSS.parse(open('http://instagrss-mgng.rhcloud.com/dannysmith')).items.first
+      # @last_gram = SimpleRSS.parse(open('http://widget.websta.me/rss/n/dannysmith')).items.first
+      @last_gram = SimpleRSS.parse(open('http://iconosquare.com/feed/dannysmith')).items.first
       description = CGI.unescapeHTML(@last_gram.description)
-      regexp = /low<\/a><\/div>\n<div><a href=\"(.+)>image size:standard/
+      regexp = %r{target='_blank'><img src='(.+)'\/></a>}
       @last_gram_src = description.match(regexp).captures.first
-      @last_gram.title
-      @last_gram.link
+
+      # Get instagram link
+      html = Net::HTTP.get(URI(@last_gram.link))
+      regexp2 = %r{<a href="(https://www.instagram.com/p/.+)/".+<\/span> View on Instagram<\/a>}
+      @last_gram_url = html.match(regexp2).captures.first
+      binding.pry
 
       erb :index
     end

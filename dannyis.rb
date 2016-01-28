@@ -60,7 +60,6 @@ module DannyIs
       html = Net::HTTP.get(URI(@last_gram.link))
       regexp2 = %r{<a href="(https://www.instagram.com/p/.+)/".+<\/span> View on Instagram<\/a>}
       @last_gram_url = html.match(regexp2).captures.first
-      binding.pry
 
       erb :index
     end

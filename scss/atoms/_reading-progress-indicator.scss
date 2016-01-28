@@ -1,0 +1,22 @@
+progress.c-reading-progress-indicator {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: $zIndex-4--progressBar;
+  height: $size--readingProgressBarHeight;
+
+  // Reset appearance
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  background-color: transparent; // Firefox / IE 10+
+  color: $color--readingProgressBarColor; //IE 10+
+
+  // For Safari & Firefox
+  &::-webkit-progress-bar {background-color: transparent;}
+  &::-webkit-progress-value {background-color: $color--readingProgressBarColor;}
+  &::-moz-progress-bar {background-color: $color--readingProgressBarColor;}
+}

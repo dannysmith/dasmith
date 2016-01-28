@@ -7,18 +7,19 @@
 </div>
 
 <div class="readability clearfix">
-  <% @bookmarks.each do |bookmark| %>
-    <% unless bookmark.article.title.match(/^https?:\/\//) %>
+  <% @bookmarks.each do |item| %>
+    <% puts item.title %>
+    <% unless item.title.match(/^https?:\/\//) %>
       <div class="container">
         <div class="card">
-          <figure class="front" style="background-image: url('<%= bookmark.article.lead_image_url %>')">
-            <a href="<%= bookmark.article.url %>">
-              <%= bookmark.article.title %>
+          <figure class="front" style="background-image: url('<%= item.image %>')">
+            <a href="<%= item.url %>">
+              <%= item.title %>
             </a>
           </figure>
           <figure class="back">
-            <a href="<%= bookmark.article.url %>">
-              <%= bookmark.article.excerpt %>
+            <a href="<%= item.url %>">
+              <%= item.excerpt %>
             </a>
           </figure>
         </div>

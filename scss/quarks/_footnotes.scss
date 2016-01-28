@@ -1,0 +1,14 @@
+.footnotes {
+  font-size: $type--small;
+  color: $color--footnoteText;
+
+  ol {
+    list-style-type: lower-roman;
+  }
+
+  li:before {display: none;}
+}
+
+[rev="footnote"] {
+  font-size: $type--smaller;
+}

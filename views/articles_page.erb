@@ -1,0 +1,14 @@
+<%= erb :'partials/_page_header' %>
+
+<div class="container">
+  <% @articles.each do |article| %>
+  <article class="article hentry">
+    <h1><a href="/writing/<%= article.slug %>" class="entry-title"><%= article.title %></a></h1>
+    <div class="article-body entry-content">
+      <%= article.body %>
+    </div>
+    <time class="published hidden" datetime="<%= article.date.to_s %>">
+  </article>
+  <% end %>
+
+</div>

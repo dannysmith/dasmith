@@ -1,5 +1,5 @@
 title: Controlling the Rag with Redcarpet
-post_id: 6
+article_id: 6
 slug: controlling-the-rag-with-redcarpet
 
 #!!==========================================================
@@ -17,7 +17,7 @@ Personally, I'm not too concerned about hyphenation, but in addition to the othe
 Mark points us to Nathan Ford's [ragadjust](https://github.com/nathanford/ragadjust) javascript library, but as I'm already parsing markdown into HTML on here, it seemed inefficient parse it again with JS.
 
 
-<blockquote><p>Good typographic design — on the web, in print; anywhere, in fact — relies on small, measurable improvements across an entire body of work</p><footer>Mark Boulton</footer></blockquote>
+> Good typographic design — on the web, in print; anywhere, in fact — relies on small, measurable improvements across an entire body of work -- Mark Boulton
 
 # Using a Redcarpet Renderer
 
@@ -97,9 +97,9 @@ We could write violations one to three like this:
 
 Initially, I tried to achieve this by splitting the paragraphs into arrays of words and joining them together again, but that didn't seem like a very clean or efficient solution. Instead, we're going to use a RegExp. Be warned, it's pretty long. Essentially, it matches any word which is < 3 characters, is a dash of some sort (wither literal or an HTML entity code), or is a preposition word. It then captures the word and the subsequent space.
 
-<i>
+<pre class="u-code">
 /(?:\s|^|>)(?<word>(\w{0,3}|[-–—]|\&ndash\;|\&mdash\;|aboard|about|above|across|after|against|along|amid|among|anti|around|before|behind|below|beneath|beside|besides|between|beyond|concerning|considering|despite|down|during|except|excepting|excluding|following|from|inside|into|like|minus|near|onto|opposite|outside|over|past|plus|regarding|round|save|since|than|that|this|through|toward|towards|under|underneath|unlike|until|upon|versus|with|within|without)(?<space>\s))/i
-</i>
+</pre>
 
 Actually implementing this is pretty simple, as we can use red carpet's `normal_text` method and ruby's gsub to replace the space after anything that matches. We're actually replacing the match with itself, stripped of the trailing space and with a non-breaking space added:
 

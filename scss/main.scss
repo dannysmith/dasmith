@@ -1,35 +1,43 @@
 // Libraries
-@import "../bower_components/normalize.css/normalize";
-@import "../../mixin-library/mixins";
-@import "bourbon/bourbon";
+// @import "bourbon/bourbon";
+@import "../vendor/normalize-scss/normalize";
+// @import "../vendor/grid.scss/grid.scss";
+// @import "../vendor/fontawesome/scss/font-awesome.scss";
+// @import "../vendor/magnific-popup/dist/magnific-popup.css";
 
-// Variables
-@import "variables";
-
-// Helpers & Base
-@import "helpers";
+// Import the App
+@import "variables/variables";
+@import "utilities/utilities";
 @import "base";
-@import "layout";
+@import "quarks/quarks";
+@import "atoms/atoms";
+@import "molecules/molecules";
+// @import "layout";
+
+
+// OLD CSS FROM DASMITH
+
+// @import "layout";
 
 // Modules
-@import "modules/about";
-@import "modules/agile";
-@import "modules/article";
-@import "modules/article_list";
-@import "modules/article_list_page";
-@import "modules/aside";
-@import "modules/blockquote";
-@import "modules/code";
-@import "modules/figure";
-@import "modules/font-awesome";
-@import "modules/footnote";
-@import "modules/magnific_popup";
-@import "modules/nav_main";
-@import "modules/page_footer";
-@import "modules/page_header";
-@import "modules/readability";
-@import "modules/syntax";
-@import "modules/table";
+// @import "modules/about";
+// @import "modules/agile";
+// @import "modules/article";
+// @import "modules/article_list";
+// @import "modules/article_list_page";
+// @import "modules/aside";
+// @import "modules/blockquote";
+// @import "modules/code";
+// @import "modules/figure";
+// @import "modules/font-awesome";
+// @import "modules/footnote";
+// @import "modules/magnific_popup";
+// @import "modules/nav_main";
+// @import "modules/page_footer";
+// @import "modules/page_header";
+// @import "modules/readability";
+// @import "modules/syntax";
+// @import "modules/table";
 
 // Shame
 @import "shame";

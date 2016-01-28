@@ -1,5 +1,5 @@
 title: A Simpler Responsive Grid
-post_id: 12
+article_id: 12
 slug: a-simpler-responsive-grid
 
 #!!==========================================================

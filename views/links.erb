@@ -1,12 +1,12 @@
 <% content_for :title do %>Notes and Links - Danny Smith<% end %>
 <%= erb :'partials/_page_header', locals: {section_title: 'noting'} %>
 
-<div class="article-list articles-list-page">
-  <ul>
+<div class="c-link-list">
+  <ul class="o-blocky-link-list o-blocky-link-list--colored">
   <% @links.each do |link| %>
     <li>
-      <a href="<%= link[:url] %>"><%= link[:title] %></a>
-      <div class="article-list-description"><%= link[:content] %></div>
+      <a href="<%= link.url %>"><%= link.title %></a>
+      <div class="article-list-description"><%= link.content %></div>
     </li>
   <% end %>
   </ul>

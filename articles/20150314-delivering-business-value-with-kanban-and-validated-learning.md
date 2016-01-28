@@ -1,5 +1,5 @@
 title: Delivering Business Value with Kanban and Validated Learning
-post_id: 14
+article_id: 14
 slug: delivering-business-kanban-and-validated-learning
 
 #!!==========================================================

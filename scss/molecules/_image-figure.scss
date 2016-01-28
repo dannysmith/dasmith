@@ -1,0 +1,23 @@
+.c-image-figure {
+  counter-increment: articleFigureCounter;
+  background: $color--imageFigureBG;
+  padding: 1rem;
+
+  img {
+    width: 100%;
+  }
+
+  img:hover {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+  }
+
+  > figcaption {
+    color: $color--imageFigureLabelText;
+    background-color: $color--imageFigureLabelBG;
+    padding: .25em 1em;
+    margin-top: 1rem;
+
+    &:before {content: "Figure " counter(articleFigureCounter) ": "}
+  }
+}

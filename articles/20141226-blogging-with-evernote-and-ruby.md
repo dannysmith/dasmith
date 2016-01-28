@@ -1,5 +1,5 @@
 title: Blogging with Evernote and Ruby
-post_id: 8
+article_id: 8
 slug: blogging-with-evernote-and-ruby
 
 #!!==========================================================

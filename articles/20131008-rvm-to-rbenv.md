@@ -1,10 +1,10 @@
 title: Switching from RVM to rbenv
-post_id: 3
+article_id: 3
 slug: switching-from-rvm-to-rbenv
 
 #!!==========================================================
 
-A few days ago I [threw together a new website](http://me.dasmith.co.uk/articles/new-job-new-website-131002) for myself, built in ruby and styled with [Sass](http://sass-lang.com/). I'm also about to embark on a new project to rebuild an existing PHP-driven API in ruby, primarily as a demonstration of how quickly it's possible to make things using ruby, and because API design is fascinating me at the moment.
+A few days ago I [threw together a new website](http://danny.is/writing/new-job-new-website-131002) for myself, built in ruby and styled with [Sass](http://sass-lang.com/). I'm also about to embark on a new project to rebuild an existing PHP-driven API in ruby, primarily as a demonstration of how quickly it's possible to make things using ruby, and because API design is fascinating me at the moment.
 
 Before embarking on these projects, I decided that I wanted to sort a few things out:
 

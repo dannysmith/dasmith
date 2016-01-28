@@ -1,8 +1,0 @@
-  <nav class="pagination clearfix">
-    <% unless @page == @page_count %>
-      <a href="/writing/articles/<%= @page+1 %>">&larr; Older</a>
-    <% end %>
-    <% unless @page == 1 %>
-      <a href="/writing/articles/<%= @page-1 %>">Newer &rarr;</a>
-    <% end %>
-  </nav>

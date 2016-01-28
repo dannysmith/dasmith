@@ -1,0 +1,19 @@
+  del {
+    position: relative;
+    text-decoration: none;
+    color: lighten($color--fgText, 50%);
+  }
+
+  del:after {
+      border-bottom: 1px solid lighten($color--fgText, 50%);
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 60%;
+  }
+
+  // Marked Text
+  mark {
+    background: $color--markedText;
+  }

@@ -1,10 +1,10 @@
 title: Scaled Agile Frameworks
-post_id: 15
+article_id: 15
 slug: scaled-agile-framework
 
 #!!==========================================================
 
-I was asked a question last week: ***Wouldn't you say that large-scale agile frameworks like SAFe are just an exercise in keeping old-fashioned businesspeople busy, and making them feel more comfortable?***
+I was asked a question last week: "Wouldn't you say that large-scale agile frameworks like SAFe are just an exercise in keeping old-fashioned businesspeople busy, and making them feel more comfortable?"
 
 The short answer is **yes, I do**. But that's not to say they're not valuable. Let me explain why... bear with me for a minute or two.
 

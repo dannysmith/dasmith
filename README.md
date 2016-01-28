@@ -1,7 +1,11 @@
+[ ![Codeship Status for dannysmith/dasmith](https://codeship.com/projects/0d2ad730-cb31-0132-b672-466a8264ab3c/status?branch=master)](https://codeship.com/projects/75685)
+[![Coverage Status](https://coveralls.io/repos/dannysmith/dasmith/badge.png)](https://coveralls.io/r/dannysmith/dasmith)
+[![Dependency Status](https://gemnasium.com/dannysmith/dasmith.png)](http://gemnasium.com/dannysmith/dasmith)
+[![Stories in Ready](https://badge.waffle.io/dannysmith/dasmith.svg?label=ready&title=Ready)](http://waffle.io/dannysmith/dasmith)
+
 # danny.is
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dannysmith/dasmith?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Stories in Ready](https://badge.waffle.io/dannysmith/dasmith.png?label=ready&title=Ready)](https://waffle.io/dannysmith/dasmith)
-[![Build Status](https://travis-ci.org/dannysmith/dasmith.png?branch=master)](https://travis-ci.org/dannysmith/dasmith) [![Coverage Status](https://coveralls.io/repos/dannysmith/dasmith/badge.png)](https://coveralls.io/r/dannysmith/dasmith) [![Dependency Status](https://gemnasium.com/dannysmith/dasmith.png)](http://gemnasium.com/dannysmith/dasmith)
+*Notice: This is in the middle of a complete rewrite.*
 
 This is [danny.is](http://danny.is). It's a [Sinatra](http://www.sinatrarb.com/) application that parses [markdown](http://daringfireball.net/projects/markdown/) files and turns them into a simple blog. It was thrown together in a day and so is a little rough around the edges. Why did I build this instead of using a static site genrator like [Middleman](http://middlemanapp.com/)? Well, for a number of reasons:
 
@@ -12,20 +16,24 @@ This is [danny.is](http://danny.is). It's a [Sinatra](http://www.sinatrarb.com/)
 
 Although it's not really intended for general consumption (the world really doesn't need *another* markdown > blog engine), you can use it like this...
 
-## Installation and Use
+## Setup Commands
 
-### Running Locally
+```shell
+bundle install # Install Rubygems
+npm install # Install npm, so we get bower and grunt
+bower install # Install bower packages for front-end
+grunt build
+```
 
-I'm using [Guard](https://github.com/guard/guard), so you can just run:
+(Or run `bundle install && npm install && bower install && grunt build`)
 
-````
-bundle install
-bundle exec guard
-````
+## Tow run locally
+```shell
+grunt watch
+rerun foreman starts #In a new window
+```
 
-And head to http://localhost:3000.
-
-### Writing Posts
+## Writing Posts
 
 To publish a new post, put it in `/articles` with a name like `20130203-some-post-or-other.md`. The only part of the filename that matters is the date, which is in the form YYYYMMDD-. This is used to order the posts correctly. Any articles with a date in the future will only be published at midnight on that date.
 
@@ -51,6 +59,8 @@ Posts should be written in [markdown](http://daringfireball.net/projects/markdow
 * Highlighting (with  `==highlighted==`).
 * Footnotes (with `Something[^1]` and then `[^1]: This is a footnote`).
 
+### Markdown Additions 
+
 In addition, two special tags are available:
 
 ````
@@ -65,13 +75,37 @@ will instert the code to display the gist, and
 
 will insert an image with a caption (see below). Note that `{{imageraw:1}}` is also available and will just inser the image, without wrapping it in a `<figure>` tag or adding a caption.
 
+In addition, you can add citations to blockquotes and have them appear in the site:
+
+```
+> This is a blockquote -- this is the author.
+```
+
+It's also possible to include an aside with the following markdown:
+
+```
+aside> This will be rendered as an aside.
+```
+
+### Syntax Highlighting
+
+Pygments.rb is used, so if you include a language with a fenced code block it shoudl get proper highlighting:
+
+    ```ruby
+    #some code
+    ```
+
 ### Images
 
-I wanted an easy way to save a series of images or screenshots and then insert them into an article where appropriate. Although you can happily use a normal markdown image tag, if you save images in the `/public/article-images` directory with a filename like this:
+I wanted an easy way to save a series of images or screenshots and then insert them into an article where appropriate. Although you can happily use a normal markdown image tag, if you save images in the `/articles/images` directory with a filename like this:
 
 `2-3-Some-image-description.png`
 
 then it's possible to use the `{{image:1}}` syntax above to insert them into articles. The first number in the filename is the post_id or the relevant post. The second number is the image number, ahile the remainder of the filename will be used as the figure caption. The image above could be inserted into the article (with `post_id: 2`) using `{{image:3}}`. It would have a caption of *Some image description*.
+
+### Drafts
+
+Any articles saved to `/articles/drafts` will be read and rendered when in development mode, but not in production.
 
 ## Working on a new Feature
 
@@ -130,8 +164,3 @@ Delete your local feature branch.
 ## Project Status
 
 Clearley this is a very personal project and is a work in progress. Because it's just intended for me to use, there isn't a great deal of error handling built in. That said, feel free to clone/fork and use it yourself.
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dannysmith/dasmith/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

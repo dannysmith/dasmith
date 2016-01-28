@@ -1,5 +1,5 @@
 title: "Levels of Application: Agile Coaching"
-post_id: 17
+article_id: 17
 slug: levels-of-agile-coaching
 
 #!!==========================================================
@@ -70,13 +70,13 @@ To summarise, I'm suggesting that there are three levels we should work at to ch
 2. The Delivery Team
 3. The Organisation
 
- Although it's impossible to tackle each of these in isolation,  agile transformation can sometimes focus more on the process than the people. For me, though, **Agile is all about the people**.
+Although it's impossible to tackle each of these in isolation,  agile transformation can sometimes focus more on the process than the people. For me, though, **Agile is all about the people**.
  
 # Is this a new idea?
 
 Not at all. Three days after I drafted this article I stumbled across [this presentation](http://www.slideshare.net/mcottmeyer/exploring-agile-transformation-and-scaling-patterns) by Mike Cottmeyer of [LeadingAgile](http://leadingagile.com/). It outlines an iterative approach to  transformation based on the three levels we've just discussed.  One of his key takeaways is this:
 
-<blockquote><p>To lead sustainable organizational change, you have to address the structure of the organization, your practices and tools, and also the people in the organization.</p></blockquote> 
+> To lead sustainable organizational change, you have to address the structure of the organization, your practices and tools, and also the people in the organization.
 
 I agree wholeheartedly with him.
 

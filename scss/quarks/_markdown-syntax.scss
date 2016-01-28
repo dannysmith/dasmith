@@ -1,0 +1,20 @@
+
+// Override code block styling for markdown codeblocks.
+
+.highlight.highlight-markdown {
+  background: transparent;
+  padding-right: 0;
+
+  pre {
+    background-color: #f2f2f2;
+    color: lighten($black, 10%);
+    white-space: pre-wrap;
+
+    &::selection, & span::selection {background-color: $cream;}
+    &::-moz-selection, & span::-moz-selection {background-color: $cream;}
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}

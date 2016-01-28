@@ -1,0 +1,35 @@
+.o-article-box {
+  position: relative;
+  background: $color--articleBoxBG;
+  color: $color--articleBoxFG;
+  border: 2px solid $color--articleBoxBorder;
+  font-size: $type--smaller;
+  display: block;
+  padding: 1rem;
+
+  h2 {
+    font-size: $type--base;
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: .5em;
+  }
+
+  .u-icon-quote-right {
+    position: absolute;
+    bottom: 0.2em;
+    right: 0.2em;
+    font-size: 2em;
+    color: $color--articleBoxRightQuoteMark;
+  }
+
+  .u-icon-quote-left {
+    position: absolute;
+    top: 0;
+    left: -1.5em;
+    font-size: 2em;
+    color: $color--articleBoxLeftQuoteMark;
+    opacity: .5;
+  }
+}

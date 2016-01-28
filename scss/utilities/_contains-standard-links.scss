@@ -1,0 +1,30 @@
+// This should be applied to all containers that should show standard underlined links.
+.u-contains-standard-links {
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    color: $navy;
+    background-image: linear-gradient(to bottom, $color--background 75%, $color--linkUnderline 75%);
+    background-size: 2px 2px;
+    background-position: 0 1.16em;
+    background-repeat: repeat-x;
+
+    text-shadow: 2px 0 $color--background,
+                -2px 0 $color--background,
+                -3px 0 $color--background,
+                 0 2px $color--background,
+                -1px 1px $color--background,
+                 1px 1px $color--background;
+
+    &.u-plain-link {
+      background: none;
+      text-shadow: none;
+    }
+  }
+
+  a:hover {
+    background-image: linear-gradient(to bottom, $color--background 75%, $color--linkHover 75%);
+    color: $color--linkHover;
+  }
+}

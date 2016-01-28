@@ -1,32 +1,25 @@
-# Require test gems
-require 'sinatra'
-require 'rack/test'
+require 'yaml'
+require 'redcarpet'
+require 'active_support/all'
+require 'dotenv'
+
+# Test
 require 'rspec'
-require 'coveralls'
-# require 'codeclimate-test-reporter'
+require 'pry' unless ENV['RACK_ENV'] == 'production'
+require 'fileutils'
+require 'factory_girl'
 
-Coveralls.wear!
-# CodeClimate::TestReporter.start
+Dotenv.load
 
-# Require my app
-Dir[File.dirname(__FILE__) + '../lib/*'].each { |f| require f }
-Dir[File.dirname(__FILE__) + '../models/*'].each { |f| require f }
-require File.dirname(__FILE__) + '/../dasmith.rb'
-
-# setup test environment
-set :environment, :test
-set :raise_errors, true
-set :logging, false
-
-# Specify that the app is a Sinatra app
-module SinatraSpecHelpers
-  def app
-    DASmith
-  end
-end
+# Load in everything in lib
+Dir[File.dirname(__FILE__) + '/../lib/*'].each { |f| require f }
 
 RSpec.configure do |config|
-  config.color_enabled = true
-  config.include Rack::Test::Methods
-  config.include SinatraSpecHelpers
+  config.color = true
+  config.tty = true
+  config.include FactoryGirl::Syntax::Methods
+
+  config.before(:all) do
+    FactoryGirl.reload
+  end
 end

@@ -1,0 +1,33 @@
+@mixin center-with-margin($breakpoint, $margin) {
+  margin-left: $size--defaultArticleElementMargin;
+  margin-right: $size--defaultArticleElementMargin;
+  @media screen and (min-width: $breakpoint) {
+    margin-left: $margin;
+    margin-right: $margin;
+  }
+}
+
+@mixin pull-left-with-margin($breakpoint, $margin) {
+  margin-right: $size--defaultArticleElementMargin;
+  margin-left: 0;
+  @media screen and (min-width: $breakpoint) {
+    margin-right: $margin;
+    padding-left: $margin;
+  }
+}
+
+@mixin pull-right-with-margin($breakpoint, $margin) {
+  margin-left: $size--defaultArticleElementMargin;
+  margin-right: 0;
+  @media screen and (min-width: $breakpoint) {
+    margin-left: $margin;
+    padding-right: $margin;
+  }
+}
+
+@mixin pull-both-with-margin($margin: 0) {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: $margin;
+  padding-right: $margin;
+}

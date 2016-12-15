@@ -6,7 +6,7 @@ slug: a-simpler-responsive-grid
 
 {{imageraw: 1}}
 
-After making use of various complicated CSS grid systems, I’ve been using a simple percentage-based grid for the last fyear or so. It’s based on a 1000 pixel wide container with 63 pixel columns and 20 pixel gutters. The outside gutters at the extreme left/right are 12 pixels to produce a nice round number.
+After making use of various complicated CSS grid systems, I’ve been using a simple percentage-based grid for the last year or so. It’s based on a 1000 pixel wide container with 63 pixel columns and 20 pixel gutters. The outside gutters at the extreme left/right are 12 pixels to produce a nice round number.
 
 By using a 1000 pixel wide container, the maths is easy when using percentages. each column is 6.3%, gutters are 2% and so on…
 

@@ -47,9 +47,9 @@ class DASmith < Sinatra::Base
     $articles.reverse!
 
     # Set up Readit config
-    Readit::Config.consumer_key = ENV['READABILITY_KEY']
-    Readit::Config.consumer_secret = ENV['READABILITY_SECRET']
-    Readit::Config.parser_token = ENV['READABILITY_PARSER_TOKEN']
+    # Readit::Config.consumer_key = ENV['READABILITY_KEY']
+    # Readit::Config.consumer_secret = ENV['READABILITY_SECRET']
+    # Readit::Config.parser_token = ENV['READABILITY_PARSER_TOKEN']
   end
 
   before do
@@ -123,65 +123,65 @@ class DASmith < Sinatra::Base
 
 
   ####################### READABILITY ###################
-  get '/reading' do
-
-    @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],
-                                    site: 'https://www.readability.com/',
-                                    access_token_path: '/api/rest/v1/oauth/access_token/')
-
-    @access_token = @consumer.get_access_token(nil, {}, x_auth_mode: 'client_auth',
-                                                        x_auth_username: ENV['READABILITY_KEY'],
-                                                        x_auth_password: ENV['READABILITY_PASSWORD'])
-
-    @api = Readit::API.new @access_token.token, @access_token.secret
-
-    @bookmarks, @meta = @api.bookmarks(archive: 1, per_page: 50, include_meta: true)
-
-    erb :reading
-  end
+  # get '/reading' do
+  #
+  #   @consumer = OAuth::Consumer.new(ENV['READABILITY_KEY'], ENV['READABILITY_SECRET'],
+  #                                   site: 'https://www.readability.com/',
+  #                                   access_token_path: '/api/rest/v1/oauth/access_token/')
+  #
+  #   @access_token = @consumer.get_access_token(nil, {}, x_auth_mode: 'client_auth',
+  #                                                       x_auth_username: ENV['READABILITY_KEY'],
+  #                                                       x_auth_password: ENV['READABILITY_PASSWORD'])
+  #
+  #   @api = Readit::API.new @access_token.token, @access_token.secret
+  #
+  #   @bookmarks, @meta = @api.bookmarks(archive: 1, per_page: 50, include_meta: true)
+  #
+  #   erb :reading
+  # end
 
 
   ###################### EVERNOTE AGILE NOTES ############
 
-  get '/agile/?' do
-    # NOTE: TOKEN WILL EXPIRE ON 22 DEC 2015.
-    # You can Renew it Here: https://dev.evernote.com/doc/articles/authentication.php#devtoken
-    if Date.today > Date.parse('2015-12-22')
-      "Ooops. It seems my Evernote API key has Expired. Could you tweet @dannysmith and let me know. Muchas gracias!"
-    else
-      @notes = get_evernote_notes 'notebook:"Agile Toolkit" tag:"published"'
-      erb :agile
-    end
-  end
+  # get '/agile/?' do
+  #   # NOTE: TOKEN WILL EXPIRE ON 22 DEC 2015.
+  #   # You can Renew it Here: https://dev.evernote.com/doc/articles/authentication.php#devtoken
+  #   if Date.today > Date.parse('2015-12-22')
+  #     "Ooops. It seems my Evernote API key has Expired. Could you tweet @dannysmith and let me know. Muchas gracias!"
+  #   else
+  #     @notes = get_evernote_notes 'notebook:"Agile Toolkit" tag:"published"'
+  #     erb :agile
+  #   end
+  # end
 
 
   ###################### EVERNOTE LINKS ############
 
-  get '/noting/?' do
-    if Date.today > Date.parse('2015-12-22')
-      "Ooops. It seems my Evernote API key has Expired. Could you tweet @dannysmith and let me know. Muchas gracias!"
-    else
-      @links = get_evernote_notes 'notebook:"danny.is Links"'
-      erb :links
-    end
-  end
+  # get '/noting/?' do
+  #   if Date.today > Date.parse('2015-12-22')
+  #     "Ooops. It seems my Evernote API key has Expired. Could you tweet @dannysmith and let me know. Muchas gracias!"
+  #   else
+  #     @links = get_evernote_notes 'notebook:"danny.is Links"'
+  #     erb :links
+  #   end
+  # end
 
 
 
 
   ##################### JSON ROUTES #####################
 
-  get '/articles.json' do
-    binding.pry
-  end
-
-  get '/articles/list.json' do
-
-  end
-
-  get '/articles/:post.json' do
-
-  end
+  # get '/articles.json' do
+  #   # binding.pry
+  # end
+  #
+  # get '/articles/list.json' do
+  #
+  # end
+  #
+  # get '/articles/:post.json' do
+  #
+  # end
 
   ##################### RSS ROUTES #####################
 

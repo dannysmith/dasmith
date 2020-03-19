@@ -20,7 +20,7 @@ I'm using [Guard](https://github.com/guard/guard), so you can just run:
 
 ````
 bundle install
-bundle exec guard
+bundle exec rackup
 ````
 
 And head to http://localhost:3000.
